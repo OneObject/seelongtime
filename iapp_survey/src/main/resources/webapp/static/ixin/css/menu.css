@@ -1,0 +1,18 @@
+.menu-preview{
+	background-image: url("../img/iphone.png");
+	 width: 300px;
+    height: 600px;
+     background-size: 300px;
+    background-repeat: no-repeat;
+    padding-top: 89px;
+    display: block;
+    overflow: hidden;
+}
+.menu-box{
+	margin:0px auto;
+	width: 237px;
+	height: 421px;
+	background-color: blue;
+	display: block;
+    overflow: hidden;
+}

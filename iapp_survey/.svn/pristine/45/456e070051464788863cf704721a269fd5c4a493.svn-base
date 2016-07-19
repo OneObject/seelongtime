@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- <encoder> <pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c@%t]:%L - %m%n</pattern> </encoder> -->
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c]:%L-%m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.longtime.app" level="debug" additivity="true"/>
+	<logger name="com.longtime.ajy" level="info" additivity="true"/>
+	<logger name="com.kin" level="debug" additivity="true"/>
+
+	<root level="info">
+		<appender-ref ref="stdout" />
+	</root>
+
+</configuration>

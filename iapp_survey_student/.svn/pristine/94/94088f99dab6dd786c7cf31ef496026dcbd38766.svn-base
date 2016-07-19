@@ -1,0 +1,1 @@
+alter table credit_log MODIFY rulename VARCHAR(255) null;

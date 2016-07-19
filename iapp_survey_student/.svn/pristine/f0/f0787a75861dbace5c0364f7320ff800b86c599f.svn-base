@@ -1,0 +1,240 @@
+html, body, div, span, a, p, section, article, dl, ul, dd, dt, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+dl, ul {
+  list-style: none; }
+
+a, button, input, textarea, span, img, li, div {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+section, div, a, ul, dl, span, p, dd, dt, li, input, textarea, label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-break: break-all; }
+
+html, body {
+  -webkit-overflow-scrolling: touch; }
+
+.wrapper-static {
+  -webkit-overflow-scrolling: touch; }
+
+body {
+  min-width: 320px;
+  color: rgba(0, 0, 0, 0.87);
+  -ms-touch-action: none;
+  background: #f7f7f7; }
+
+input, textarea, div {
+  outline: medium; }
+
+input, textarea {
+  -webkit-appearance: none !important; }
+
+input[type="search"] {
+  -webkit-appearance: none !important; }
+
+input::-webkit-search-cancel-button {
+  display: none !important; }
+
+input {
+  line-height: normal !important; }
+
+a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+.ctl-show {
+  display: block !important; }
+
+.ctl-hide {
+  display: none !important; }
+
+a:link {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:visited {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:active {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+.margin-top-0 {
+  margin-top: 0px !important; }
+
+.margin-top-10 {
+  margin-top: 10px !important; }
+
+.margin-top-12 {
+  margin-top: 12px !important; }
+
+.margin-top-44 {
+  margin-top: 44px !important; }
+
+.margin-top-50 {
+  margin-top: 50px !important; }
+
+.margin-top-51 {
+  margin-top: 51px !important; }
+
+.margin-top-90 {
+  margin-top: 90px !important; }
+
+.margin-top-101 {
+  margin-top: 101px !important; }
+
+.margin-top-152 {
+  margin-top: 152px !important; }
+
+.margin-bottom-0 {
+  margin-bottom: 0px !important; }
+
+.margin-bottom-5 {
+  margin-bottom: 5px !important; }
+
+.margin-bottom-8 {
+  margin-bottom: 8px !important; }
+
+.margin-bottom-10 {
+  margin-bottom: 10px !important; }
+
+.margin-bottom-45 {
+  margin-bottom: 45px !important; }
+
+.margin-bottom-50 {
+  margin-bottom: 50px !important; }
+
+.margin-bottom-51 {
+  margin-bottom: 51px !important; }
+
+.margin-bottom-55 {
+  margin-bottom: 55px !important; }
+
+.margin-bottom-61 {
+  margin-bottom: 61px !important; }
+
+.margin-bottom-71 {
+  margin-bottom: 71px !important; }
+
+.margin-bottom-91 {
+  margin-bottom: 91px !important; }
+
+.margin-bottom-110 {
+  margin-bottom: 110px !important; }
+
+.min-height-48 {
+  min-height: 48px; }
+
+.min-height-64 {
+  min-height: 64px; }
+
+.min-height-48 {
+  min-height: 48px; }
+
+.min-height-64 {
+  min-height: 64px; }
+
+body {
+  font-family: "FontAwesome", "Microsoft YaHei"  !important; 
+  color:#f32d51;
+  background:#f1f1f1;}
+
+.clear { zoom:1; }
+.clear:after { content:""; display:block; clear:both; }
+
+
+
+
+
+.main-box{
+  width:100%;
+}
+.main-box a{
+  display:table;
+  font-size:15px;
+  width:33%;
+  float:left;
+  color:#444;
+  background:#fff;
+}
+.main-box a.a-3{
+  width:34%;
+  border-right:none;
+}
+.main-box a div{
+  display:table-cell;
+  vertical-align:middle;
+  width:100%;
+  text-align:center;
+}
+.main-box a label{
+  display:block;
+  margin-top:5px;
+}
+section .main-box a img{
+  width:72px;
+  height:72px;
+}
+
+footer {
+  width:100%;
+  height:55px;
+  background:#f7f7f7;
+  border-top:1px solid #d7cfc3;
+  position:fixed;
+  left:0;
+  bottom:0;
+}
+footer .footer-fection {
+  width:100%;
+  height:49px;
+  text-align:center;
+}
+footer .footer-fection .main-box .line {
+  line-height:55px;
+  color:#8d7549;
+}
+footer .footer-fection .main-box a {
+  height:55px;
+  border:none;
+}
+footer .footer-fection .main-box a label {
+  margin-top:0;
+  color:#666;
+}
+footer .footer-fection img {
+  width:20px;
+  height:20px;
+}
+
+#replace-box-1 .wrap_banner {
+  width:100%;
+  background:#fff;
+}
+#replace-box-1 .wrap_banner img {
+  width:100%;
+}
+#replace-box-1 .main {
+  background:#fff;
+  padding-bottom:10px;
+}
+#replace-box-1 .main .title {
+  font-size:16px;
+  height:39px;
+  line-height:39px;
+  color:#000;
+  text-align:center;
+  width:33%;
+}
+#replace-box-1 .main_2 {
+  margin-top:6px;
+}

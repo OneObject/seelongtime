@@ -1,0 +1,123 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+    xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	    http://www.directwebremoting.org/schema/spring-dwr
+	    http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd"
+	default-autowire="no" default-lazy-init="false">
+
+    消息生产者
+    <bean id="lt.queue.msg.productor" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueProductor"
+        init-method="init">
+        队列名称
+        <property name="queueName" value="lt.queue.msg" />
+        redis客户端
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+	
+    <bean id="messageService" class="com.longtime.message.service.impl.MessageServiceImpl" init-method="init">
+   	 	<property name="dataSource" ref="apps.dataSource"></property>
+		<property name="msgProductor" ref="lt.queue.msg.productor"></property>
+	</bean>
+	
+	
+	提醒start
+	 消息生产者
+    <bean id="lt.queue.notify.productor" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueProductor"
+        init-method="init">
+        队列名称
+        <property name="queueName" value="lt.queue.notify" />
+        redis客户端
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+	
+    <bean id="notifySender" class="com.longtime.message.NotifySenderImpl">
+		<property name="notifyRecordService" ref="notifyRecordService"></property>
+		<property name="notifyModeSettingService" ref="notifyModeSettingService"></property>
+		<property name="notifyProductor" ref="lt.queue.notify.productor"></property>
+	</bean>
+	提醒end
+	
+	
+	oplog 队列
+	消息生产者
+    <bean id="lt.queue.oplog.productor" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueProductor"
+        init-method="init">
+        队列名称
+        <property name="queueName" value="${com.longtime.ajy.queue.oplog.name}" />
+        redis客户端
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+    
+    消息消费者
+    <bean id="opLogRedisQueueConsumer" class="com.longtime.app.oplog.listener.OpLogRedisQueueconsumer">
+    	<property name="opLogHandle" ref="opLogHandle"/>
+    	<property name="tokenService" ref="tokenService"/>
+    </bean>
+	
+	队列侦听器
+    <bean id="lt.queue.oplog.listener" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueListener"
+        init-method="start" destroy-method="stop">
+        队列名称
+        <property name="queueName" value="${com.longtime.ajy.queue.oplog.name}" />
+        消息消费者
+        <property name="consumer" ref="opLogRedisQueueConsumer" />
+        redis客户端
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+    
+    
+    enn icoach push
+    消息生产者
+    <bean id="lt.queue.msg.productor.iCoach" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueProductor"
+        init-method="init">
+        队列名称
+        <property name="queueName" value="lt.queue.msg.icoach" />
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+    <bean id="ennIcoachMessageService" class="com.longtime.message.service.impl.MessageServiceImpl" init-method="init">
+   	 	<property name="dataSource" ref="apps.dataSource"></property>
+		<property name="msgProductor" ref="lt.queue.msg.productor.iCoach"></property>
+	</bean>
+	
+	
+	
+	队列侦听器
+    <bean id="lt.queue.msg.listener.icoach" class="com.myctu.platform.gateway.agent.queue.redis.RedisQueueListener"
+        init-method="start" destroy-method="stop">
+        队列名称
+        <property name="queueName" value="lt.queue.msg.icoach" />
+        消息消费者
+        <property name="consumer" ref="ennIcoachMsgRedisQueueConsumer" />
+        redis客户端
+        <property name="redisClient" ref="lt.redisClient" />
+    </bean>
+    <bean id="ennIcoachMsgRedisQueueConsumer" class="com.longtime.app.ext.enn.push.listener.EnnMessageRedisQueueconsumer">
+		<property name="operationListeners">
+			<set>
+				<ref bean="ennIcoachMsgPushListener" />
+			</set>
+		</property>
+	</bean>
+	消息消费者
+    <bean id="ennIcoachMsgPushListener" class="com.longtime.app.ext.enn.push.listener.EnnMessagePushListener" init-method="init">
+		队列名称
+        <property name="masterSecret" value="${com.longtime.jpusht.masterSecret}" />
+        消息消费者
+        <property name="appKey" value="${com.longtime.jpusht.appKey}" />
+        redis客户端
+        <property name="dataSource" ref="apps.dataSource" />
+	</bean>
+    
+	
+	
+</beans>
+ -->

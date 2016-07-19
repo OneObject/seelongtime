@@ -1,0 +1,265 @@
+body,div,h2,h4,ul,li,img,span,p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0); 
+}
+img { border:0; }
+h2 {
+	font-size:24.5px;
+	line-height:40px;
+	margin:10px auto;
+}
+h4 {
+	font-size:17.5px;
+	margin:10px auto;
+	line-height:20px;
+}
+body {
+	font-size:14px;
+	color:#333;
+	line-height:20px;
+	font-family:'Microsoft Yahei',Arial,STHeiti,sans-serif;
+}
+dl,ul { list-style:none;}
+img { border:0; }
+input, textarea, select { outline: medium; }
+input[type=text], input[type=password], textarea { -webkit-appearance: none; }
+input[type=radio],input[type="checkbox"] {
+	margin:4px 0 0;
+	line-height:normal;
+	cursor:pointer;
+}
+textarea {outline:none; resize:none;}
+input::-webkit-search-cancel-button { display: none; }
+input { line-height: normal; }
+
+.clear { zoom:1; }
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0; 
+}
+.fl { float:left; }
+.fr { float:right; }
+
+
+.paper {
+	/*min-width:718px;
+	max-width:1000px;*/
+	width:90%;
+	margin:0 auto;
+}
+.exam_top {
+	width:100%;
+	text-align:center;
+}
+.survuy {
+	padding-bottom:50px;
+	border:1px dashed #dadada;
+	overflow:hidden;
+	width:100%;
+}
+.survuy h4 {
+	border-bottom:1px solid #dadada;
+	padding-bottom:20px;
+}
+.survuy ul {
+	padding:10px;
+	border-bottom:1px solid #dadada;
+}
+.survuy ul li {
+	font-size:14px;
+	line-height:30px;
+}
+.score {
+	color:#2980D7;
+}
+.answer {
+	margin-top:10px;
+	width:100%;
+	display:block;
+}
+.answer input {
+	margin-top:8px;
+	margin-right:5px;
+}
+.ques_answer {
+	padding-left:0;
+}
+.answer .search_text {
+	border:1px solid #dadada;
+	width:100%;
+	height:80px;
+	padding:5px;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.answer .answer-select {
+	width:50px;
+}
+.answer img {
+	width:80%;
+	margin-left:10%;
+}
+.answer-btn {
+	width:300px;
+	height:44px;
+	line-height:44px;
+	text-align:center;
+	border-radius:4px;
+	cursor:pointer;
+	margin-left:auto;
+	margin-right:auto;
+}
+.btn-beaty {
+	font-size:14px;
+	color:#fff;
+	background:#00704a;
+	margin-bottom:50px;
+}
+
+
+.answer-box {
+	width:40%;
+	height:10px;
+	border-radius:10px;
+	border:1px solid #ccc;
+	margin-left:10px;
+	margin-top:10px;
+	position:relative;
+	overflow:hidden;
+}
+.answer-box .answer-val {
+	background:#fff000;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	border-radius:10px;
+}
+.answer-text {
+	font-size:12px;
+	margin-left:10px;
+}
+
+.exam-box {
+	padding-bottom:10px;
+}
+.exam-btn {
+	min-width:80px;
+	height:30px;
+	background:#f00;
+	line-height:30px;
+	text-align:center;
+	font-size:16px;
+	margin-top:10px;
+	cursor:pointer;
+	color:#fff;
+	border-radius:4px;
+}
+.btn-unbind {
+	background:#eee;
+}
+.exam-tip {
+	font-size:16px;
+	color:#00f;
+	border-bottom:1px solid #dadada;
+	padding:20px 0;
+}
+.exam-btn-box {
+	width:100%;
+	position:relative;
+}
+.exam-sub {
+	position:absolute;
+	left:50%;
+	margin-left:-40px;
+}
+.exam-ban {
+	width:100%;
+	margin:20px 0;
+}
+.exam-ban img {
+	width:100%;
+}
+.exam-content {
+	width:100%;
+}
+.exam-content .title {
+	font-size:20px;
+	font-weight:bold;
+}
+.exam-content p {
+	margin-bottom:10px;
+}
+.go-exam{
+	display:inline-block;
+	padding:0 15px;
+	height:30px;
+	margin:0 auto;
+	background:#ffb900;
+	cursor:pointer;
+	margin-top:20px;
+	border-radius:4px;
+	line-height:30px;
+}
+.exam-code {
+	position:relative;
+}
+.code-show {
+	position:absolute;
+	left:-180px;
+	top:0;
+	display:none;
+}
+.fill-wrap {
+	margin-left:10px;
+}
+.fill-wrap:first-child {
+	margin-bottom:20px;
+}
+.fill-wrap .search-box {
+	margin-left:20px;
+}
+.fill-wrap input {
+	border:0;
+	border-bottom:1px solid #7f9db9;
+	color:#7f9db9;
+}
+.fill-wrap .search-text {
+	width:100px;
+}
+.fill-wrap .search-age {
+	width:30px;
+}
+.fill-wrap .search-money {
+	width:50px;
+}
+.fill-wrap .must {
+	color:#ff0000;
+}
+ul.star-title {
+	border-bottom:0;
+}
+.star {
+	position:relative;
+}
+.star ul{
+	margin:0 10px;
+	height:50px;
+	border-bottom:0;
+}  
+
+.hidden{
+	display:none;
+}
+.star-btn-box {
+	margin-top:20px;
+}

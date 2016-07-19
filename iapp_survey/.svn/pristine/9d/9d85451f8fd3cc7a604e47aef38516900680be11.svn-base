@@ -1,0 +1,23 @@
+.add_role{float: right;margin-right: 16px;margin-top: 3px;}
+.add_box{overflow: hidden;margin-bottom: 10px;}
+.role_detail_text{background-color: #dff0d8;border: 1px solid #d6e9c6;width: 98%;margin: 10px auto;}
+.text{float: left;display: block;margin-top: 12px;margin-right: 20px;}
+.anniu{cursor: pointer;margin:0 10px;display: block;float: left;}
+.role_detail h4{float: left;display: block;}
+#add_member_dialog{width: 700px;height: 650px;background-color: #FFFFFF;}
+/* #add_member_dialog input{width: 300px;
+margin: 5px;} */
+//#add_member_dialog input[type="text"]{width: 300px;margin: 5px;} 
+.close_btn{float: right;}
+.easyDialog_text{padding: 20px;overflow:hidden;}
+.yellow{float: right;display: block;margin-top: -20px;}
+.pagination{float: right;}
+.easyDialog_footer{overflow: hidden;}
+.dialog-btn{float: right;margin-right: 20px;margin-top: 20px;}
+.cancle{margin-left: 30px;}
+
+.required{
+color: rgb(224, 34, 34);
+font-size: 12px;
+padding-left: 2px
+}

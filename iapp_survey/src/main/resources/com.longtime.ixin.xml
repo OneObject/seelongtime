@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+    xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	    http://www.directwebremoting.org/schema/spring-dwr
+	    http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd"
+	default-autowire="no" default-lazy-init="false">
+
+    <!-- <bean id="messageProEntrance" class="com.longtime.app.ixin.service.MessageProEntrance" init-method="init">  
+        <property name="handlers">
+        	<map>
+        		<entry key="news" value-ref="newsHandler"></entry>
+        		<entry key="game" value-ref="gameHandler"></entry>
+        		<entry key="vote" value-ref="voteService"></entry>
+        		<entry key="study" value-ref="studyService"></entry>
+        		<entry key="notice" value-ref="noticeService"></entry>
+        		<entry key="card" value-ref="rewardService"></entry>
+        		<entry key="activity" value-ref="activityService"></entry>
+        		<entry key="sign_activity" value-ref="activitySignService"></entry>
+        		<entry key="topic" value-ref="topicCommentService"></entry>
+        		<entry key="exam" value-ref="examinationService"></entry>
+        	</map>
+        </property>  
+        <property name="simpleMessageHandler" ref="simpleMessageHandler"></property>
+    </bean> -->
+<!-- 
+   <bean id="ixin_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+       <property name="driverClass" value="${ctu.jdbc.driverClass}" />
+		<property name="jdbcUrl" value="${ctu.jdbc.url}" />
+		<property name="user" value="${ctu.jdbc.username}" />
+		<property name="password" value="${ctu.jdbc.password}" />
+   </bean> 	
+    -->
+   <bean id="ixin_jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+       <property name="dataSource" ref="apps.dataSource"></property>
+   </bean>
+</beans>

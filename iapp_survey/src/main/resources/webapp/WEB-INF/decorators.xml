@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemesh 2 -->
+<!DOCTYPE decorators[
+        <!ELEMENT decorators (excludes?, decorator+)>
+        <!ATTLIST decorators defaultdir CDATA #IMPLIED>
+        <!ELEMENT excludes (pattern*)>
+        <!ELEMENT decorator (pattern*)>
+        <!ATTLIST decorator
+                name CDATA #REQUIRED
+                page CDATA  #IMPLIED
+                webapp CDATA  #IMPLIED
+                >
+        <!ELEMENT pattern (#PCDATA)>
+        ]>
+<decorators defaultdir="/WEB-INF/jsp/layout_sitemesh">
+    <decorator name="default" page="admin/default.jsp" >
+        <pattern>/base/admin/*</pattern>
+        <pattern>/mgr/*</pattern>
+        <pattern>/report/*</pattern>
+    </decorator>
+    <decorator name="dialog" page="admin/dialog.jsp">
+        <pattern>*.dlg</pattern>
+        <pattern>/demo/*.dlg</pattern>
+    </decorator>
+     <decorator name="demo" page="admin/default.jsp">
+        <pattern>/demo/*</pattern>
+    </decorator>
+    <excludes>
+    	<pattern>*.js*</pattern>
+    	<pattern>*.css*</pattern>
+    	<pattern>*.list*</pattern>
+    	<pattern>/mgr/ixinnofilter/*</pattern>
+    	<pattern>/mgr/include/*</pattern>
+    	<pattern>/mgr/login.*</pattern>
+    	<pattern>/mgr/guide/*</pattern>
+    	<pattern>/base/admin/ivideo/uploadoption.*</pattern>
+    	<pattern>/base/admin/ivideo/getvideodetail4shudent.*</pattern>
+    	<pattern>/base/admin/itest/examination/takeexam.*</pattern>
+    	<!-- <pattern>/demo/sitemesh/index.xhtml</pattern> -->
+    	<pattern>/base/admin/ueditor/video.*</pattern>
+    	<pattern>/base/admin/ueditor/document.*</pattern>
+    	<pattern>/mgr/survey/add_detail.*</pattern>
+    	<pattern>/base/admin/message/user.*</pattern>
+    	<pattern>/mgr/xeroxfodder/list*</pattern>
+    	<pattern>/base/admin/media/list*</pattern>
+    	<pattern>/base/admin/sendrule/list*</pattern>
+    </excludes>
+</decorators>

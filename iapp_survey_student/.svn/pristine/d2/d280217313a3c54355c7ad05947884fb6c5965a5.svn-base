@@ -1,0 +1,14 @@
+.baoming-inputbox{
+    margin-top: 48px;
+    padding: 0px 16px;
+}
+.baoming-inputbox input{
+    color: #53575E;
+    background-clip: padding-box;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+.button{
+    margin-top: 8px;
+    font-size: 20px;
+}

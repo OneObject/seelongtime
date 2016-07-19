@@ -1,0 +1,58 @@
+<%@page import="com.longtime.ajy.student.config.Constant"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/WEB-INF/include/taglibs_m.jsp"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>技术支持</title>
+		<link type="text/css" rel="stylesheet" href="${basepath}/static/m/ext/muyang/css/techservice.css" />
+	</head>
+	<body>
+        <section class="module-select">
+            <div class="box-select">
+                <div class="select-line" id="select-line-1" data-status="closed" data-href="box-options-1" data-id="s0">
+                    <span>饲料</span>
+                    <label></label>
+                </div>
+                <div class="box-options" id="box-options-1" style="display: none;">
+
+                </div>
+            </div>
+            <div class="box-select">
+                <div class="select-line"  id="select-line-2" data-status="closed" data-href="box-options-2"  data-id="g0">
+                    <span>产品组别</span>
+                    <label class="arrow"></label>
+                </div>
+                <div class="box-options" id="box-options-2" style="display: none;">
+
+                </div>
+            </div>
+        </section>
+        <section class="module-group-show" id="module-group-show">
+            <!--<div class="result-line">-->
+                <!--<div class="base-info">-->
+                    <!--<label class="arrow"></label>-->
+                    <!--<div class="man-info">-->
+                        <!--<span class="name">赵波</span>-->
+                        <!--<span class="department">研究院</span>-->
+                        <!--<span class="position">主管</span>-->
+                    <!--</div>-->
+                    <!--<div class="product-info">混合产品、喷涂、添加产品</div>-->
+                <!--</div>-->
+                <!--<div class="more-info">-->
+                    <!--<label class="arrow"></label>-->
+                    <!--<div class="series">-->
+                        <!--混合产品、喷涂、添加产品-->
+                    <!--</div>-->
+                    <!--<div class="tel">139999999999</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </section>
+        <script type="text/javascript" src="${basepath}/static/m/ext/muyang/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="${basepath}/static/m/ext/muyang/js/techservice.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,72 @@
+html,body{
+    font-family: "microsoft yahei";
+}
+.todosign{
+    margin: 0px;
+    padding: 10px;
+    margin-top: 60px;
+}
+.arow{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    max-width: 640px;
+    display: block;
+    overflow: hidden;
+    margin: 0px auto;
+}
+.riliicon{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 20px;
+
+}
+.fontstyle{
+    color: #53575E;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.sign-btn{
+    border-radius: 5px;
+    border: 1px solid #4a90e2;
+    display: block;
+    overflow: hidden;
+    height: 48px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 48px;
+    color: #4a90e2;
+}
+.sign-btn:hover{
+
+}
+.sign-btn>img{
+    height: 30px;
+    margin: 9px;
+    float: left;
+    margin-left: 35%;
+}
+.sign-btn>span{
+    float: left;
+}
+#tishi{
+    left: 35%;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    border-shadow:3px 3px 6px #666;
+    border: 1px solid #000000;
+    background-color: #000000;
+    opacity:0;
+    background-clip:padding-box;
+}

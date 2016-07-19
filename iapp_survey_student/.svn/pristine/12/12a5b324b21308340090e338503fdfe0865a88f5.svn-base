@@ -1,0 +1,130 @@
+.big-title{
+    font-size: 20px;
+    margin: 16px 16px;
+    color: #53575E;
+}
+.rowline{
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
+.classitem{
+    display: block;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius:5px;
+    border: 1px solid #CCCCCC;
+    background-clip: padding-box;
+    padding: 8px;
+    float: left;
+    margin-bottom: 16px;
+    height: 102px;
+}
+.classTitle{
+    display: block;
+    font-size: 16px;
+    border-left: 2px solid #529bea;
+    padding-left: 8px;
+    color: #53575E;
+    margin: 6px 0px 8px;
+}
+.classCount{
+    display: block;
+    float: right;
+    font-size: 14px;
+    margin-top: -28px;
+    color: #CCCCCC;
+}
+.classcontent{
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+}
+/*列表页面*/
+.categoryTags{
+    margin: 24px 16px 0px;
+    font-size: 16px;
+    line-height: 28px;
+    height: 56px;
+    display: block;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.classBtn{
+    overflow: hidden;
+    padding: 0px 5px;
+    width: auto;
+    display: inline-block;
+}
+.classBtn.active{
+    color: #ffffff;
+    background-color: #529bea;
+    border-radius: 5px;
+}
+.pulldown{
+    height: 28px;
+    text-align: right;
+    padding-right: 16px;
+    color: #529bea;
+    border-bottom: 1px solid #CCCCCC;
+    background-clip: padding-box;
+}
+.series{
+    display: block;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 16px 8px;
+    width: 100%;
+}
+.seriesItem{
+    border: 1px solid #CCCCCC;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.seriesItem>.bigImg{
+    width: 100%;
+}
+.seriesItem .ge-list li{
+    padding: 16px 0px;
+}
+.seriesItem .ge-list li:last-child{
+    border: none;
+}
+.seriesItem>h1{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #53575E;
+    font-size: 18px;
+    line-height: 34px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6)!important;
+    text-align: left;
+    filter: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');
+    height: 34px;
+    display: block;
+    overflow: hidden;
+    color: #ffffff;
+    margin-top: -38px;
+}
+.seriesItem>p{
+    color: #999999;
+    font-size: 14px;
+    line-height: 28px;
+}
+.seriesItem .flleft{
+    display: block;
+    text-align: right;
+}

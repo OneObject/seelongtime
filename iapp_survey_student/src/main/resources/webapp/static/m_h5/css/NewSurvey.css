@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+article.survey{width:100%;height:100%;background:#f8f8f8;}
+.survey section.infoBox{padding:15px 10px 12px;box-sizing:border-box;width:100%;background:#fff;border-bottom:1px solid #e0e0e0;}
+.survey section.infoBox ul{width:100%;}
+.survey section.infoBox ul li{width:100%;font-size:12px;line-height:12px;color:#888;}
+.survey section.infoBox ul li span{float:right;display:inline-block;font-size:14px;margin-top:-16px;height:16px;line-height:16px;}
+.survey section.infoBox ul li span i{margin-right:4px;}
+.survey section.infoBox ul li:first-child{height:auto;min-height:16px;font-size:16px;line-height:18px;margin-bottom:15px;color:#53575e;}
+.survey section.infoBox ul li:last-child{margin-top:12px;line-height:14px;}
+.survey section.infoBox p.msg{border:1px solid;width:100%;text-align:center;font-size:16px;height:52px;line-height:50px;box-sizing:border-box;margin-bottom:20px;}
+
+.survey section.questionBox{padding:14px 8px;box-sizing:border-box;width:100%;overflow:hidden;}
+.survey section.questionBox .qHead{box-sizing:content-box;height:16px;line-height:16px;padding-bottom:10px;border-bottom:1px solid #e0e0e0;}
+.survey section.questionBox .qHead span:first-child{font-size:16px;color:#53575e;}
+.survey section.questionBox .qHead span:last-child{font-size:12px;color:#888;float:right;margin-right:10px;}
+.survey section.questionBox dl{padding:18px 0px 20px;width:100%;}
+.survey section.questionBox dl dt{margin-bottom:15px;font-size:16px;line-height:16px;font-weight:normal;box-sizing:content-box;}
+.survey section.questionBox dl dt label{font-size:12px;color:#C26468;font-weight:normal;display:inline;margin-bottom:0px;}
+.survey section.questionBox dl dt p{display:inline-block;}
+/*.survey section.questionBox dl.sel > dd{display:-moz-box;display:-webkit-box;display:box;-moz-box-orient: horizontal;-webkit-box-orient: horizontal;box-orient: horizontal;-moz-box-align: start;width:100%;}
+*/
+.survey section.questionBox dl.sel > dd{position:relative;}
+.survey section.questionBox dl dd{overflow:hidden;margin-top:12px;border:1px solid #f2f2f2;padding:10px;min-height:36px;background:#fff;line-height:22px;box-sizing:border-box;font-size:16px;}
+.survey section.questionBox dl dt+dd{margin-top:0px;}
+.survey section.questionBox dl dd span.select{margin-right:10px;margin-top:2px;border:1px solid #e4e4e4;height:16px;width:16px;line-height:16px;display:inline-block;border-radius:16px;position:absolute;top:10px;left:12px;}
+.survey section.questionBox dl dd span.select2{border-radius:0px;}
+.survey section.questionBox dl dd span.select input{-moz-opacity:0;filter:alpha(opacity=0);opacity:0;}
+/*.survey section.questionBox dl dd span.select + span{-moz-box-flex:1;-webkit-box-flex:1;box-flex:1;}*/
+.survey section.questionBox dl dd span.select + span{display: block;padding-left:26px;font-size:16px;}
+.survey section.questionBox dl dd span:last-child{line-height:22px;}
+.survey section.questionBox dl dd span.dan{background:url(../img/dian.png) center center no-repeat;background-size:100% 100%;}
+.survey section.questionBox dl dd span.duo{background:url(../img/duo.png) center center no-repeat;background-size:100% 100%;}
+.survey section.questionBox dl dd textarea{border:none;width:100%;font-size:16px;overflow:hidden;min-height:44px;word-wrap:break-word;color:#53575e;}
+.survey section.questionBox dl dd p{padding-bottom:8px;width:100%;}
+.survey section.questionBox dl dd p img{width:100%;display:block;}
+
+.survey section.submit{padding:20px 8px 34px 8px;box-sizing:border-box;width:100%;}
+.survey section.submit span{display:block;border:1px solid;font-size:16px;height:36px;line-height:36px;text-align:center;cursor:pointer;}
+
+.survey section.questionBox dl.grade{padding-bottom:0px;}
+.survey section.questionBox dl.grade dd{background:none;border:none;padding:0px;display:box;}
+.survey section.questionBox dl.grade dd label{display:inline-block;font-size:16px;text-align:center;margin:0 15px 15px 0;border:1px solid #E0E0E0;background:#fff;color:#707070;cursor:pointer;}
+.survey section.questionBox dl.grade dd label.cur{color:#fff;}
+
+.survey section.questionBox dl.result dd{-moz-display:box;-webkit-display:box;display:box;float:left;width:100%;line-height:16px;box-sizing:border-box;}
+.survey section.questionBox dl.result dd span{line-height:16px;}
+.survey section.questionBox dl.result dd span:first-child{width:84px;float:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.survey section.questionBox dl.result dd span:last-child{width:46px;float:right;text-align:right;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.survey section.questionBox dl.result dd span.per{-moz-box-flex:1;-webkit-box-flex:1;box-flex:1;height:16px;line-height:16px;display:inline-block;}
+.survey section.questionBox dl.result dd span.per label{height:12px;background:#627f26;border-radius:4px;display:inline-block;}
+/*from l*/
+.survey section.questionBox dl dt.label{position:relative;}
+.survey section.questionBox dl dt.label label.block{position:absolute;width:2px;height:14px;display:inline-block;background-color:#627f26;left:0px;top:1px;}
+.survey section.questionBox dl dt.label span{display:inline-block;margin-left:5px;}
+
+.survey section.msgBox{padding:34px 8px;box-sizing:border-box;width:100%;}
+.survey section.msgBox p{border:1px solid;width:100%;text-align:center;font-size:16px;height:52px;line-height:50px;box-sizing:border-box;}
+.survey section.msgBox2{padding:42px 8px;}
+.survey section.msgBox2+p{font-size:16px;color:#53575e;width:100%;height:16px;line-height:16px;padding:0px;margin:0px;text-align:center;}
+
+.survey dl.sel_dan dd,.survey dl.sel_duo dd{cursor:pointer;}
+
+.survey section.resultBox{padding:12px 8px;box-sizing:border-box;width:100%;overflow:hidden;}
+.survey section.resultBox .rHead{height:16px;line-height:16px;padding:0px 0px 14px;font-size:16px;}
+.survey section.resultBox dl{padding-bottom:14px;}
+.survey section.resultBox dl dt{padding-bottom:10px;font-size:14px;line-height:14px;}
+.survey section.resultBox dl dd{margin-bottom:14px;box-sizing:border-box;padding:10px;border:1px solid #f2f2f2;background:#fff;min-height:36px;overflow:hidden;font-size:14px;}
+.survey section.resultBox dl dd p{padding-bottom:10px;width:100%;}
+.survey section.resultBox dl dd p img{width:100%;display:block;}
+.survey section.resultBox dl dd span{display:inline-block;font-size:14px;height:14px;line-height:14px;float:left;}
+.survey section.resultBox dl dd p+span,.survey section.resultBox dl dd span:first-child{width:50px;margin-right:5px;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.survey section.resultBox dl dd span.per+span{width:62px;padding:0px 4px;color:#627f26;float:right;}
+.survey section.resultBox dl dd span.per+span i{margin-right:2px;}
+.survey section.resultBox dl dd span.per{height:14px;line-height:14px;}
+.survey section.resultBox dl dd span.per label.b{display:inline-block;width:38px;color:#999;font-size:14px;text-align:center;margin-left:5px;}
+.survey section.resultBox dl dd span.per label.a{height:14px;background:#627f26;border-radius:4px;display:inline-block;}
+.survey section.resultBox dl dd textarea{border:none;width:100%;font-size:16px;overflow:hidden;height:auto;word-wrap:break-word;color:#53575e;background:#fff;font-size:14px;}
+.survey section.resultBox dl dd label.color{color:#627f26;margin-left:5px;font-size:14px;}
+/*from l*/
+.survey section.resultBox dl dt.label{position:relative;}
+.survey section.resultBox dl dt.label label.block{position:absolute;width:2px;height:14px;display:inline-block;background-color:#627f26;left:0px;top:1px;}
+.survey section.resultBox dl dt.label span{display:inline-block;margin-left:5px;}
+
+.survey section.resultBox dl.result1 dd{-moz-display:box;-webkit-display:box;display:box;float:left;width:100%;line-height:16px;box-sizing:border-box;}
+.survey section.resultBox dl.result1 dd span{line-height:16px;}
+.survey section.resultBox dl.result1 dd span:first-child{width:84px;float:left;overflow:hidden;margin-right:0px;white-space:nowrap;text-overflow:ellipsis;text-align:left;height:16px;}
+.survey section.resultBox dl.result1 dd span:last-child{width:46px;float:right;text-align:right;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#53575e;padding:0px;}
+.survey section.resultBox dl.result1 dd span.per{-moz-box-flex:1;-webkit-box-flex:1;box-flex:1;height:16px;line-height:16px;display:inline-block;}
+.survey section.resultBox dl.result1 dd span.per label{height:12px;background:#627f26;border-radius:4px;display:inline-block;}
+
+
+/*调研模块(完善)*/
+.survey dl,.survey ul{margin-bottom:0px;}
+.survey div.title{width:100%;height:38px;line-height:38px;padding:6px 0px;text-align:center;font-size:16px;color:#fff;background-color:#009933;}
+.survey section.questionBox dl dd > input{display:block;border:1px solid #eee;height:34px;padding:5px;font-size:14px;color:#999;margin:8px 0px 2px 28px;width:90%;box-sizing:border-box;}
+.survey section.questionBox dl dl dt{color:#666;font-size:14px;margin-bottom:10px;}
+.survey section.questionBox dl li span.select{margin-right:10px;margin-top:2px;border:1px solid #e4e4e4;height:16px;width:16px;line-height:16px;display:inline-block;border-radius:16px;position:absolute;top:0px;left:2px;}
+.survey section.questionBox dl.duanluo dt{color:#111;line-height:22px;margin-bottom:5px;}
+
+.survey section.questionBox dl.dafen>dd{background:none;border:none;padding:0px;}
+.survey section.questionBox dl.dafen dl{padding:0px 0px 25px 0px;}
+.survey section.questionBox dl.dafen ul{padding:0px;}
+.survey section.questionBox dl.dafen ul li.star{margin:8px 0px;overflow:hidden;}
+.survey section.questionBox dl.dafen ul li.star span{display:inline-block;width:20%;text-align:center;float:left;cursor:pointer;margin:2px 0 6px;}
+.survey section.questionBox dl.dafen ul li.star i{display:inline-block;font-size:20px;color:#eee;}
+.survey section.questionBox dl.dafen ul li.star span.cur i{color:#f8e072;}
+.survey section.questionBox dl.dafen li.label3{width:100%;padding:0 10px;float:left;box-sizing:border-box;}
+.survey section.questionBox dl.dafen li.label3 label{font-size:12px;color#333;display:inline-block;font-weight:normal;width:33%;float:left;}
+.survey section.questionBox dl.dafen li.label3 label.a{text-align:left;box-sizing: border-box;padding-right:10px;}
+.survey section.questionBox dl.dafen li.label3 label.b{text-align:left;}
+.survey section.questionBox dl.dafen li.label3 label.c{text-align:left;box-sizing: border-box;padding-left:10px;}
+
+.survey section.questionBox dl.dafen dl dd{position:relative;}
+.survey section.questionBox dl.dafen dl dd > label{position:absolute;right:5px;top:3px;font-size:12px;color:#C26468;font-weight:normal;margin-bottom:0px;display:inline;}
+
+.survey section.questionBox dl.jzdanxuan>dd{background:none;border:none;padding:0px;}
+.survey section.questionBox dl.jzdanxuan dl{padding:0px 0px 20px 0px;}
+.survey section.questionBox dl.jzdanxuan dl li{cursor:pointer;line-height:22px;margin:8px 0px;position:relative;}
+
+.survey section.questionBox dl.jzduoxuan>dd{background:none;border:none;padding:0px;}
+.survey section.questionBox dl.jzduoxuan dl{padding:0px 0px 20px 0px;}
+.survey section.questionBox dl.jzduoxuan dl li{cursor:pointer;line-height:22px;margin:8px 0px;position:relative;}
+
+.survey #progressBar{width:100%;height:4px;}
+.survey #progressBar span{width:1%;height:4px;background:#009933;display:block;}
+
+.survey div.ctlBox{padding:20px 8px 34px 8px;box-sizing:border-box;width:100%;text-align:center;overflow:hidden;}
+.survey div.ctlBox span{display:block;border:1px solid;font-size:16px;height:36px;line-height:36px;text-align:center;cursor:pointer;border-color:#009933;color:#009933;}
+.survey div.ctlBox span.a{width:130px;float:left;}
+.survey div.ctlBox span.b{width:130px;float:right;}
+.survey div.ctlBox span.c{width:100%;float:left;}
+
+.survey section.questionBox dl li span.select2{border-radius: 0px;}
+
+.survey section.questionBox dl dd > input.invalid{background-color:#FFEBEB;color:#333;}
+.survey .blockTishi{height:24px;background:#FF8181;color:#fff;line-height:24px;padding:8px;margin:18px 0 0px 0;font-size:16px;border:1px solid #ddd;box-shadow:1px 1px 3px #ddd;box-sizing:content-box;}

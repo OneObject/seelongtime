@@ -1,0 +1,1004 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+<!-- 
+	<parent>
+		<groupId>com.myctu.platform.components</groupId>
+		<artifactId>platform-repository</artifactId>
+		<version>0.1</version>
+	</parent>
+ -->
+ 
+ 
+	<groupId>com.longtime.ajy</groupId>
+	<artifactId>iapp_survey</artifactId>
+	<version>0.2-SNAPSHOT</version>
+
+	<name>iapp_survey</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<!-- cut components -->
+		<ctu-utils.version>0.2.3-SNAPSHOT</ctu-utils.version>
+		<ctu-cache.version>0.5-SNAPSHOT</ctu-cache.version>
+		<ctu-spring-ext.version>0.3-SNAPSHOT</ctu-spring-ext.version>
+		<cas-agent.version>0.5-SNAPSHOT</cas-agent.version>
+		<gateway-agent.version>0.2.11-SNAPSHOT</gateway-agent.version>
+		<!-- spring -->
+		<spring.version>3.1.2.RELEASE</spring.version>
+		<!-- mongo -->
+		<mongodb.driver.version>2.10.1</mongodb.driver.version>
+		<guava.version>16.0.1</guava.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<mysqldriver.version>5.1.20</mysqldriver.version>
+		<!-- orm -->
+		<hibernate.version>4.2.0.Final</hibernate.version>
+		<dao-hibernate.version>1.2.0</dao-hibernate.version>
+		<httpclient.version>4.3.2</httpclient.version>
+		<sitemesh.version>2.4.2</sitemesh.version>
+		<druid.version>1.0.2</druid.version>
+		<slf4j.version>1.7.5</slf4j.version>
+		<logback.version>1.0.13</logback.version>
+		<junit.version>4.11</junit.version>
+		<mockito.version>1.9.5</mockito.version>
+		<commons-lang3.version>3.1</commons-lang3.version>
+		<joda.version>2.3</joda.version>
+		<jongo.version>1.1</jongo.version>
+		<freemarker.version>2.3.22</freemarker.version>
+		<javax-mail.version>1.5.0-b01</javax-mail.version>
+	</properties>
+
+
+	<dependencies>
+	
+		<dependency>
+		    <groupId>cn.jpush.api</groupId>
+		    <artifactId>jpush-client</artifactId>
+		    <version>3.1.3</version>
+		    <exclusions>
+		    	<exclusion>
+		          <groupId>org.slf4j</groupId>
+		          <artifactId>slf4j-log4j12</artifactId>
+		        </exclusion>
+		    </exclusions>
+		</dependency>
+	
+		<!-- weixin sdk -->
+		<dependency>
+	  		<groupId>me.chanjar</groupId>
+	  		<artifactId>weixin-java-mp</artifactId>
+	  		<version>1.1.3</version> 
+	  		<!-- <version>1.1.2-SNAPSHOT</version> -->
+		</dependency>
+		<dependency>
+			<groupId>me.chanjar</groupId>
+	  		<artifactId>weixin-java-cp</artifactId>
+	  		<version>1.1.3</version> 
+	  		<!-- <version>1.1.2-SNAPSHOT</version> -->
+		</dependency>
+		
+	
+		<!-- 上传图片 -->
+		<dependency>
+			<groupId>net.coobird</groupId>
+			<artifactId>thumbnailator</artifactId>
+			<version>0.4.8</version>
+		</dependency>
+		<!-- 上传图片 -->
+	
+		<!-- credit server -->
+		<!-- <dependency>
+			  <groupId>com.longtime</groupId>
+			  <artifactId>message</artifactId>
+			  <version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
+		
+		<!-- common-dao -->
+		<dependency>
+	   		<groupId>com.longtime.common</groupId>
+	  			<artifactId>common-dao</artifactId>
+	   		<version>0.1-GA</version>
+		</dependency>
+		
+		<!-- credit server -->
+		<dependency>
+			<groupId>com.longtime</groupId>
+			<artifactId>credit-server</artifactId>
+			<version>1.0.3-GA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.longtime.common</groupId>
+			<artifactId>common-cache-pubsub-queue</artifactId>
+			<version>0.2-GA</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.15</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.3.173</version>
+		</dependency>
+
+		<dependency>
+			<groupId>scorm.jar</groupId>
+			<artifactId>scorm.jar</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/scorm.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>comet4j-tomcat7.jar</groupId>
+			<artifactId>comet4j-tomcat7.jar</artifactId>
+			<version>0.1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/comet4j-tomcat7-0.1.0.jar</systemPath>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>ant</groupId>
+			<artifactId>ant</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		
+		
+		
+		<!-- sitemesh2 -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>${sitemesh.version}</version>
+		</dependency>
+
+		<!-- hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.genericdao</groupId>
+			<artifactId>dao-hibernate</artifactId>
+			<version>${dao-hibernate.version}</version> <!-- use current version -->
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysqldriver.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.telecom.ctu.projects</groupId> <artifactId>ctu-framework</artifactId> 
+			<version>0.1-SNAPSHOT</version> <exclusions> <exclusion> <groupId>org.eclipse.jetty</groupId> 
+			<artifactId>jetty-server</artifactId> </exclusion> <exclusion> <groupId>org.eclipse.jetty</groupId> 
+			<artifactId>jetty-jsp</artifactId> </exclusion> <exclusion> <groupId>org.eclipse.jetty</groupId> 
+			<artifactId>jetty-webapp</artifactId> </exclusion> <exclusion> <groupId>org.eclipse.jetty</groupId> 
+			<artifactId>jetty-jmx</artifactId> </exclusion> <exclusion> <groupId>com.myctu.platform.components.service-gateway</groupId> 
+			<artifactId>service-gateway-agent</artifactId> </exclusion> </exclusions> 
+			</dependency> -->
+
+		<!--
+		<dependency>
+			<groupId>com.myctu.platform.components.platform-repository</groupId>
+			<artifactId>repository-engine</artifactId>
+			<version>0.4.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-server</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-webapp</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-jmx</artifactId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>com.myctu.platform.components.platform-repository</groupId>
+			<artifactId>repository-engine</artifactId>
+			<version>0.4.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/repository-engine-0.4.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>com.myctu.platform.components.service-gateway</groupId>
+			<artifactId>service-gateway-agent</artifactId>
+			<version>0.3-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/service-gateway-agent-0.3-SNAPSHOT.jar</systemPath>
+		</dependency>
+		 -->
+		<dependency>
+			<groupId>com.telecom.ctu.platform.common</groupId>
+			<artifactId>ctu-protocol</artifactId>
+			<version>0.3.3-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/ctu-protocol-0.3.3-SNAPSHOT.jar</systemPath>
+		</dependency>
+				<!-- platform library -->
+		<dependency>
+			<groupId>com.telecom.ctu.platform.common</groupId>
+			<artifactId>spring-ext</artifactId>
+			<version>${ctu-spring-ext.version}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/spring-ext-0.3-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+
+		<!-- platform lib -->
+		<dependency>
+			<groupId>com.telecom.ctu.platform.common</groupId>
+			<artifactId>ctu-utils</artifactId>
+			<version>${ctu-utils.version}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/resources/webapp/WEB-INF/lib/ctu-utils-0.2.3-SNAPSHOT.jar</systemPath>
+		</dependency>
+		
+		
+		
+
+		<!-- json 支持 -->
+		<!-- -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<!-- 加密 -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcpg-jdk16</artifactId>
+			<version>1.45</version>
+		</dependency>
+		
+		 <!-- ognl -->
+        <dependency>
+            <groupId>ognl</groupId>
+            <artifactId>ognl</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+        
+
+		<!-- sso -->
+		<!-- <dependency> <groupId>com.telecom.ctu.platform.components.cas</groupId> 
+			<artifactId>cas-agent</artifactId> <version>0.4-RELEASE</version> </dependency> -->
+
+
+		<!-- LOGGING begin -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- 代码直接调用log4j会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- 代码直接调用common-logging会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- 代码直接调用java.util.logging会被桥接到slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+
+		<!-- j2ee -->
+		<!-- <dependency> <groupId>org.eclipse.jetty.aggregate</groupId> <artifactId>jetty-all-server</artifactId> 
+			</dependency> <dependency> <groupId>org.eclipse.jetty</groupId> <artifactId>jetty-jsp</artifactId> 
+			</dependency> -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<!-- 支持写jsp时标签代码提示 -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- mongodb -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>${mongodb.driver.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.jongo</groupId>
+		    <artifactId>jongo</artifactId>
+		    <version>${jongo.version}</version>
+		</dependency>
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+
+	 	<!-- template engine -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+
+<!-- GENERAL UTILS begin -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<!-- joda  -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>20030211.134440</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2</version>
+		</dependency>
+		<!-- 加密 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpg-jdk16</artifactId>
+            <version>1.45</version>
+        </dependency>
+        
+		 <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.4</version>
+      </dependency>
+		
+		<!-- GENERAL UTILS end -->
+
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.apache.httpcomponents</groupId>
+  			<artifactId>httpclient</artifactId>
+  			<version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.apache.httpcomponents</groupId>
+  			<artifactId>httpcore</artifactId>
+  			<version>${httpclient.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.0.1.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-expression</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons-core</artifactId>
+			<version>1.2.1.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- AOP begin -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.7.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.7.3</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!-- AOP end -->
+
+		<!-- 定时器 -->
+		<dependency>
+			<groupId>org.opensymphony.quartz</groupId>
+			<artifactId>quartz-all</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javax-mail.version}</version>
+        </dependency>
+
+		<!-- test support -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3</version>
+		</dependency>
+
+		<!-- redis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+		<!-- DWR -->
+		<dependency>
+			<groupId>org.directwebremoting</groupId>
+			<artifactId>dwr</artifactId>
+			<version>3.0.0-rc3-SNAPSHOT</version>
+		</dependency>
+		<!-- pull -->
+		<dependency>
+			<groupId>xmlpull</groupId>
+			<artifactId>xmlpull</artifactId>
+			<version>1.1.3.1</version>
+		</dependency>
+
+		<!-- 七牛 -->
+		<dependency>
+    		<groupId>com.qiniu</groupId>
+   			<artifactId>sdk</artifactId>
+    		<version>6.1.0</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.qiniu</groupId>
+    		<artifactId>qiniu-java-sdk</artifactId>
+    		<version>[7.0.0, 7.0.99]</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<excludes>
+					<exclude>webapp/**</exclude> <!-- 排查 webapp目录 -->
+				</excludes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
+					<finalName>${project.artifactId}</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<debug>true</debug>
+					<showWarnings>true</showWarnings>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<server>tomcat</server>
+					<ignorePackaging>true</ignorePackaging>
+					<path>/iapp</path>
+					<port>8888</port>
+					<uriEncoding>UTF-8</uriEncoding>
+					<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory> <!-- webapp 目录 -->
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.3-SNAPSHOT</version>
+				<configuration>
+					<server>tomcat-7</server>
+					<ignorePackaging>true</ignorePackaging>
+					<protocol>org.apache.coyote.http11.Http11NioProtocol</protocol>
+					<path>/iapp</path>
+					<port>8888</port>
+					<uriEncoding>UTF-8</uriEncoding>
+					<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory> <!-- webapp 目录 -->
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4.3</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<includes>
+						<include>**/**.class</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+	<repositories>
+
+<!-- 
+		<repository>
+			<id>myctu.repository.snapshot</id>
+			<url>http://218.1.73.6/nexus/content/repositories/snapshot</url>
+			<snapshots>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>myctu.repository.release</id>
+			<url>http://218.1.73.6/nexus/content/repositories/release</url>
+		</repository>
+ -->
+		<repository>
+			<id>main</id>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+		
+		
+
+		<!-- <repository> <id>microant</id> <url>http://microant.googlecode.com/svn/maven2</url> 
+			<snapshots> <updatePolicy>never</updatePolicy> </snapshots> </repository> -->
+
+		 <repository>
+			<id>spring-releases</id>
+			<name>Spring Maven RELEASE Repository</name>
+			<url>http://maven.springframework.org/release</url>
+		</repository>
+		<repository>
+			<id>spring-milestone</id>
+			<name>Spring Maven MILESTONE Repository</name>
+			<url>http://maven.springframework.org/milestone</url>
+		</repository>
+		<repository>
+			<id>repository.jboss.org</id>
+			<url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jboss.maven2</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>sonatype-oss-repo</id>
+			<name>Sonatype Open 
+				Source maven snapshot repo</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</repository> 
+
+	</repositories>
+
+	 <pluginRepositories> <pluginRepository> <id>apache.snapshots</id> <name>Apache 
+		Snapshots</name> <url> http://repository.apache.org/content/groups/snapshots-group/ 
+		</url> <releases> <enabled>false</enabled> </releases> <snapshots> <enabled>true</enabled> 
+		</snapshots> </pluginRepository> </pluginRepositories> 
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/dev</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/test/web.xml</webXml> -->
+							<warName>iapp_survey</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp_survey</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>test</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/test</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/test/web.xml</webXml> -->
+							<warName>iapp_survey</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp_survey</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/release</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<detail>true</detail>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+							<warName>iapp_survey</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp_survey</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>release2</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/release2</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<detail>true</detail>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+							<warName>iapp</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>guoyao</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/guoyao</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<detail>true</detail>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+							<warName>iapp</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>muyang</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/muyang</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<detail>true</detail>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+							<warName>iapp</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>enn</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>${basedir}/profile/enn</directory>
+					</resource>
+				</resources>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.1.1</version>
+						<configuration>
+							<detail>true</detail>
+							<containerConfigXML>svn.info</containerConfigXML>
+							<!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+							<warName>iapp</warName>
+							<warSourceDirectory>${basedir}/src/main/resources/webapp</warSourceDirectory>
+							<outputDirectory>${project.build.directory}/iapp</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+	
+	
+
+	<packaging>war</packaging>
+</project>

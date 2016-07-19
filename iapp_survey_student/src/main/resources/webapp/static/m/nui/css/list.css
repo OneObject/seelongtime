@@ -1,0 +1,131 @@
+.ge-list{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+    background-color: #ffffff;
+    width: 100%;
+}
+.ge-list li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 8px 16px;
+}
+.item-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+.item-font span{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.item-font span:first-child{
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+.item-title{
+    font-size: 18px;
+    color: #53575e;
+}
+.item-intro{
+    font-size: 14px;
+    line-height: 28px;
+    color: #999999;
+    max-height: 56px;
+}
+
+/*-------------------------------------------------左图右文的列表--------------------------------------------------------------------*/
+.img-font>.item-font{
+    padding-left: 88px;
+    margin-top: -80px;
+    height: 80px;
+
+}
+.no-img>.item-font{
+    height: 80px;
+}
+.has-control span{
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+.item-control{
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+    font-size: 14px;
+    color: #999999;
+}
+.inline{
+    font-size: 18px;
+    color: #53575E;
+    display: block;
+    overflow: hidden;
+    line-height: 18px;
+    padding: 12px 0px 6px;
+}
+.inline span{
+    padding-right: 20px;
+    width: 100%;
+    display: block;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    float: left;
+    min-height: 18px;
+}
+.inline>span>.fa{
+    font-size: 24px;
+    margin-right: 8px;
+}
+.inline i{
+    font-size: 18px;
+    line-height: 28px;
+    float: right;
+    margin-top: -20px;
+}
+.tabBtn{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    height: 40px;
+    margin: 24px auto;
+    width: 204px;
+}
+
+.baseName,.baseTime{
+    border: 1px solid #529bea;
+    width: 100px;
+    display: inline-block;
+    height: 40px;
+    float: left;
+    background-clip: padding-box;
+    background-color: #ffffff;
+    font-size: 20px;
+    color: #529bea;
+}
+.baseName.active,.baseTime.active{
+    color: #ffffff;
+    background-color: #529bea;
+}
+.baseName{
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.baseTime{
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

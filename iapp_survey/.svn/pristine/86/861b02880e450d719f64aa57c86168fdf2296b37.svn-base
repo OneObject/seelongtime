@@ -1,0 +1,44 @@
+html,body{font-family: "微软雅黑";}
+.study-person {
+    width: 65px;
+    height: 65px;
+    display: block;
+    background-image: url("../images/icon-index.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.pass-rate {
+    width: 65px;
+    height: 65px;
+    display: block;
+    background-image: url("../images/icon-index.png");
+    background-position: -68px 0;
+    background-repeat: no-repeat;
+}
+.study-time {
+    width: 65px;
+    height: 65px;
+    display: block;
+    background-image: url("../images/icon-index.png");
+    background-position: -135px 0;
+    background-repeat: no-repeat;
+}
+.search_box{background-color: #EFEFEF;width: 100%;overflow: hidden;display: block;}
+.search_box .search_container{padding: 20px;margin-left: 20%;}
+.mt10{margin-top: 10px;}
+.search_condition{margin-top: 5px;padding: 10px 20px;background-color:#EFEFEF;width: 100%;display: block; }
+.search_condition .row{width: 80%;margin: 0 auto;}
+.condition_title{display: block;float: left;text-align: right;background-color: #FFFFFF;border: 1px solid #afafaf;padding: 5px 10px;}
+.condition_item{float: left;margin-left: -40px;}
+.condition_item>li{float: left;list-style: none;cursor: pointer;}
+.condition_item>.check_item{padding: 5px 10px;display: block;margin-left: 5px;border: 1px solid #AFAFAF;}
+.item_checked{background-color: #EA6161;color: #FFFFFF;}
+.eve_checked{display: table;}
+.checked_father{margin-left: 10px;border: 1px solid #AFAFAF;}
+.item_dropdown{width: 28px;height: 28px;overflow: hidden;line-height: 14px;}
+.checked_father .btn-group .btn{padding: 0px;}
+.btn-name{float: left;padding: 5px 10px;}
+.ceng{padding: 5px 5px;color: #172784;cursor: text;}
+.btn_group_center{display: block;margin: 0px auto;width: 320px;margin-top: 10px;margin-bottom: 30px;}
+.pagination{float: right;}
+.mt10{margin-top: 10px;}

@@ -1,0 +1,164 @@
+html,body,div,span,a,p,section,article,dl,ul,dd,dt,li,img{
+    margin:0;padding:0;border:0;
+}
+dl,ul{
+    list-style: none;
+}
+a,button,input,textarea,span,img,li,div{
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+section,div,a,ul,dl,span,p,dd,dt,li,nav{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    min-width: 320px;
+    color:rgba(0,0,0,0.87);
+    -ms-touch-action:none;
+}
+input[type="search"] {
+    -webkit-appearance: none;
+}
+a{
+    color:rgba(0,0,0,0.87);
+    text-decoration: none;
+}
+section.header{
+	width:100%;
+	height: 144px;
+	background: #529bea;
+	z-index:0;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.header h1{
+	margin-top:30px;
+	font-size:18px;
+	text-align: center;
+	color:#fff;
+}
+.logo{
+	position:absolute;
+	width:144px;
+	height:144px;
+	border-radius:144px;
+	background:#fff;
+	left:50%;
+	margin-left:-72px;
+	bottom:0;
+	margin-bottom:-72px;
+}
+.logo img{
+	display: block;
+	width:138px;
+	margin:3px;
+	height:138px;
+	border-radius: 138px;
+}
+nav {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 240px 12px 15px 12px;
+}
+nav div {
+	float: left;
+	width: 100%;
+	height: 50%;
+	position: relative;
+}
+nav span {
+	display: block;
+	width: 33%;
+	height: 100%;
+	float: left;
+	position: relative;
+
+}
+nav div span:nth-child(2) {
+	width: 34%;
+}
+nav a{
+	display: block;
+	width: 100%;
+	position: absolute;
+	left:50%;
+	top:50%;
+
+}
+nav div:nth-child(1) a{
+	-webkit-transform: translate3d(-50%, -55%, 0);
+	transform: translate3d(-50%, -55%, 0);
+}
+nav div:nth-child(2) a{
+	-webkit-transform: translate3d(-50%, -53%, 0);
+	transform: translate3d(-50%, -53%, 0);
+}
+nav a img {
+	display: block;
+	width: 100%;
+}
+header{
+	height:50px;
+	line-height: 50px;
+	background:#fff;
+	color:#529bea;
+	position:relative;
+}
+header span{
+	position:absolute;
+	display: block;
+	width:50px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+}
+header span img{
+	display: block;
+	width:24px;
+	height:24px;
+	margin:13px auto;
+}
+header .title{
+	width:100%;
+	padding:0px 50px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	color:#529bea;
+	font-size:16px;
+	box-shadow: 0px 0px 5px #ccc;
+}
+.bg-color{
+	background-color:#eee;
+}
+.knowledge-list{
+	width:100%;
+	padding:15px 15px 15px 15px;
+	overflow: hidden;
+}
+.knowledge-list > span{
+	display: inline-block;
+	width:50%;
+	height:132px;
+	float:left;
+	margin-top:15px;
+}
+.knowledge-list a {
+	display: block;
+	background: #fff;
+	border-radius: 20px;
+	width:132px;
+	height:132px;
+	margin:0 auto;
+	box-shadow: 0px 0px 5px #ccc;
+}
+.knowledge-list a img{
+	display: block;
+	height:120px;
+	margin:0 auto;
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd"
+	default-autowire="no" default-lazy-init="false">
+
+
+	<!-- 线程执行器配置，用于任务注册 -->
+	<!-- <bean id="executor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="100" />
+		<property name="queueCapacity" value="500" />
+	</bean> -->
+
+
+	<!-- 定时查询，生成试卷-->
+	<bean id="job_create_test_paper"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="createTestPaperTask" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false"/> <!-- 串行 -->
+	</bean>
+	<bean id="task_create_test_paper" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_create_test_paper" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="60000" /> <!-- 延迟10秒启动，然后每隔1分钟执行一次。 -->
+	</bean>
+	
+	<!-- 定时查询，改变考试状态-->
+	<!-- <bean id="job_change_exam_status"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="changeExamStatuTask" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false"/> 串行
+	</bean>
+	<bean id="task_change_exam_status" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_change_exam_status" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="60000" /> 延迟10秒启动，然后每隔1分钟执行一次。
+	</bean> -->
+	
+	<!-- 定时查询，删除redis内过期内容-->
+	<!-- <bean id="job_remove_cache"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="removeCacheTask" />
+		<property name="targetMethod" value="execute" />
+		<property name="concurrent" value="false"/> 串行
+	</bean>
+	<bean id="task_remove_cache" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_remove_cache" />
+		<property name="startDelay" value="60000" />
+		<property name="repeatInterval" value="86400000" /> 延迟10秒启动，然后每隔1天执行一次。
+	</bean> -->
+
+
+	<!-- 设置调度-->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="task_create_test_paper" /> <!-- 定时查询，生成试卷 -->
+				<!-- <ref bean="task_change_exam_status" />定时查询，更改考试状态
+				<ref bean="task_remove_cache" /> --><!-- 定时查询，移除redis过期信息 -->
+			</list>
+		</property>
+		<property name="taskExecutor" ref="executor" />
+	</bean>
+ 
+</beans>

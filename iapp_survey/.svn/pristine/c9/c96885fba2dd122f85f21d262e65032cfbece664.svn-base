@@ -1,0 +1,406 @@
+body {
+	font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+}
+
+.box {
+	overflow: hidden;
+	display: block;
+}
+
+.ixin_container {
+	
+}
+
+.ixin_item {
+	width: 342px;
+	float: left;
+	margin: 10px 15px;
+}
+
+.ixin_item.w2 {
+	width: 50%;
+}
+
+#edui1_elementpath {
+	display: none;
+}
+
+.btngroup {
+	display: block;
+	text-align: right;
+	padding: 10px 20px;
+}
+
+.preview {
+	width: 380px;
+	height: auto;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+	padding: 10px;
+	float: right;
+}
+
+.preview .title {
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #000;
+	height: 36px;
+	line-height: 36px;
+}
+
+.preview .title a {
+	color: #000;
+}
+
+.preview  .datetime {
+	height: 24px;
+	line-height: 24px;
+	color: #999;
+	font-size: 12px;
+}
+
+.preview  .img {
+	width: 100%;
+}
+
+.preview  .img img {
+	width: 350px;
+	height: 200px;
+}
+
+.preview  .description {
+	font-size: 14px;
+	font-family: "微软雅黑";
+	line-height: 28px;
+}
+
+.edit {
+	width: 100%;
+	border: 1px solid #ccc;
+	float: left;
+	min-height: 200px;
+}
+
+.edit .upload_box {
+	width: 100%;
+	height: 200px;
+}
+
+.fl {
+	float: right;
+}
+
+.fr {
+	float: right;
+	clear: right;
+}
+
+.minw {
+	min-width: 50px;
+}
+
+.keywords_list {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.arule {
+	width: 100%;
+	border: 1px solid #D3D3D3;
+	margin-bottom: 20px;
+}
+
+.titlebar {
+	height: 30px;
+	background-color: #d6d6d6;
+	line-height: 30px;
+}
+
+.keytitle {
+	padding-left: 10px;
+	float: left;
+}
+
+.keytitle span:FIRST-CHILD {
+	color: #000;
+	font-weight: bold;
+}
+
+.opendiv {
+	float: right;
+	padding-right: 20px;
+}
+
+.detailbox {
+	min-height: 20px;
+	padding: 5px 20px;
+	line-height: 30px;
+}
+
+.detailbox ul li {
+	float: left;
+	list-style: none;
+}
+
+.keyword {
+	display: block;
+	background-color: #d9d9d9;
+	padding: 2px 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.keyreplay {
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+
+.keyreplay ul li {
+	margin: 10px;
+}
+
+.onemsg {
+	width: 342px;
+	height: 365px;
+	border: 1px solid #d3d3d3;
+	padding: 0px 14px;
+}
+
+.replaytitle {
+	width: 100%;
+	height: 30px;
+	font-size: 16px;
+	line-height: 32px;
+	display: block;
+	cursor: pointer;
+}
+
+.replaytime {
+	width: 100%;
+	height: 24px;
+	font-size: 14px;
+	line-height: 28px;
+	display: block;
+}
+
+.replayimg {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	margin: 10px 0px;
+}
+
+.form-group {
+	display: block;
+	overflow: hidden;
+}
+
+.control-label {
+	text-align: right;
+}
+
+.addkey {
+	background-color: #f1f1f1;
+	width: 100%;
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 20px;
+}
+
+.addkey span:FIRST-CHILD {
+	margin-right: 30px;
+}
+
+.addkeydialog {
+	width: 500px;
+	height: 300px;
+}
+
+#prev_list {
+	min-height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#prev_list li {
+	float: left;
+	list-style: none;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.mybtn-group {
+	text-align: right;
+	clear: both;
+}
+
+.mybtn-group span {
+	margin-right: 10px;
+}
+
+.addreplaydialog {
+	width: 730px;
+	height: 400px;
+	display: block;
+	overflow: scroll;
+}
+
+.addreplaydialog ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.addreplaydialog ul li {
+	float: left;
+	margin-left: 10px;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.sucailist {
+	margin: 0px;
+	padding: 0px;
+}
+
+.sucailist li {
+	float: left;
+	list-style: none;
+}
+
+.sucai_item {
+	width: 342px;
+	float: left;
+	margin: 10px 5px;
+}
+
+.stepbox {
+	text-align: center;
+	margin: 10px;
+}
+
+.stepbox img {
+	height: 30px;
+}
+
+.sucailist {
+	margin: 0px;
+	padding: 0px;
+}
+
+.sucailist li {
+	float: left;
+	list-style: none;
+}
+
+.sucai_item {
+	width: 342px;
+	float: left;
+	margin: 10px 5px;
+}
+/*上面的代码被压缩过了，一般情况下大家不要动。*/
+.half-left {
+	float: left;
+	margin: 10px;
+	border: 1px solid #ddd;
+	width: 320px;
+	min-height: 50px;
+	padding: 10px;
+}
+
+.tp_head,.tp_body {
+	display: block;
+}
+
+.tp_title {
+	font-size: 18px;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	font-family: "微软雅黑";
+	padding: 5px;
+	color: #000;
+}
+
+.tp_time {
+	color: #999;
+}
+
+.tp_initiator {
+	color: #4B8DF8;
+}
+
+.tp_explain {
+	display: block;
+	line-height: 24px;
+	color: red;
+	text-indent: 24px;
+}
+
+.tp_body {
+	margin-top: 5px;
+}
+
+.tp_body .fa-bar-chart-o {
+	color: #35AA47
+}
+
+.tm_title {
+	color: #000;
+	font-weight: bold;
+}
+
+.tm_block {
+	display: block;
+	overflow: hidden;
+	line-height: 24px;
+}
+
+.tm_wz_dx {
+	width: 100%;
+	line-height: 24px;
+	display: block;
+	padding: 5px;
+	border: 1px solid #ddd;
+	margin: 5px 0px;
+}
+
+.tm_wz_dx .radio input[type="radio"],.tm_wz_dx  .radio-inline input[type="radio"],.tm_wz_dx  .checkbox input[type="checkbox"],.tm_wz_dx  .checkbox-inline input[type="checkbox"]
+	{
+	float: left;
+	margin-left: 0px;
+}
+
+.half-right {
+	float: left;
+	display: block;
+	border: 1px solid #ddd;
+	margin: 10px 0px;
+}
+
+.mt5 {
+	margin-top: 5px;
+}
+
+.btngroup {
+	clear: both;
+}
+
+.mauto {
+	margin: 0px auto;
+	clear: both;
+	width: 67%;
+}
+.newcss{
+	width: 70%;
+	border: 1px dashed  #bbb;
+	margin: 0px auto 30px;
+	display: block;
+}
+.newbtncss{
+	float: right;
+	margin: 10px 20px;;
+}

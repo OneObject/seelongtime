@@ -1,0 +1,1417 @@
+/*框架布局*/
+body {
+    min-width: 768px;
+    font-family: "microsoft yahei";
+}
+
+.head {
+    width: 100%;
+    height: 40px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    position: fixed;
+    line-height: 40px;
+    min-width: 580px;
+    z-index: 9999;
+}
+
+.head div {
+    line-height: 40px;
+}
+
+.logo {
+    float: left;
+    height: 40px;
+}
+.company-name{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+}
+
+.msg-box {
+    height: 40px;
+    display: block;
+    cursor: pointer
+}
+
+.search-box {
+    float: right;
+    line-height: 30px;
+}
+
+.search {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    padding: 0px 10px;
+    line-height: 30px;
+}
+
+.search:focus {
+    border-radius: 5px;
+}
+
+.search-btn {
+    height: 30px;
+    margin-left: 6px;
+    margin-top: -2px;
+}
+
+.warning {
+    background-image: url("../img/frame/warning.png");
+    display: block;
+    height: 40px;
+    width: 50px;
+    float: right;
+    margin-left: 10px;
+    text-align: right;
+    font-size: 12px;
+}
+.header-user-name-000{
+    display: block;
+    height: 40px;
+    width: 200px;
+    float: right;
+    margin-left: 10px;
+    text-align: right;
+    font-size: 14px;
+    color: #ffffff;
+}
+.warning span {
+    font-family: "microsoft yahei";
+    font-weight: bold;
+    margin-right: 3px;
+    font-size: 14px;
+    vertical-align: middle;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    margin-top: 4px;
+}
+
+.dropdown-menu {
+    text-align: left
+}
+
+.setting-box {
+    font-size: 24px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center
+}
+
+/*左边菜单*/
+.menu {
+    width: 120px;
+    position: fixed;
+    top: 40px;
+    height: 100%;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-align: center
+}
+
+.menu ul {
+    margin: 0px;
+    padding: 0px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.menu ul li {
+    padding: 0px;
+    margin: 0px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.menu ul li span {
+    width: 68px;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    font-size: 14px;
+    margin: 0px auto;
+}
+
+.menu ul li:hover {
+    cursor: pointer
+}
+
+.menu ul li[class="addmore"] {
+    height: 40px;
+}
+
+.menu ul li[class="addmore"] span {
+    height: 40px;
+}
+
+.addmore i {
+    font-size: 40px;
+}
+
+/*正文内容区域，主要区域*/
+.main {
+    margin-left: 120px;
+    padding-top: 50px;
+}
+
+/*首页  左右两栏*/
+.main-home {
+    padding: 6px 20px;
+}
+
+.youce {
+    max-width: 300px;
+}
+
+.persional {
+    height: 275px;
+    width: 270px;
+    display: block;
+    overflow: hidden;
+    border: 2px solid;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.persional .down {
+    height: 200px;
+    margin-top: 77px;
+}
+
+.touxiang-bg {
+    border-radius: 67px 67px 70px 70px;
+    height: 128px;
+    width: 128px;
+    margin: -61px auto 0px auto;
+    position: absolute;
+    margin-left: 67px;
+}
+
+.touxiang {
+    margin-top: -4px;
+    margin-left: -1px;
+    height: 127px;
+    width: 127px;
+}
+
+.name-level {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.name-level h3, .name-level h5 {
+    font-family: "microsoft yahei"
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.message table {
+    border-top-width: 2px;
+    border-style: solid;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.message table tr td {
+    border-right-style: solid;
+    border-right-width: 2px;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.message table tr td:last-child {
+    border-right: none;
+}
+
+/*统一的栏目框，为了后面中间也能使用所以我使用相对size*/
+.table-box {
+    width: 100%;
+    border: 2px solid;
+    margin-top: 15px;
+    border-radius: 3px;
+    display: block;
+    overflow: hidden
+}
+
+.table-box .table-header {
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    line-height: 40px;
+}
+
+.table-box .table-header .table-title {
+    font-size: 12px;
+    font-family: 'microsoft yahei';
+    padding: 0px 10px;
+}
+
+/*加入的群组*/
+.qunzu {
+    margin: 0px;
+    padding: 0px;
+}
+
+.qunzu li {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    margin: 14px 7px;
+    list-style: none;
+    zoom: 1;
+    z-index: 1;
+}
+
+.qunzu li img {
+    z-index: -1;
+}
+
+.qunzu li .renshu {
+    font-family: "microsoft yahei";
+    float: right;
+    margin-top: -68px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 49px;
+    z-index: 100;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+/*感兴趣的主题*/
+.zhuti {
+    margin: 0px;
+    padding: 0px;
+}
+
+.zhuti li {
+    width: 100%;
+    border-bottom: 1px dashed;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 12px;
+    font-family: "microsoft yahei";
+    font-size: 12px;
+    list-style: none;
+}
+
+.zhuti li:last-child {
+    border-bottom: none;
+}
+
+.zhuti li .zt-title {
+    float: left;
+    max-width: 200px;
+}
+
+.zhuti li .zt-renshu {
+    float: right;
+}
+
+/*感兴趣的人*/
+.person {
+    margin: 0px;
+    padding: 0px;
+}
+
+.person li {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    margin: 14px 7px;
+    list-style: none;
+    width: 74px;
+    text-align: center;
+}
+
+.person li .person-name {
+    font-size: 12px;
+    font-family: "microsoft yahei";
+    width: 100%;
+}
+
+/*********************************************************************************************************************/
+/*学习首页*/
+.last-study, .choose-course {
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 16px 20px;
+    width: 100%;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+    min-height:216px;
+}
+
+/*.last-study img{min-width: 320px;min-height: 180px;}*/
+.ifone{
+    display: block;
+    overflow: hidden;
+}
+.img{
+    width: 320px;
+    height: 180px;
+    float: left;
+    border: 2px solid;
+}
+.img h2{
+    font-size: 24px;
+    font-family: "microsoft yahei";
+    text-align: center;
+    margin-bottom: 20px;
+}
+.img span{
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+}
+.zi{
+    margin-left: 20px;
+    min-width: 200px;
+    width: 100%;
+    padding-left: 330px;
+}
+.last-study .zi{
+    margin-top: -180px;
+}
+.last-study .jianjie{
+    padding-left: 350px;
+}
+@media (min-width: 900px) {
+    .study-into{
+        float: right;
+        margin-left: 20px;
+        clear: right;
+        min-width: 200px;
+        margin-top: -60px;
+        margin-right: 30px;
+    }
+    .mybtn-red {
+        border: 2px solid;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 14px 26px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 900px) {
+    .study-into{
+        float: right;
+        margin-left: 20px;
+        clear: right;
+        min-width: 200px;
+        margin-left: 20px;
+        /*width: 100%;*/
+    }
+    .mybtn-red {
+        width: 100%;
+        border: 2px solid;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 14px 26px;
+        margin-bottom: 30px;
+    }
+}
+
+
+.course-title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.study-progress {
+    margin-top: 12px;
+    line-height: 24px;
+    display: block;
+    overflow: hidden;
+}
+
+
+/*@media (max-width: 980px) {*/
+    /*屏幕分辨率768px的时候*/
+    /*.mybtn-red {*/
+        /*border: 2px solid;*/
+        /*width: 100%;*/
+        /*display: block;*/
+        /*overflow: hidden;*/
+        /*text-align: center;*/
+        /*line-height: 40px;*/
+        /*border-radius: 3px;*/
+        /*cursor: pointer;*/
+    /*}*/
+
+    /*.jianjie {*/
+        /*clear: both;*/
+        /*text-align: left;*/
+        /*text-indent: 2em;*/
+        /*padding: 10px 0px;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 981px) and ( max-width: 1000px) {*/
+    /*屏幕分辨率768px的时候*/
+    /*.mybtn-red {*/
+        /*border: 2px solid;*/
+        /*display: block;*/
+        /*overflow: hidden;*/
+        /*text-align: center;*/
+        /*border-radius: 3px;*/
+        /*cursor: pointer;*/
+        /*padding: 14px 26px;*/
+        /*margin-bottom: 30px;*/
+    /*}*/
+
+    /*.jianjie {*/
+        /*text-align: left;*/
+        /*text-indent: 2em;*/
+        /*padding: 10px 0px;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 1000px) {*/
+    /*屏幕分辨率768px的时候*/
+    /*.study-into {*/
+        /*float: right;*/
+    /*}*/
+
+    /*.mybtn-red {*/
+        /*border: 2px solid;*/
+        /*display: block;*/
+        /*overflow: hidden;*/
+        /*text-align: center;*/
+        /*border-radius: 3px;*/
+        /*cursor: pointer;*/
+        /*padding: 14px 26px;*/
+        /*margin-bottom: 30px;*/
+    /*}*/
+
+    /*.jianjie {*/
+        /*clear: right;*/
+        /*text-align: left;*/
+        /*padding: 10px 0px;*/
+        /*margin-left: 345px;*/
+        /*min-height: 80px;*/
+        /*margin-top: -50px;*/
+    /*}*/
+/*}*/
+
+/*已添加的课程*/
+.old-course {
+    margin: 0px;
+    padding: 14px 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.old-course li:first-line:first-child {
+    margin-left: 0px;
+}
+
+.old-course li {
+    list-style: none;
+    width: 140px;
+    height: 176px;
+    display: block;
+    overflow: hidden;
+    margin-left: 14px;
+    border: 1px solid;
+    border-bottom: 2px solid;
+    float: left;
+    margin-bottom: 14px;
+}
+
+.morebtn {
+    float: right;
+    display: block;
+    padding: 2px 3px;
+    border-radius: 3px;
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-right: 14px;
+}
+
+.course-item {
+    width: 100%;
+    cursor: pointer;
+}
+
+.course-item table {
+    width: 100%;
+    padding: 0px;
+}
+
+.course-item table tr:first-child {
+    height: 103px;
+}
+
+.course-item table td img:first-child {
+    margin-top: -7px;
+}
+
+.pullup {
+    height: 7px;
+    margin-top: -7px;
+    position: absolute;
+    z-index: 100
+}
+
+.course-item-name {
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    display: block;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    line-height:20px;
+    overflow:hidden;
+}
+
+.course-item-time {
+	height: 20px;
+    font-size: 12px;
+    text-align: right;
+    width: 100%;
+    display: block;
+    padding-right: 10px;
+    margin-top:10px;
+}
+
+.course-item-detail {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    height: 103px;
+    width: 100%;
+    line-height: 24px;
+}
+.course-item-detail span:last-child{
+    margin-top: 10px;
+}
+
+.redbtn {
+    border: 2px solid;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.choose-course {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bigbtn {
+    width: 222px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    padding: 0px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: 50px auto;
+}
+
+/*列表页*/
+.list-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+.list-box li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    height: 170px;
+    /*background-color: #000000;*/
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.list-item {
+    width: 100%;
+    height: 150px;
+}
+
+.li-left {
+    width: 267px;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
+.li-left img {
+    width: 100%;
+}
+
+.li-right {
+    padding-left: 20px;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
+.li-right .item-title {
+    font-size: 22px;
+    padding-top: 4px;
+    margin-right: 20px;
+}
+
+.li-right i {
+    font-size: 22px;
+    margin-right: 6px;
+}
+
+.biaoqian {
+    padding: 2px 4px;
+    margin-right: 20px;
+    cursor: pointer
+}
+
+.line1 {
+    height: 40px;
+    display: block;
+    width: 100%;
+}
+
+.line2 {
+    font-size: 12px;
+    line-height: 24px;
+    height: 72px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .li-right {
+        padding-left: 290px;
+        width: 100%;
+        margin-top: -150px;
+        /*margin-top: -150px;*/
+    }
+}
+
+/*评论条*/
+.line3 {
+    margin-bottom: 0px;
+    margin-top: 10px
+}
+
+.pinglun-bar {
+    margin: 0px;
+    padding: 0px;
+    float: left
+}
+
+.pinglun-bar li {
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    border: none;
+    margin-right: 20px;
+    display: block;
+}
+
+.pinglun-bar li i {
+    font-size: 14px;
+}
+
+.defaultbtn {
+    padding: 3px 5px;
+    border: 2px solid;
+    border-radius: 3px;
+    float: right;
+    margin-right: 20px;
+}
+
+.fenye {
+    width: 100%;
+    text-align: center;
+}
+
+.fenye .pagination li a {
+    margin-right: 10px;
+}
+
+/*详情页面*/
+.detail {
+    margin-top: 20px;
+}
+
+.detail .nav-tabs {
+    border-bottom: 4px solid;
+}
+
+.detail .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-bottom-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.detail .nav-tabs > li {
+    margin-bottom: -4px;
+}
+
+.detail .tab-pane {
+    border: 1px solid #f5f5f5;
+    border-top: none;
+}
+
+/*评论列表**************************************************************************************************************/
+.pl-item {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pl-item li {
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #dadada;
+    list-style: none;
+    padding: 16px 30px;
+}
+
+.pl-item li .user-photo img {
+    width: 50px;
+    height: 50px;
+}
+
+.pl-item li .user-name {
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.pl-item li .user-container {
+    width: 100%;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.time-caozuo .time {
+    float: left;
+    margin-left: 14px;
+}
+
+.time-caozuo .caozuo {
+    margin-left: 0px;
+    padding: 0px;
+    float: right;
+    margin-right: 14px;
+}
+
+.time-caozuo .caozuo li {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    float: left;
+    margin-right: 10px;
+}
+
+.time-caozuo .caozuo li i {
+    font-size: 14px;
+}
+
+.time-caozuo .caozuo li .custombtm {
+    cursor: pointer;
+}
+
+/*评论输入框*/
+.input-box-pinlun {
+    padding: 14px 30px;
+}
+
+.input-box-pinlun .user-photo img {
+    height: 50px;
+    width: 50px;
+}
+
+.input-box-pinlun .user-container {
+    width: 100%;
+    height: 50px;
+    padding: 0px 14px;
+}
+
+.input-box-pinlun {
+    margin-bottom: 30px;
+}
+
+.input-box-pinlun .user-container textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+}
+
+.input-box-pinlun td:last-child {
+    padding: 0px 14px;
+}
+
+.input-box-pinlun .user-caozuo {
+    margin-top: -1px;
+    /*border: 1px solid;*/
+    border-top: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.input-box-pinlun .user-caozuo .biaoqing {
+    font-size: 14px;
+    display: block;
+    margin-left: 14px;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+}
+
+.input-box-pinlun .user-caozuo .fabu {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    margin-right: 14px;
+}
+
+.input-box-pinlun .user-caozuo .fabu li {
+    float: left;
+    margin-left: 6px;
+    list-style: none;
+}
+
+.fabubtn {
+    padding: 3px 10px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.fabu .wen, .fabu .weibo {
+    margin-top: 6px;
+    display: block;
+    height: 19px;
+    width: 19px;
+    background-image: url("../img/study/share.png");
+    background-repeat: no-repeat;
+}
+
+.fabu .wen {
+    background-position: -19px 0px;
+}
+
+.fabu .wen:hover, .fabu .active[f="w"] {
+    background-position: 0px 0px;
+    cursor: pointer;
+}
+
+.fabu .weibo {
+    background-position: -57px 0px;
+}
+
+.fabu .weibo:hover, .fabu .active[f="s"] {
+    background-position: -38px 0px;
+    cursor: pointer;
+}
+
+/*详情··························································*/
+.canshu {
+    padding: 14px 30px;
+}
+
+.canshu table {
+    width: 100%;
+    line-height: 30px;
+}
+
+.jieshao {
+    padding: 14px 30px;
+}
+
+.jieshao h4 {
+    font-weight: bold;
+}
+
+.jiesha img {
+    float: left;
+    margin: 14px;
+}
+
+/*考试界面**************************************************************************************************************/
+.ifone, .oldlist {
+    border: 2px solid;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.ifone {
+    width: 100%;
+    padding: 16px 20px;
+}
+
+.ifone img[class="img-responsive"] {
+    width: 320px;
+    height: 180px;
+    float: left;
+}
+
+.ifone .jianjie span {
+    float: left;
+}
+
+.test-list {
+    width: 100%;
+    font-size: 16px;
+}
+
+.test-list thead {
+    height: 30px;
+    line-height: 30px;
+    font-family: "microsoft yahei";
+}
+
+.test-list thead th {
+    text-align: center;
+}
+
+.test-list th, .test-list td {
+    border: 1px dashed;
+}
+
+.test-list th {
+    border-top: none;
+}
+
+.test-list th:first-child {
+    border-left: none;
+}
+
+.test-list th:last-child {
+    border-right: none;
+}
+
+.test-list tbody td {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.test-list tbody tr td:first-child {
+    border-left: none;
+}
+
+.test-list tbody tr td:last-child {
+    border-right: none;
+}
+
+.redsmallbtn {
+    padding: 0px 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+/***********************************************************************************************************************/
+/*密码修改*/
+.changebox{
+    padding: 10px 50px;
+    width: 400px;
+    display: block;
+    overflow: hidden;
+    margin: 10px auto;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    /*background-color: #3D4450;*/
+}
+.changebox label{
+    /*color: #d9534f;*/
+}
+.has-error input{
+    background-color: #fabdbd;
+}
+.has-error .alert{
+    margin-top: 10px;
+}
+.submibtn{
+    text-align: center;
+}
+.submibtn span{
+    padding: 10px 30px;
+}
+/*个人中心---------------------用户信息这一块*/
+.user-info{
+    width: 200px;
+    display: block;
+    overflow: hidden;
+    height: 250px;
+    float: left;
+}
+.user-info .user-info-photo>img{
+    width: 198px;
+    height: 198px;
+    border: 1px solid;
+}
+.bianjitouxiangbg{
+    width: 100%;
+    height: 30px;
+    display:block;
+    overflow: hidden;
+    line-height: 30px;
+    margin-top: -31px;
+    z-index: 4;
+    position: absolute;
+    width: 198px;
+}
+.user-info .user-info-fans{
+    height: 50px;
+    line-height: 50px;
+    width: 198px;
+}
+.edit-span{
+    margin-top: -30px;
+    position: absolute;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 6;
+    width: 198px;
+    cursor: pointer;
+}
+.user-info .user-info-fans ul,.user-info .user-info-fans ul li{
+    margin: 0px;
+    padding: 0px;
+}
+.user-info .user-info-fans{
+    border: 1px solid;
+    border-top: none;
+}
+.user-info-fans ul li{
+    list-style: none;
+    float: left;
+    display: block;
+    width: 65px;
+    overflow: hidden;
+    line-height: 12px;
+    height: 49px
+}
+.user-info-fans ul li span{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.user-info-fans ul li span:first-child{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.user-info-fans ul li span:last-child{
+    font-size: 12px;
+    font-weight: bold;
+}
+.user-info-fans ul li:first-child{
+    border-right: 1px solid;
+}
+.user-info-fans ul li:last-child{
+    border-left: 1px solid;
+}
+.user-detail{
+    border: 1px solid;
+    padding: 10px;
+    height: 250px;
+    margin-left: 220px;
+    min-width: 440px;
+}
+.user-detail-line1,.user-detail-line2,.user-detail-line3{
+    display: block;overflow: hidden;
+}
+.user-detail-line1>div{
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+.user-detail-line1 .user-detail-name{
+    font-size: 28px;
+    margin-top: 12px;
+}
+.user-detail-line1 .user-detail-sex img{
+    width: 24px;
+    height: 24px;
+    margin-top: 22px;
+    display: block;
+}
+.user-detail-line1 .edit-name{
+    font-size: 24px;
+    margin-top: 20px;
+    display: block;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.user-detail-line1 .user-detail-time{
+    display: block;
+    overflow: hidden;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+.user-detail-line2{
+    font-size: 18px;
+}
+.user-detail-info{
+    display: block;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.user-detail-info span{
+    display: block;
+    overflow: hidden;
+    line-height: 28px;
+    font-size: 14px;
+}
+.bianji{
+    float: left;
+    margin-top: 30px;
+}
+@media (max-width:1024px ) {
+    .user-detail-info{
+        display: block;
+        overflow: hidden;
+    }
+    .user-detail-info span{
+        display: block;
+        overflow: hidden;
+        line-height: 28px;
+        font-size: 14px;
+    }
+    .bianji{
+        float: right;
+        margin-top: -10px;
+    }
+}
+.edit-box{
+    width: 500px;
+    display: block;
+    overflow: hidden;
+}
+.clearbox{width: 100%;height: 100%;overflow: hidden;}
+.artwork{
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+    width: 300px;
+    height: 350px;
+    float: left;
+    
+}
+.artwork img{
+    width: 280px;
+    height:auto;
+}
+.imgfather{
+	height:280px;width:280px;display:block;overflow:hidden;line-height:280px;
+}
+.artwork input{
+    margin-top: 10px;
+}
+.imgpreview{
+    width: 200px;
+    height: 350px;
+    float: left;
+    border: 1px solid;
+}
+.imgpreview ul{
+    margin: 0px;
+    padding: 0px;
+}
+.imgpreview ul li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    width: 180px;
+    height: 165px;
+    text-align: center;
+    padding: 30px 25px 15px;
+}
+.imgpreview ul li>div{
+    width: 130px;
+    height: 130px;
+    display: block;
+    overflow: hidden;
+}
+.imgpreview ul li img{
+    width: 130px;
+    height: 130px;
+}
+/**/
+.home-input-box{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.home-input-box textarea{
+    width: 100%;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid;
+    resize: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding-right:100px;
+}
+.home-input-box span{
+    width: 48px;
+    height: 50px;
+    display: block;
+    font-size: 24px;
+    float: right;
+    overflow: hidden;
+    line-height: 50px;
+    margin-top: -50px;
+    border: 1px solid;
+    text-align: center;
+    border-top-right-radius:3px;
+}
+.home-input-box .span{
+    border-radius: 0px;
+    margin-right: 48px;
+    border-right: none;
+}
+.hide-btn-box{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-align: right;
+    margin-top:10px;
+}
+.dongtai-list{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.dongtai-list li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.dongtai-item{
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    margin-top: 20px;
+    display: block;
+	overflow: hidden;
+	/* height: 70px; */
+}
+.dongtai-item-row1{
+    height: 50px;
+    display: block;
+    overflow: hidden;
+}
+.dongtai-item-user-photo{
+    height: 50px;
+    width: 50px;
+}
+.dongtai-item-userinfo{
+    width: 100%;
+    padding-left: 60px;
+    height: 50px;
+    margin-top: -50px;
+    display: block;
+    overflow: hidden;
+}
+.dongtai-item-userinfo-name{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -3px;
+}
+
+/*.dongtai-item-userinfo-time,.dongtai-item-userinfo-count{
+    height: 30px;
+    display: block;
+    width: 30%;
+    float: left;
+    padding-top: 13px;
+}*/
+/*
+*过渡性调整 3月26日
+*于波
+*start
+*/
+.dongtai-item-userinfo-time{
+    height: 30px;
+    display: block;
+    float: right;
+    padding-top: 13px;
+    margin-top: -30px;
+    font-size: 12px;
+}
+.dongtai-item-row2{
+    padding: 10px 0px;
+    padding-left: 60px;
+    margin-top: -30px;
+    font-size: 16px;
+    color:#958550 ;
+    min-height:30px;
+}
+/*3月26日 end*/
+/*.dongtai-item-row2{
+    padding: 10px 0px;
+    font-size: 16px;
+    color:#958550 ;
+}*/
+.dongtai-item-row3{
+    font-size: 12px;
+}
+.zan{
+    margin-left: 20px;cursor: pointer;
+}

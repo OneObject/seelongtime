@@ -1,0 +1,167 @@
+html,body,div,span,a,p,section,article,dl,ul,dd,dt,li{
+    margin:0;padding:0;border:0;
+}
+dl,ul{
+    list-style: none;
+}
+a,button,input,textarea,span,img,li,div{
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+section,div,a,ul,dl,span,p,dd,dt,li{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background: #f1f1f1;
+    font-size:100%;
+}
+section.banner{
+    width: 100%;
+    position:relative;
+}
+section.banner img{
+    display: block;
+    width: 100%;
+}
+section.banner .rank-info{
+    width:100%;
+    height: 71px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: rgba(255,255,255,0.5);
+    padding:10px;
+    z-index:100;
+    border-bottom: 1px solid #eee;
+}
+section.banner .rank-info dt{
+    overflow: hidden;
+    text-align: left;
+    font-size:20px;
+    color:rgba(0,0,0,0.87);
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    height:30px;
+    line-height:30px;
+}
+section.banner .rank-info dd{
+    font-size:12px;
+    color:rgba(0,0,0,0.48);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+}
+section.rank{
+    width: 100%;
+}
+section.rank .rank-intro{
+    width:100%;
+    padding:10px;
+    background: #fff;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: 1px 1px 2px #eee;
+}
+section.rank .rank-intro dt{
+    color:rgba(0,0,0,0.87);
+    font-size:16px;
+    line-height: 22px;
+}
+section.rank .rank-intro dd{
+    color:rgba(0,0,0,0.48);
+    font-size:14px;
+    line-height: 20px;
+}
+section.rank .rank-list{
+    padding:0 10px 10px 10px;
+}
+section.rank .rank-list li{
+    width:100%;
+    display: block;
+    margin-top:10px;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    min-height: 54px;
+    padding:10px;
+    box-shadow: 1px 1px 3px #eee;
+    overflow: hidden;
+}
+section.rank li.me{
+    background: #EBFFF7!important;
+}
+.rank-list li > label{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    font-size:14px;
+    font-weight: bold;
+    border-radius: 2px;
+    background: #e1e1e1;
+    position: absolute;
+    left:12px;
+    top:12px;
+    color:#999;
+}
+.rank-list li:nth-child(1) > label{
+    background-color: #ff5d5d;
+    color:#fff;
+}
+.rank-list li:nth-child(2) > label{
+    background-color: #529bea;
+    color:#fff;
+}
+.rank-list li:nth-child(3) > label{
+    background-color: #a4e012;
+    color:#fff;
+}
+.rank-list li > div{
+    width:100%;
+    padding:0 86px 0 56px;
+    height: 34px;
+    line-height: 34px;
+    color:#529bea;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    left:0;
+    top:10px;
+}
+.rank-list li > div img{
+    display: block;
+    width:34px;
+    height:34px;
+    margin-right:18px;
+    float:left;
+}
+.rank-list li > span{
+    display: inline-block;
+    width:72px;
+    height:34px;
+    text-align: right;
+    line-height: 34px;
+    float:right;
+    color:rgba(0,0,0,0.87);
+}
+.rank-list li > a{
+    display: inline-block;
+    color:#529BEA;
+    float:left;
+    text-decoration: none;
+    font-size:16px;
+    line-height: 22px;
+    width: 100%;
+    padding:0 0 0 44px;
+}
+.rank-list li > a + span{
+    height:22px;
+    line-height: 22px;
+    text-align: right;
+    width:72px;
+}

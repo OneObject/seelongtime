@@ -1,0 +1,142 @@
+.test-item{
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+.test-time{
+    width: 80px;
+    height: 80px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-clip: padding-box;
+}
+.test-detail{
+    width: 100%;
+    padding-left: 90px;
+    margin-top: -80px;
+}
+.test-name{
+    height: 56px;
+    display: block;
+    font-size: 16px;
+}
+.test-intro{
+    font-size: 12px;
+    color: #999999;
+}
+.test-month{
+    font-size: 14px;
+    display: block;
+    line-height: 24px;
+    padding-left: 5px;
+}
+.test-day{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+.redbg{
+    background-color: #ea5a40;
+}
+.bluebg{
+    background-color: #529bea;
+}
+.greenbg{
+    background-color: #27AE60;
+}
+.defaultbg{
+    background-color: #999999;
+}
+.testdetailes{
+    padding: 8px;
+}
+.testdetailes> h1{
+    font-size: 18px;
+    line-height: 28px;
+}
+.testdetailes>img{
+    width: 100%;
+    margin: 10px 0px;
+}
+.testdetailes>.times{
+    font-size: 14px;
+    color: #999999;
+    line-height: 28px;
+}
+.testdetailes>p{
+    font-size: 14px;
+    line-height: 32px;
+}
+.answerbox{
+    padding: 8px;
+    background-color: #ffffff;
+}
+.answerbox> h1{
+      font-size: 18px;
+      line-height: 28px;
+  }
+.questionsmsg{
+    font-size: 12px;
+    color: #999999;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 24px;
+}
+.questionsmsg>span:last-child{
+    float: right;
+}
+.questionitem{
+    margin-top: 10px;
+}
+.questionasnwers{
+    display: block;
+    overflow: hidden;
+}
+.questiontitle{
+    font-size: 16px;
+    line-height: 36px;
+}
+.questionasnwers>label{
+    margin-bottom: 5px;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #aaa;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.textarea{
+    width: 100%;
+    resize: none;
+    height: 60px;
+    border-radius: 5px;
+    background-clip: padding-box;
+}
+.answerboxss{
+    width:100%;
+    padding: 8px;
+}
+.welcome-font{
+    font-size: 14px;
+    color: #999999;
+    display: block;
+    padding-left: 20px;
+}
+.score{
+    font-size: 72px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #529bea;
+}
+.danwei{
+    display: block;
+    text-align: right;
+    font-size: 36px;
+    color: #999999;
+    padding-right: 20px;
+    margin-top: -12px;
+}
+.shuomingwen{
+    font-size: 14px;
+    color: #999999;
+}

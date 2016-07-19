@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>/resource/*</pattern>
+		<pattern>/api/*</pattern>
+		<pattern>/widget/*</pattern>
+		<pattern>/login*</pattern>
+		<pattern>/m/h5/login*</pattern>
+		<pattern>/error/*</pattern>
+		<pattern>*.js*</pattern>
+	    	<pattern>*.css*</pattern>
+	    	<pattern>*.list*</pattern>
+	    	<pattern>/service/sites/*</pattern>
+	    	<pattern>/widget/trace/*</pattern>
+	    	<pattern>/statistics/*</pattern>
+	    	<pattern>/survey/attend*</pattern>
+	    	<pattern>/survey/result*</pattern>
+	    	<pattern>/survey/prompt*</pattern>
+	    	<pattern>/m/ixin/nsurvey*</pattern>
+	</excludes>
+	<decorator name="mobile_default" page="m/default.jsp">
+		<pattern>/m/*</pattern>
+	</decorator>
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+</decorators>

@@ -1,0 +1,129 @@
+##################################################
+###    server  settings                       ####
+##################################################
+#com.longtime.host=0.0.0.0
+#com.longtime.port=8011
+#com.longtime.root.path=/iapp
+
+##################################################
+###     mongo settings                        ####
+##################################################
+com.longtime.mongo.address=mongodb-server:27027
+com.longtime.mongo.db=iapp_survey
+
+
+##################################################
+###     redis settings                        ####
+##################################################
+redis.host=redis-server
+redis.port=6389
+
+#\u7b54\u5377\u540eredis\u5185\u4fe1\u606f\u4fdd\u5b58\u65f6\u95f4
+com.longtime.redis.keep.time=259200000
+
+##################################################
+###   mysql database settings                 ####
+##################################################
+ctu.jdbc.driverClass=com.mysql.jdbc.Driver
+ctu.jdbc.url=jdbc:mysql://longtimeennapp.mysql.rds.aliyuncs.com:3306/iapp_survey2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+ctu.jdbc.username=longtime_survey
+ctu.jdbc.password=longtime2016
+ctu.jdbc.pool.init.size=10
+ctu.jdbc.pool.max.size=10
+
+
+##################################################
+###   hibernate settings                      ####
+##################################################
+ctu.hibernate.mappingDirectoryLocations=classpath*:example/hibernate
+ctu.hibernate.packagesToScan=com.longtime.app.**.model.**,com.longtime.demo.model.**
+
+##################################################
+###   img server settings                     ####
+##################################################
+#com.longtime.imgserver.download=http://aijiayou.qiniudn.com/
+com.longtime.imgserver.download=http://7d9ijt.com1.z0.glb.clouddn.com/
+com.longtime.imgserver.upload=http://up.qiniu.com/
+#\u4e03\u725b\u670d\u52a1
+com.longtime.qiniu.upserver=http://up.qiniu.com/
+
+
+##################################################
+###   iappserver settings                     ####
+##################################################
+com.longtime.ivideo.webappsource.savedir=/resource/ivideo/
+com.longtime.ivideo.baseurl=http://www.aijiayou.com/iapp/
+#com.longtime.app.baseurl=http://www.aijiayou.com/iapp/
+
+##################################################
+###     weixin appid  appsecret               ####
+##################################################
+#\u7231\u52a0\u6cb9\u670d\u52a1\u53f7
+com.longtime.ajy.weixin.appid=wxd301c80aa34b6b24
+com.longtime.ajy.weixin.appsecret=f83007f9e17b0258dd7a2979079c14e5
+
+
+##################################################
+###     image style               ####
+##################################################
+com.longtime.qiniu.style.320x180=-320x180
+com.longtime.qiniu.style.180x180=-180x180
+
+##################################################
+###   student web settings                    ####
+##################################################
+com.longtime.ajy.student.webroot=http://123.57.12.201:9030/student/
+
+##################################################
+###     cookie domain                         ####
+##################################################
+#\u7a7a\u8868\u793a\u5f53\u524d\u57df\u540d\u4e0b
+com.longtime.ajy.cookie.domain=
+com.longtime.ajy.cookie.prefix=
+
+##################################################
+###     websocket server                      ####
+##################################################
+com.longtime.websocket.server=http://socketio.aijiayou.com
+
+##################################################
+###     cache config                        ####
+##################################################
+lt.cache.useLocal=true
+lt.cache.useRemote=false
+##################################################
+###      server config                        ####
+##################################################
+com.longtime.ajy.doc.webroot=http://www.aijiayou.com/document
+
+com.longtime.ajy.player.root=http://www.aijiayou.com/player
+
+##################################################
+###     email config                          ####
+##################################################
+com.longtimeit.email.host=smtp.exmail.qq.com
+com.longtimeit.email.port=25
+com.longtimeit.email.username=test_wx_d@longtimeit.com
+com.longtimeit.email.password=longtime123
+com.longtimeit.email.alias=\u6c49\u5f97\u8c03\u7814\u4e91
+com.longtimeit.email.encoding=UTF-8
+
+com.longtime.ajy.queue.oplog.name=lt.queue.oplog
+
+com.longtimeit.email.survey.notify=${name},\u60a8\u597d<br/><br/>\u8bda\u631a\u9080\u8bf7\u60a8\u53c2\u52a0${surveyName}\uff0c\u8c22\u8c22\u60a8\u7684\u914d\u5408\uff01<br/><a href="${surveyUrl}"> \u8bf7\u70b9\u51fb\u8fd9\u91cc </a>\u6216\u5728\u6d4f\u89c8\u5668\u8f93\u5165\uff1a ${surveyUrl}<br/>\u7528\u6237\u540d/\u5bc6\u7801\uff1a\u5de5\u53f7/888888<br/><br/>${remark}<br/><br/>${author}<br/>${sendDate}
+com.longtimeit.email.survey.notify.title=%s\u9080\u8bf7
+com.longtimeit.survey.attend.url=/survey/attend.xhtml?id=%s
+
+com.longtime.vote.paper.save.url=/resource/vote/paper/
+##################################################
+###   \u7f51\u7edc\u4e0a\u4e0b\u8f7d\u6587\u4ef6\u4e34\u65f6\u4fdd\u5b58\u5730\u5740   \u7edd\u5bf9\u5730\u5740          ####
+##################################################
+com.longtime.ajy.download.tmp.dir=/opt/applications/webapps/iapp_survey/resource/tmp/
+
+
+#\u5fae\u4fe1\u56fe\u7247\u4e0b\u8f7d\u8def\u5f84
+com.longtime.ajy.download.weixin.img.dir=/resource/weixin/img/
+
+#####jpush config###############################
+com.longtime.jpusht.masterSecret=5d068db5f5e1041c63c94824
+com.longtime.jpusht.appKey=240af5031ad750770ac7fc76

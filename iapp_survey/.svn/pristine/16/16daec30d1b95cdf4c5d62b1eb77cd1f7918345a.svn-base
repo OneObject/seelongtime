@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+    xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+	    http://www.directwebremoting.org/schema/spring-dwr
+	    http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd"
+	default-autowire="no" default-lazy-init="false">
+	
+    <!-- 主应用 properties files -->
+	<bean id="main_propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="order" value="1" />  
+        <property name="ignoreUnresolvablePlaceholders" value="true" />  
+        <property name="locations">
+        	<list>
+				<value>classpath*:com.longtime.properties</value>
+				<value>classpath*:com.longtime.app.ixin.properties</value>
+				<value>classpath*:com.longtime.app.notify.properties</value>
+			</list>  
+        </property>  
+    </bean>  
+	
+	<import resource="com.longtime.support.redis.context.xml"/>
+	
+	<import resource="com.longtime.db.context.xml" />
+	
+	<import resource="com.longtime.support.mongo.context.xml" />
+
+	<import resource="com.longtime.task.context.xml"/>
+
+	<import resource="com.longtime.ixin.xml"/>
+	
+	<!-- <import resource="com.longtime.msg.xml"/> -->
+	
+	
+	<!-- 各 app 配置 -->
+	<!-- <import resource="apps/itest/com.longtime.app.itest.context.xml"/>
+	<import resource="apps/ivideo/com.longtime.app.ivideo.context.xml"/>
+	<import resource="apps/course/com.longtime.app.course.context.xml"/> -->
+	
+	
+	
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<context:annotation-config />
+	<context:component-scan base-package="com.longtime.app,com.longtime.demo,com.longtime.platform.credit,com.longtime.message">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<dwr:annotation-config />
+
+	
+    <!-- <bean class="com.longtime.common.spring.SpringContextUtil" id="springContextUtil" />  -->
+</beans>

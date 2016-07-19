@@ -1,0 +1,173 @@
+html, body, header, h2, h4, section, footer, article, nav, aside, div, p, ul, dl, li, dt, dd, span, a, label, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); 
+}
+
+body {
+  font-family: Arial,'Microsoft Yahei',STHeiti,sans-serif;
+  font-size: 12px;
+  min-width:1200px;
+}
+
+dl, ul { list-style: none; }
+
+img { border:0; vertical-align:top; }
+
+input, textarea, select { outline: medium; }
+
+input[type=text], input[type=password], textarea { -webkit-appearance: none; }
+textarea {outline:none; resize:none;}
+
+input::-webkit-input-placeholder {
+  color:#c8c8c8 !important;
+  font-size:16px !important;
+  font-family:Arial,'Microsoft Yahei',STHeiti,sans-serif !important;
+}
+input:-moz-placeholder {
+  color:#c8c8c8 !important;
+  font-size:16px !important;
+  font-family:Arial,'Microsoft Yahei',STHeiti,sans-serif !important;
+}
+input::-moz-placeholder {
+  color:#c8c8c8 !important;
+  font-size:16px !important;
+  font-family:Arial,'Microsoft Yahei',STHeiti,sans-serif !important;
+}
+input:-ms-input-placeholder {
+  color:#c8c8c8 !important;
+  font-size:16px !important;
+  font-family:Arial,'Microsoft Yahei',STHeiti,sans-serif !important;
+}
+
+input::-webkit-search-cancel-button { display: none; }
+
+input { line-height: normal; }
+
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; }
+
+.clear { zoom:1; }
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0; 
+}
+.fl { float:left; }
+.fr { float:right; }
+
+.header {
+  width:100%;
+  height:70px;
+  line-height:70px;
+  border-top:3px solid #f2453a;
+}
+.header-wrapper {
+  width:1200px;
+  height:70px;
+  margin:0 auto;
+}
+.header-wrapper .logo {
+  display:block;
+  width:229px;
+  height:58px;
+}
+.header-wrapper .logo-text {
+  font-size:30px;
+  color:#989797;
+  height:50px;
+  margin-top:8px;
+  line-height:50px;
+  padding-left:17px;
+  border-left:1px solid #f2453a;
+}
+.header-wrapper .change {
+  margin-left:20px;
+}
+
+.wrapper {
+  width:100%;
+  min-height:526px;
+  border-top:3px solid #ddd;
+  border-bottom:3px solid #ddd;
+  background-color:#00989e;
+}
+.wrapper-content {
+  width:1200px;
+  margin:0 auto;
+  position:relative;
+}
+.wrapper-content .banner {
+ /* margin-left:140px;*/
+ position:absolute;
+ left:140px;
+ top:0;
+}
+.login {
+  width:324px;
+  background:#eee;
+  position:absolute;
+  right:60px;
+  top:70px;
+}
+.login h2 {
+  text-align:center;
+  font-size:18px;
+  color:#444;
+  margin-top:30px;
+}
+.login .inp {
+  width:252px;
+  margin:0 auto;
+}
+.login .inp .tip {
+  font-size:14px;
+  color:#f70a0a;
+  height:30px;
+  line-height:30px;
+}
+.login .inp .search {
+  width:100%;
+  height:32px;
+  margin-bottom:20px;
+  border:1px solid #e1e1e1;
+  border-radius:5px;
+  overflow:hidden;
+}
+.login .inp .search label {
+  width:34px;
+  height:32px;
+}
+.login .inp .search input {
+  height:32px;
+  width:216px;
+  background:#fff;
+  line-height:32px;
+}
+.login .inp .remenb {
+  font-size:14px;
+  color:#444;
+  margin-bottom:21px;
+}
+.login .inp .remenb input[type=checkbox]{
+  margin-top:3px;
+  margin-right:9px;
+}
+.login .inp .btn {
+  width:100%;
+  margin-bottom:75px;
+}
+.login .inp .btn .btn-sub {
+  width:100%;
+  height:46px;
+  text-align:center;
+  line-height:46px;
+  font-size:20px;
+  color:#fff;
+  background:#f2453a;
+  border-radius:5px;
+  cursor:pointer;
+}

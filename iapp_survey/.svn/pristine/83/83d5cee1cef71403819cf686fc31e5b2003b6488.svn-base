@@ -1,0 +1,6 @@
+.table_add{font-size: 14px;float: right;display: block;margin-right: 16px;}
+.time_box,.time_zhi{float: left}
+.left_lable{float: left;display: block;width: 100px;text-align: right;}
+.time_box input{height: 30px;}.time_zhi{margin-top: 6px;}
+.search_condition .mt10{margin-top: 10px;display: block;}
+.study_detail_title{width: 100px;border-right:1px solid #CECECE; }

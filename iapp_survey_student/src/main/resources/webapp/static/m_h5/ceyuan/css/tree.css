@@ -1,0 +1,171 @@
+html, body, div, span, a, p, section, article, dl, ul, dd, dt, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+dl, ul {
+  list-style: none; }
+
+a, button, input, textarea, span, img, li, div {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+section, div, a, ul, dl, span, p, dd, dt, li, input, textarea, label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-break: break-all; }
+
+html, body {
+  -webkit-overflow-scrolling: touch; }
+
+.wrapper-static {
+  -webkit-overflow-scrolling: touch; }
+
+body {
+  min-width: 320px;
+  color: rgba(0, 0, 0, 0.87);
+  -ms-touch-action: none;
+  background: #fff; }
+
+input, textarea {
+  -webkit-appearance: none !important; }
+
+input[type="search"] {
+  -webkit-appearance: none !important; }
+
+input::-webkit-search-cancel-button {
+  display: none !important; }
+
+input {
+  line-height: normal !important; }
+
+a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+.ctl-show {
+  display: block !important; }
+
+.ctl-hide {
+  display: none !important; }
+
+a:link {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:visited {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:active {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+body {
+  font-family: "FontAwesome", "Microsoft YaHei"  !important;
+  background:url(../img/ceyuan/background.jpg);
+  background-size:cover;}
+
+
+
+
+
+.bg{
+  position:relative;
+  background:#ab0663;
+}
+.bg img{
+  width:100%;
+  height:auto;
+}
+
+.container {
+  width:9rem;
+  height:auto;
+  position:absolute;
+  top:2rem;
+  text-align:center;
+}
+
+
+  .container-1{
+    width:7rem;
+    position:absolute;
+    top:7rem;
+  }
+
+  .container-2{
+    top:10.5rem;
+  }
+
+  .container-3{
+    top:14rem;
+  }
+
+
+  .container-4{
+    top:17.4rem;
+  }
+
+  .container-5{
+    top:21rem;
+  }
+
+  .container-6{
+    top:24rem;
+  }
+  .hex-6{
+    background:#c643ec;
+  }
+
+  .container-7{
+    top:27rem;
+  }
+
+
+
+@media only screen and (max-width:320px){
+  .container {
+  width:7rem;
+  top:2rem;
+  text-align:center;
+}
+
+
+  .container-1{
+    width:5rem;
+    position:absolute;
+    top:6rem;
+  }
+
+  .container-2{
+    top:8.5rem;
+  }
+
+  .container-3{
+    top:11.1rem;
+  }
+
+
+  .container-4{
+    top:13.4rem;
+  }
+
+  .container-5{
+    top:15.8rem;
+  }
+
+  .container-6{
+    top:18.2rem;
+  }
+
+  .container-7{
+    top:20.5rem;
+  }
+}
+
+

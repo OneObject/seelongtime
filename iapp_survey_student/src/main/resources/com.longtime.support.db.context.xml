@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"  
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	
+	default-lazy-init="true">
+    <!-- 主应用 properties files -->
+ 	<!--  c3p0 -->
+	<bean id="app.ajy.student.dataSource" name="message.dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="initialPoolSize" value="${com.lt.ajy.s.jdbc.pool.init.size}" />
+		<property name="minPoolSize" value="${com.lt.ajy.s.jdbc.pool.init.size}" />
+		<property name="maxPoolSize" value="${com.lt.ajy.s.jdbc.pool.max.size}" />
+		<property name="maxIdleTime" value="60" />
+		<property name="idleConnectionTestPeriod" value="60" />
+		<property name="acquireIncrement" value="2" />
+		<property name="acquireRetryAttempts" value="10" />
+		<property name="breakAfterAcquireFailure" value="false" />
+		<property name="testConnectionOnCheckin" value="true" />
+		<property name="testConnectionOnCheckout" value="true" />
+		<property name="maxStatements" value="10" />
+		<property name="preferredTestQuery" value="SELECT 'x'" />
+  		
+		<property name="driverClass" value="${com.lt.ajy.s.jdbc.driverClass}" />
+		<property name="jdbcUrl" value="${com.lt.ajy.s.jdbc.url}" />
+		<property name="user" value="${com.lt.ajy.s.jdbc.username}" />
+		<property name="password" value="${com.lt.ajy.s.jdbc.password}" />
+	</bean>
+	
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+       <constructor-arg ref="app.ajy.student.dataSource" />
+   </bean>
+
+
+	<bean id="app.ajy.student.txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	    <property name="dataSource" ref="app.ajy.student.dataSource"/>
+	</bean>
+	
+	<tx:advice id="app.ajy.student.txAdvice" transaction-manager="app.ajy.student.txManager">
+		<tx:attributes>
+			<tx:method name="del*" isolation="READ_COMMITTED" />
+			<tx:method name="remove*" isolation="READ_COMMITTED" />
+			<tx:method name="add*" isolation="READ_COMMITTED"  />
+			<tx:method name="create*" isolation="READ_COMMITTED"  />
+			<tx:method name="insert*" isolation="READ_COMMITTED"  />
+			<tx:method name="save*" isolation="READ_COMMITTED"  />
+			<tx:method name="update*" isolation="READ_COMMITTED"  />
+			<tx:method name="do*" isolation="READ_COMMITTED"  />
+			<tx:method name="init*" isolation="READ_COMMITTED"  />
+			<tx:method name="process*" isolation="READ_COMMITTED"  />
+			<tx:method name="*" isolation="READ_COMMITTED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 对于service使用annotation声明事物 -->
+	<tx:annotation-driven mode="proxy" proxy-target-class="true" transaction-manager="app.ajy.student.txManager"
+		order="100" />
+	<aop:config proxy-target-class="true">
+		<aop:advisor pointcut="execution(* com.longtime.ajy.student.service..*.*(..))" advice-ref="app.ajy.student.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.ajy.mweb.service..*.*(..))" advice-ref="app.ajy.student.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.ajy.player..service..*.*(..))" advice-ref="app.ajy.student.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.ajy.ext..service..*.*(..))" advice-ref="app.ajy.student.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.common.service..*.*(..))" advice-ref="app.ajy.student.txAdvice" order="300" />
+
+	</aop:config>
+	
+</beans>

@@ -1,0 +1,133 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "microsoft yahei";
+}
+.welcome-box{
+    display: block;
+    overflow: hidden;
+    min-width: 1000px;
+}
+.welcome-header{
+    width: 100%;
+    height: 45px;
+    display: block;
+    overflow: hidden;
+    background-color: #212121;
+    line-height: 45px;
+    color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9995 !important;
+    padding-left: 20px;
+}
+.welcome-header img{
+    height: 35px;
+    width: 40px;
+}
+.welcome-header .name{
+    font-size: 20px;
+}
+.welcome-footer{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: #3D3D3D;
+    color: #ffffff;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.stemp1,.stemp2,.stemp3,.stemp4,.stemp5,.stemp6,.stemp7{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 50px 0px;
+}
+/*欢迎页面------------------------------------------------------------------------------------------------------------*/
+.stemp1{
+    background-color: #ff6501;
+}
+.tiaoguo{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    text-align: right;
+    width: 100px;
+    float: right;
+}
+.huanying{
+    color: #ffffff;
+    font-size: 36px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    line-height: 72px;
+    margin-top: 100px;
+}
+.nextbtn{
+    margin-top: 100px;
+    float: right;
+}
+/*输入账号密码--------------------------------------------------------------------------------------------------------*/
+.stemp2{
+    background-color: #1293dc;
+}
+.warn-msg{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.input-form{
+    width: 400px;
+    margin: 50px auto;
+    font-size: 20px;
+    line-height: 20px;
+}
+.input-form input{
+    font-size: 20px;
+    font-weight: bold;
+    color: #34495E;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.stemp3{
+    background-color: #FE613E;
+}
+.waiting-box{
+    width: 300px;
+    height: 200px;
+    margin: 30px auto 0px;
+    text-align: center;
+}
+.fa-10x{
+    font-size: 15em;
+    color: #ffffff;
+}
+.stemp4{
+    background-color: #ff6863;
+}
+.zhidao-big{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 48px;
+    margin-top: 30px;
+    display: block;;
+    overflow: hidden;
+}
+.zhidao-small{
+    font-size: 20px;
+}
+.openerwei{
+    color: #3c763d;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<html myAttribute="test">  
+  <head>  
+    <title>my title</title>  
+    <meta name="meta-name" content="meta-content" />  
+  </head>  
+  <body onload="alert('ready');">  
+      
+  </body>  
+</html>
+<!-- 自定义的内容 -->
+<content tag="myJS">  
+<script>
+alert(1);
+</script>
+</content> 
+
+
+
+<!-- 
+  This will gives us "test" from  tag's attribute 
+-->  
+<sitemesh-decorator:getProperty property="myAttribute" />  
+  
+<!-- 
+  This will gives us 'my title' from the content of <title> tag 
+-->  
+<sitemesh-decorator:getProperty property="title" />  
+  
+<!-- 
+  This will gives us 'meta-content' from  tag with name 'meta-name' 
+-->  
+<sitemesh-decorator:getProperty property="meta.meta-name" />  
+  
+<!-- 
+  This will gives us 'alert('ready');' from onload attribute in <body> tag 
+-->  
+<sitemesh-decorator:getProperty property="page.myJS" /> 
+
+
+<sitemesh-decorator:getProperty property="body.onload" /> 

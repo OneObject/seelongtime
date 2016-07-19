@@ -1,0 +1,1 @@
+ALTER table ixin_activity ADD `style` varchar(32) DEFAULT 'series';

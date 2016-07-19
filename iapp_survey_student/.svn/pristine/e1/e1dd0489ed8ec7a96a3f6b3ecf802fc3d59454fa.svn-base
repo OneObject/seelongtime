@@ -1,0 +1,63 @@
+/*头部样式*/
+.top-bar{
+    height: 45px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    line-height: 45px;
+}
+.logo{
+    height: 40px;
+    margin-top: 2px;
+}
+.top-bar-section li a[class="frame-warning"]{
+    background-image: url("../img/frame/warning.png");
+    width: 50px;
+    height: 40px;
+    margin-top: 2px;
+    display: block;
+    overflow: hidden;
+}
+.top-bar-section li a[class="frame-warning"] span{
+    margin-left: 10px;
+    display: block;height: 40px;
+    line-height: 40px;
+}
+.top-bar-section li:not(.has-form) a[class="setting"]{
+margin-top: 2px;
+    font-size: 24px;
+}
+.top-bar-section li table,.top-bar-section li table tr,.top-bar-section li table tr td{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    line-height: 30px;
+    background: none;
+}
+.top-bar-section li table{
+margin-right: 20px;
+}
+.top-bar-section li .search{
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    border: none;
+    float: left;
+}
+.top-bar-section li img{
+    float: left;
+}
+.main{margin-top: -5px;}
+.side-nav-color{max-width: 120px;height: 100%;overflow: hidden;display: block}
+.side-nav-bg{height: 100%;overflow: hidden;width: 120px;position: fixed;margin-left: -15px;}
+.menu ul{
+    margin-top: 80px;;
+}
+.menu ul li{
+    list-style: none;
+    text-align: center;
+}
+.menu ul li span{
+    width: 68px;display: block;height: 40px;overflow: hidden;border-bottom-style: dashed;border-bottom-width: 1px;font-size: 14px;margin: 0px auto;
+    line-height: 40px;
+}
+.menu ul li:hover{cursor: pointer}

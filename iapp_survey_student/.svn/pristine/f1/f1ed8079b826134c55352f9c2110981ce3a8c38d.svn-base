@@ -1,0 +1,84 @@
+.courseposter{
+    width: 100%;
+}
+.courseTitle{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 4px 8px;
+}
+.tostudy{
+    display: block;
+    text-align: right;
+    padding: 0px 8px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.courseDetail{
+    display: block;
+    padding: 8px ;
+    border-bottom: 1px solid #CCCCCC;
+}
+.smallTag{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.detailContent{
+    font-size: 12px;
+    line-height: 20px;
+}
+.zanaddmove{
+    color: #529bea;
+    font-size: 24px;
+    position: absolute;
+    left: 30%;
+    bottom: 52px;
+}
+#discuss{
+    width: 100%;
+    padding: 8px;
+    height: 445px;
+}
+.textarea-input{
+    width: 100%;
+    height: 90px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    font-size: 18px;
+}
+.doaction{
+    display: block;
+    clear: both;
+    text-align: right;
+}
+.em{
+    font-size: 24px;
+    display: block;
+    width: 48px;
+    overflow: hidden;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    float: left;
+}
+input[type="text"].inputlook{
+    height: 40px;
+    margin-top: 5px;
+    width: 180px;
+}
+.discuss-list{
+    background-color: #ffffff;
+}
+.discuss-item-detail{
+    width: 100%;
+    padding: 10px 8px;
+    text-align: right;
+    font-size: 14px;
+    color: #999999;
+    border-bottom: 1px solid #CCCCCC;
+
+}
+.pinlunshu{
+    float: left;
+}

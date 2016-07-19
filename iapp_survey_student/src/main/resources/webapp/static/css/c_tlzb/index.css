@@ -1,0 +1,18 @@
+*{padding:0px;margin:0px;}
+a{text-decoration:none;font-size:16px;color:black;}
+ul,ol,dl{list-style: none;}
+body{font-family:"宋体";overflow: hidden;width:100%;height:100%;position: relative;}
+.indexContainer{overflow: hidden;}
+.bg{height: 100%;width: 100%;position: absolute;left: 0;}
+.mainBox{position: absolute;left: 0;top: 0;width: 100%;height: 50%;z-index: 300;background:url(../../img/c_tlzb/bg.jpg) center top no-repeat;background-size:auto 100%;background-color: #000;overflow: hidden;}
+.imgArr{position: absolute;height: 3.9%;bottom: 5%;z-index:105;}
+.menu{position: absolute;width: 100%;height: 50%;left: 0;top: 50%;z-index: 200;background:url(../../img/c_tlzb/bg3.jpg) center top no-repeat;background-size:auto 100%;background-color: #000;overflow: hidden;}
+.products{position: absolute;height:36%;opacity: 0;}
+.p1{z-index: 0;right: 2.5%;transform:rotateY(-80deg);-webkit-transform:rotateY(-80deg);bottom: 2.5%;}
+.p2{z-index: 0;left: 2.5%;transform:rotateY(-80deg);-webkit-transform:rotateY(-80deg);bottom: 2.5%;}
+.p3{z-index: 0;right: 2.5%;transform:rotateY(-80deg);-webkit-transform:rotateY(-80deg);bottom: 42%;}
+.p4{z-index: 0;left: 2.5%;transform:rotateY(-80deg);-webkit-transform:rotateY(-80deg);bottom: 42%;} 
+.indexLogo{opacity: 0;position: absolute;top: 12%;height: 5%;}
+.indexTitle{transform:translateY(-200px);-webkit-transform:translateY(-200px); width: 100%;height: 8.5%;position: absolute;background: #434c6c;text-align: center;}
+.whiteLogo{height: 55%;}
+.hover{display:none;z-index:1000;position:absolute;width:100%;height:100%;left:0px;top:0px;background-color:#000;text-align:center;color:#fff;font-size:18px;}

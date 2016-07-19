@@ -1,0 +1,30 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>2.0</tlib-version>
+	<uri>http://www.longtimeit.com/taglib-elfunctions-ajy</uri>
+	<function>
+		<name>createStatus</name>
+		<function-class>com.longtime.common.web.utils.AjyELFunctions</function-class>
+		<function-signature>String createStatus(int,java.lang.String,int,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>statusComplete</name>
+		<function-class>com.longtime.common.web.utils.AjyELFunctions</function-class>
+		<function-signature>boolean statusComplete(int,java.lang.String,int,java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>creditTotal</name>
+		<function-class>com.longtime.common.web.utils.AjyELFunctions</function-class>
+		<function-signature>int creditTotal(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>orgFullName</name>
+		<function-class>com.longtime.common.web.utils.AjyELFunctions</function-class>
+		<function-signature>String orgFullName(java.lang.String)</function-signature>
+	</function>
+	
+</taglib>

@@ -1,0 +1,169 @@
+html, body, div, span, a, p, section, article, dl, ul, dd, dt, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+dl, ul, ol {
+  list-style: none; }
+
+a, button, input, textarea, span, img, li, div {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+section, div, a, ul, dl, span, p, dd, dt, li, input, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  color: rgba(0, 0, 0, 0.87);
+  -ms-touch-action: none; }
+
+input, textarea, div {
+  outline: medium; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:link {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:visited {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+a:active {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none; }
+
+.body-bg-gray {
+  background-color: #eee; }
+
+.sign-header {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  overflow: hidden; }
+  .sign-header ul {
+    width: 100%; }
+    .sign-header ul li {
+      width: 100%; }
+    .sign-header ul li:first-child {
+      margin: 3px 0;
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 28px; }
+    .sign-header ul li:last-child {
+      margin: 5px 0 3px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.87);
+      line-height: 22px; }
+
+.sign-footer {
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  width: 100%;
+  background: #eee; }
+  .sign-footer ul {
+    width: 100%; }
+    .sign-footer ul li {
+      width: 100%; }
+    .sign-footer ul li:first-child {
+      margin: 3px 0;
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.36);
+      line-height: 28px; }
+    .sign-footer ul li:last-child {
+      margin: 5px 0 3px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.36);
+      line-height: 22px; }
+
+.sign-content {
+  padding: 0 15px;
+  margin-bottom: 50px; }
+  .sign-content .time {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 30px;
+    margin-top: 34px;
+    margin-bottom: 36px;
+    text-align: center; }
+  .sign-content .box-to-sign .info {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.48);
+    line-height: 28px;
+    text-align: center; }
+  .sign-content .box-to-sign input {
+    width: 100%;
+    height: 48px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 20px;
+    text-align: center;
+    margin: 35px 0 30px; }
+    .sign-content .box-to-sign input :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: rgba(0, 0, 0, 0.36); }
+    .sign-content .box-to-sign input ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: rgba(0, 0, 0, 0.36); }
+    .sign-content .box-to-sign input input:-ms-input-placeholder,
+    .sign-content .box-to-sign input textarea:-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.36); }
+    .sign-content .box-to-sign input input::-webkit-input-placeholder,
+    .sign-content .box-to-sign input textarea::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.36); }
+  .sign-content .box-to-sign .btn-sign {
+    font-size: 24px;
+    color: #fff;
+    border-radius: 5px;
+    background: #4a90e2;
+    height: 48px;
+    line-height: 48px;
+    text-align: center; }
+  .sign-content .box-signed .sign-img {
+    width: 100%;
+    height: 68px;
+    background: url(../img/gou.png) center center no-repeat;
+    background-size: auto 64px; }
+  .sign-content .box-signed .info {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 36px;
+    text-align: center;
+    color: #4a90e2; }
+
+.signing-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); }
+  .signing-box .signing {
+    width: 134px;
+    height: 134px;
+    background: url(../img/qdcg.png) center center no-repeat;
+    background-size: 134px 134px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -67px;
+    margin-left: -67px;
+    z-index: 55; }
+
+/*# sourceMappingURL=sign.css.map */

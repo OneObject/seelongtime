@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8"/>
+    	<title>课程学习</title>
+    	<!--[if IE]>
+		<script type="text/javascript">
+		    document.createElement("header");
+		    document.createElement("footer");
+		    document.createElement("section");
+		    document.createElement("aside");
+		    document.createElement("nav");
+		    document.createElement("article");
+		    document.createElement("hgroup");
+		    document.createElement("time");
+		</script>
+		<style type="text/css">
+		header,footer,section,aside,nav,article,hgroup,time{display: block;}
+		</style>
+		<![endif]-->
+	<script type="text/javascript" src="http://v.jteam.cn:80/player/static/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript"
+        src="http://v.jteam.cn:80/player/static/player.js?v=1.0" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            var videoitem='';
+			var poster='';
+			var globdata = '';
+			$(function(){
+			    setupPlayer();
+			 });
+			 //初始化player 
+			 function setupPlayer(){
+			        $("#player").player({
+			            playerKey:"testkey", //授权key
+			            serverUrl:"http://v.jteam.cn:80/jvideo/api/player/playUrl.do", //测试的平台服务器地址
+			            autoPlay:false,
+			            //playerType:"HTML5Player", //可以指定player的类型，默认是自动识别(建议)
+			            onStateChanged:function(videoId,newPlayerState,oldPlayerState){
+			              //播放状态变化
+			              $("#status").text(newPlayerState);
+			              // alert("videoId="+videoId+",newPlayerState="+newPlayerState+",oldPlayerState="+oldPlayerState);      
+			            },
+			            onShowError:function(videoId,errorId,errorMsg){
+			               //发生错误了，比如flash未安装，播放流错误
+			               $("#status").html("videoId="+videoId+",errorId="+errorId+","+errorMsg);
+			            },
+			            onInited:function(){
+			               //当player 初始化好之后
+			                    setSource();
+			                //$("#status").html("player 已经初始完毕");
+			            },
+			            onPlayerTimeUpdated:function(time){
+			              if (!time) return;
+			              $("#time").val(parseInt(time.currentTime));   
+			            }
+			        }); 
+			     }
+			    //设置视频
+			    /**
+			     *上半场 
+			     */
+			     function setSource(){
+			        //alert(1);
+			        $("#player").player("setSource",{
+			            "src":"7bb3179571d74d277dc5659f28fa2ca3" 
+			            ,"options":{
+			          "poster":"http://img02.taobaocdn.com/imgextra/i2/679214160/T2N67wXoBaXXXXXXXX-679214160.jpg"	  
+			            } 
+			        });   
+			     }
+			     
+			     //播放视频
+			     function playVideo(){
+			        $("#player").player("playVideo");
+			     }
+			     //暂停视频
+			     function pauseVideo(){
+			        $("#player").player("pauseVideo");
+			        
+			     }
+			     //停止视频
+			     function stopVideo(){
+			        $("#player").player("stopVideo");
+			     }
+			     //seek视频到某个时间点，单位秒, live 是绝对时间 ，vod 是 相对时间(从0开始)
+			     function seekVideo(pos){
+			        $("#player").player("seekVideo",pos,false);
+			     }
+			     //seek video 到相对时间，比如向前10秒，向后10秒
+			     function seekToVideo(t){   
+			        $("#player").player("seekVideo",t,true);
+			     }
+			     //视频自适应窗口
+			     $(window).resize(function(e) {    
+			          $("#player").player("updateLayout");
+			       });
+			    
+        </script>
+        <style type="text/css" media="screen">
+        html,body{
+            margin:0; 
+            background-color:#000;
+            padding: 0px;
+            overflow: hidden;
+            }    
+        </style>
+    </head>
+    <body>
+         <section style="display:none;">
+            <button onClick="setSource()">设置视频</button>
+            <button onClick="playVideo()">播放</button>
+            <button onClick="pauseVideo()">暂停</button>
+            <button onClick="stopVideo()">停止</button>
+            <button onClick="seekToVideo(10)">向前10秒</button>
+            <button onClick="seekToVideo(-10)">向后10秒</button>
+            <div id="status" style="color:#F00"></div>
+            <input type="text" id="time" style="color:#00F" value="0">
+        </section>
+        <section id="player" style="height:100%;width:100%; background:#000;text-align: center;">
+        </section>
+    </body>
+</html>

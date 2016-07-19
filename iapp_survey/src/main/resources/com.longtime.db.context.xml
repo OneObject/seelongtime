@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd"
+	default-lazy-init="false" default-autowire="no">
+
+
+
+	<!--  c3p0 -->
+	<bean id="apps.dataSource" name="message.dataSource"  class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="initialPoolSize" value="${ctu.jdbc.pool.init.size}" />
+		<property name="minPoolSize" value="${ctu.jdbc.pool.init.size}" />
+		<property name="maxPoolSize" value="${ctu.jdbc.pool.max.size}" />
+		<property name="maxIdleTime" value="60" />
+		<property name="idleConnectionTestPeriod" value="120" />
+		<property name="acquireIncrement" value="2" />
+		<property name="acquireRetryAttempts" value="3" />
+		<property name="breakAfterAcquireFailure" value="false" />
+		<property name="testConnectionOnCheckin" value="true" />
+		<property name="testConnectionOnCheckout" value="true" />
+		<property name="maxStatements" value="10" />
+		<property name="preferredTestQuery" value="SELECT 'x'" />
+  		
+		<property name="driverClass" value="${ctu.jdbc.driverClass}" />
+		<property name="jdbcUrl" value="${ctu.jdbc.url}" />
+		<property name="user" value="${ctu.jdbc.username}" />
+		<property name="password" value="${ctu.jdbc.password}" />
+	</bean>
+	
+
+	<bean id="apps.namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="apps.dataSource" />
+	</bean>
+
+	<bean id="apps.sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- <property name="namingStrategy">
+			<bean class="com.telecom.ctu.framework.domain.CTUImprovedNamingStrategy" />
+		</property> -->
+		<property name="dataSource" ref="apps.dataSource" />
+		<property name="hibernateProperties" value="classpath*:hibernate.properties" />
+		<!-- 指定namedQuery配置文件位置 -->
+		<property name="mappingDirectoryLocations" value="${ctu.hibernate.mappingDirectoryLocations}" />
+		<property name="packagesToScan" value="${ctu.hibernate.packagesToScan}" />
+	</bean>
+	
+
+	<!-- 如果要实现多租户的配置事物,必须自己实现transactionManager -->
+	<bean id="apps.transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="apps.sessionFactory" />
+	</bean>
+
+	<!-- 对于service使用annotation声明事物 -->
+	<tx:annotation-driven mode="proxy" proxy-target-class="true" transaction-manager="apps.transactionManager"
+		order="100" />
+
+	<tx:advice id="apps.dao.txAdvice" transaction-manager="apps.transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="list*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="find*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="search*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="query*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="load*" isolation="READ_COMMITTED" read-only="true" />
+			<tx:method name="*" isolation="READ_COMMITTED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config proxy-target-class="true">
+		<aop:advisor pointcut="execution(* com.longtime.app..service..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+		<!-- 
+		<aop:advisor pointcut="execution(* com.longtime.app..dao..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+		 -->
+		 
+		<!-- 
+		<aop:advisor pointcut="execution(* com.longtime.app.admin.course.service..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.app.admin.course.dao..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+		
+		<aop:advisor pointcut="execution(* com.longtime.app.base.service..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+		<aop:advisor pointcut="execution(* com.longtime.app.base.dao..*.*(..))" advice-ref="apps.dao.txAdvice" order="200" />
+	     -->
+	     
+		<aop:advisor pointcut="execution(* com.longtime.common.service..*.*(..))" advice-ref="apps.dao.txAdvice" order="300" />
+		<!-- 
+		<aop:advisor pointcut="execution(* com.longtime.common.dao..*.*(..))" advice-ref="apps.dao.txAdvice" order="300" />
+ 		-->
+	</aop:config>
+
+</beans>

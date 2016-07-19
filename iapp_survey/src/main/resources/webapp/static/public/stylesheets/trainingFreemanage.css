@@ -1,0 +1,12 @@
+html,body{font-family: "微软雅黑";}
+.add_btn{cursor: pointer;}
+.add_root_node{width:480px;height:300px;line-height: 24px;}
+.add_root_node .must_input{padding: 0 10px;color: red;font-size: 18px;margin: 5px;display: block;}
+.add_root_node lable{color: #000000;font-size: 14px;}
+.add_root_node .add_input_text{width: 100px;}
+.add_root_node .row{display: block;clear: both;margin: 10px 0px;}
+.add_root_node .row .fl{float: left;display: block;}
+.add_root_node .row .w30{width: 30%;text-align: left;}
+.add_root_node .row .w70{width: 69%;}
+.add_root_node .row input,.add_root_node .row select{width: 95%;}
+.add_root_node .row textarea{width: 95%;resize: vertical;min-height: 140px;}

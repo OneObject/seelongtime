@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd"
+	default-autowire="no" default-lazy-init="true">
+
+	<bean id="mongo" class="com.myctu.platform.spring.ext.mongo.ClusterMongoFactoryBean">
+		<property name="addressList" value="${com.longtime.iapp.student.mongo.address}" />
+	</bean>
+
+	<bean id="mongo.db.iapp.student" class="com.myctu.platform.spring.ext.mongo.DatabaseFactoryBean">
+		<property name="mongo" ref="mongo" />
+		<property name="name" value="${com.longtime.iapp.student.mongo.db}" />
+	</bean>
+	
+	<bean id="mongo.db.collection.examination" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.iapp.student" />
+		<property name="name" value="${com.longtime.iapp.student.mongo.db.collection.examination}" />
+	</bean>
+	
+	<bean id="mongo.db.collection.testee" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.iapp.student" />
+		<property name="name" value="${com.longtime.iapp.student.mongo.db.collection.testee}" />
+	</bean>
+	
+	<bean id="mongo.db.collection.testpaper" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.iapp.student" />
+		<property name="name" value="${com.longtime.iapp.student.mongo.db.collection.testpaper}" />
+	</bean>
+	
+	<bean id="mongo.db.collection.usertrack" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.iapp.student" />
+		<property name="name" value="${com.longtime.iapp.student.mongo.db.collection.usertrack}" />
+	</bean>
+
+
+	<!-- jongo  http://jongo.org -->
+	<bean id="jongo" class="org.jongo.Jongo">
+		<constructor-arg index="0" ref="mongo.db.iapp.student"/>
+	</bean>
+</beans>

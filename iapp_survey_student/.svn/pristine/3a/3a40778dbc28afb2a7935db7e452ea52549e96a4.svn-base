@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.menuicon {
+	background: url(../images/menuicon.png) no-repeat;
+	width: 34px;
+	height: 29px;
+	cursor: pointer;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/menuicon.png',
+		sizingMethod='crop' );
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+	<title>admin-console</title>
+	
+<script type="text/javascript" src="http://v.jteam.cn:80/player/static/jquery-1.10.2.min.js"></script>	
+<script type="text/javascript" src="static/js/jquery.timer.js"></script>	
+<script type="text/javascript" src="static/ivideo/student/player_trace/player_time_trace.js"></script>
+
+<body >
+test
+</body>
+</html>
+
+<script type="text/javascript">
+<!--
+
+var timeTracker = new TimeTracker("ivideo/play/trace.xhtml", "v001","u001", 120000);
+
+timeTracker.init();
+timeTracker.start();
+
+
+$.timer(callback, 10000, true);
+
+var time = 0;
+function callback(){
+	time +=2;
+	timeTracker.setPos(time);
+	
+}
+
+
+
+//-->
+</script>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd"
+	default-autowire="no" default-lazy-init="true">
+
+	 <!-- 公共mongodb数据库  -->
+    <bean id="mongo" class="com.myctu.platform.spring.ext.mongo.ClusterMongoFactoryBean">
+		<property name="addressList" value="${com.longtime.mongo.address}" />
+		<property name="connectionsPerHost" value="100"/>
+	</bean>
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongo" />
+		<constructor-arg name="databaseName" value="${com.longtime.mongo.db}" />
+	</bean>
+	<bean id="mongoTemplateFactory" class="com.myctu.platform.repository.engine.storage.mongo.BaseMongoTemplateFactory"/>
+	
+
+	<bean id="mongo.db.iapp.student" class="com.myctu.platform.spring.ext.mongo.DatabaseFactoryBean">
+		<property name="mongo" ref="mongo" />
+		<property name="name" value="${com.longtime.mongo.db}" />
+	</bean>
+	
+	<!-- jongo  http://jongo.org -->
+	<bean id="jongo" class="org.jongo.Jongo">
+		<constructor-arg index="0" ref="mongo.db.iapp.student"/>
+	</bean>
+	
+	
+	<!-- 视频播放库 -->
+	<bean id="mongo.db.player" class="com.myctu.platform.spring.ext.mongo.DatabaseFactoryBean">
+		<property name="mongo" ref="mongo" />
+		<property name="name" value="player_db" />
+	</bean>
+	
+	<bean id="mongo.db.collection.catalog" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.player" />
+		<property name="name" value="scorm_catalog" />
+	</bean>
+
+	<bean id="mongo.db.collection.study_statistics" class="com.myctu.platform.spring.ext.mongo.CollectionFactoryBean">
+		<property name="db" ref="mongo.db.player" />
+		<property name="name" value="study_statistics" />
+	</bean>
+</beans>

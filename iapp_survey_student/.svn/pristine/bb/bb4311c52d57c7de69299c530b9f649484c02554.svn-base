@@ -1,0 +1,155 @@
+/*只负责颜色*/
+.head{border-bottom-color:#1a1e25;background-color: #3d4450; }
+.company-name{
+    color: #ffffff;
+}
+.warning span{color: #ffffff;}
+.dropdown-menu>li>a:hover{
+    background-color: #d9534f;
+    color: #ffffff;
+}
+.warning .dropdown-menu{background-color:#3d4450; }
+.warning .dropdown-menu li a{background-color:#3d4450;color: #ffffff}
+.warning .dropdown-menu li a:hover{background-color: #d9534f}
+.menu{background-color: #3d4450;}
+.menu ul li span{border-bottom-color: #d9534f;color: #ffffff}
+.menu ul li i{color:#d9534f }
+.menu ul li:hover{background-color:#d9534f; }
+.menu ul li:hover i,.menu ul .active i{color: #ffffff;}
+.menu ul .active{
+    background-color:#282c34 ;
+}
+.setting-box{color: #ffffff;}
+/*首页*/
+.persional{border-color:#e5e4e3;background-color: #3d4450; }
+.persional .down{background-color: #ffffff}
+.touxiang-bg{background-color: #3d4450;}
+.name-level h3{color: #3d4450;}
+.name-level h5{color: #3d4450;}
+.message table{border-color:#e5e4e3 ;color:#3d4450;}
+.message table tr td{border-right-color: #e5e4e3;}
+/*中间样式*/
+.home-input-box textarea{
+    border-color: #dadada;
+}
+.home-input-box span{
+    border-color: #dadada;
+    color: #888888;
+}
+.home-input-box span:hover{
+    background-color: #dadada;
+    cursor: pointer;
+    color: #666666;
+}
+.dongtai-item-userinfo-time,.dongtai-item-userinfo-count{
+    color: #666666;
+}
+.dongtai-item-userinfo-count i{
+    color: #d9534f;
+}
+.dongtai-item-row3 span{
+    cursor: pointer;
+}
+.dongtai-item-row3 i{
+    color: #d9534f;
+}
+/*边栏*/
+.table-box{border-color: #e5e4e3}
+.table-box .table-header{background-color:#3d4450;color: #ffffff }
+.qunzu li .renshu{background-color: #ffffff;}
+.zhuti li{border-bottom-color:#d9534f;color: #7d7d7d; }
+.zhuti li .zt-renshu{color: #d9534f;}
+.person li .person-name{color: #3d4450;}
+/***********************************************************************************************************************/
+.last-study,.choose-course{border-color: #e5e4e3;}
+.last-study .study-progress,.ifone .study-progress{color: #595757;}
+.last-study .study-progress .jindu,.ifone .study-progress .jindu{color: #000;}
+.mybtn-red,.redbtn,.fabubtn,.redsmallbtn{background-color:#ff6863;border-color: #ea2e2a;color: #ffffff; }
+.morebtn{background-color:#d9534f }
+.old-course li{border-color: #e5e4e3}
+.choose-course{background-color: #F7F8F8;color: #DCDDDD;}
+.item-title{color:#3d4450; }
+.li-right i{color: #d9534f;}
+.biaoqian{background-color: #ff6863;color: #ffffff;}
+.defaultbtn{background-color: #3d4450;color: #ffffff;border-color: #1a1e25;}
+.defaultbtn:hover{background-color:#ff6863;border-color: #ea2e2a;color: #ffffff;cursor: pointer}
+.fenye .pagination li a,.fenye .pagination a{background-color:#3d4450;color:#ffffff}
+.fenye .pagination .active a{background-color: #d9534f;border-color: #d9534f;}
+/*详情****************************************************************************************************************/
+.detail .nav-tabs{border-bottom-color: #d9534f;}
+.detail .nav-tabs>li a{color: #000000}
+.detail .nav-tabs>li.active>a{
+    color: #4c4948;
+    border-color: #d9534f;
+    background-color: #d9534f;
+    color: #ffffff;
+}
+.detail .nav-tabs>li a:hover, .nav-tabs>li a:focus{
+    background-color: #d9534f;
+    color: #ffffff;
+    cursor: pointer;
+}
+.pl-item li{color: #4c4948;}
+.time-caozuo .time{color: #b5b5b6}
+.time-caozuo .caozuo li i{
+    color: #d9534f;
+}
+.time-caozuo .caozuo li .custombtm{
+ color: #d9534f;
+}
+.input-box-pinlun .user-container textarea{
+    border-color: #b5b5b6;
+}
+.input-box-pinlun .user-container textarea:hover,.input-box-pinlun .user-container textarea:focus{
+    border-color: #b5b5b6;
+}
+.input-box-pinlun .user-caozuo{
+border-color: #b5b5b5;
+}
+/*考试界面**************************************************************************************************************/
+.ifone,.oldlist{
+    border-color: #b5b5b6;
+}
+.img{
+    background-color: #F29C9F;
+    border-color:#b5b5b6;
+    color: #ffffff;
+}
+.test-list thead{color:#FF6863 }
+.test-list th ,.test-list td{
+    border-color: #F29C9F;
+}
+.test-list tbody td{
+    color: #4c4948;
+}
+/*个人中心============================================================================================================*/
+.user-info .user-info-photo>img{
+    border-color: #d9534f;
+}
+.user-info .user-info-fans{
+    border-color: #dadada;
+    color: #3d4450;
+}
+.user-info-fans ul li:first-child,.user-info-fans ul li:last-child{
+    border-color: #dadada;
+}
+.user-detail{
+    border-color: #dadada;
+    color: #3d4450;
+}
+.user-detail-level{
+    color: #d9534f;
+}
+.artwork,.imgpreview{
+    border-color: #dadada;
+}
+.bianjitouxiangbg{
+    background-color: #222222;
+    opacity: 0.35;
+}
+.edit-span{
+    color: #ffffff;
+}
+.user-detail-line1 .edit-name{
+    color: #16A085;
+}

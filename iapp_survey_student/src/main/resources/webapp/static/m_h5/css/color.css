@@ -1,0 +1,89 @@
+section.sender a:active,section.sender a,section.test ul li span.a,a.sub,header{background-color:#627F26;}
+section.result ul li.face_g i{color:#627F26;}
+section.result ul li.face_b i{color:#ed6363;}
+section.list a i{color:#4c9b00;}
+section.option a.cur{color:#627F26;border-color:#627F26;}
+section.testOnline a li.state label.now{background-color:#627F26;}
+
+.picBox ul li a,section.infoMore ul li span,section.infoEdit ul li span{color:#5595e3;}
+article.scroll a.sub:active{background-color:#627F26;}
+
+section.login div{border:1px solid #627F26;}
+section.login a{background:#627F26;}
+section.login a:active{background-color:#627F26;}
+
+
+p.error{color:#c26468;}
+
+/*调研模块*/
+.survey section.questionBox dl dd span.dan{background-color:#627f26;}
+.survey section.questionBox dl dd span.duo{background-color:#627f26;}
+.survey section.submit span{border-color:#627f26;color:#627f26;}
+.survey section.questionBox dl.grade dd label.cur{background:#627f26;}
+.survey section.infoBox ul li span{color:#627f26;}
+.survey section.msgBox p{border-color:#f0f3f9;background:#f0ffd1;color:#627f26;}
+.survey section.infoBox p.msg{border-color:#f0f3f9;background:#f0ffd1;color:#627f26;}
+.survey section.questionBox dl.result dd span.per label{background:#627f26;}
+
+.survey section.resultBox dl dd span.per label.a{background:#627f26;}
+.survey section.resultBox dl dd span:last-child{color:#627f26;}
+.survey section.resultBox dl dd label.color{color:#627f26;}
+.survey section.questionBox dl.result dd span.per label{background:#627f26;}
+
+.survey section.resultBox dl dd span.per+span{color:#627f26;}
+
+.survey section.questionBox dl dt.label label.block{background-color:#627f26;}
+.survey section.resultBox dl dt.label label.block{background-color:#627f26;}
+
+
+/*考试、练习模块*/
+.kaoshi section.questionBox ul.score li:first-child + li{color:#627f26;}
+.kaoshi section.questionBox ul.score li.a{color:#bbd782;}
+.kaoshi section.questionBox ul.score li.b{color:#d64156;}
+.kaoshi section.questionBox div.retry{border-color:#627f26;color:#627f26;}
+
+.kaoshi section.questionBox dl dd span.dan{background-color:#627f26;}
+.kaoshi section.questionBox dl dd span.duo{background-color:#627f26;}
+
+.kaoshi section.questionBox div.errorMsg{background:#f2dede;color:#d64156;}
+.kaoshi section.questionBox dl dd.correct{border-color:#bbd782;}
+
+.kaoshi section.questionBox .rank{color:#627f26;}
+
+.kaoshi section.questionBox div.retry1 span{border-color:#627f26;color:#627f26;}
+
+
+.kaoshi section.guideBox span{color:#627f26;}
+
+.kaoshi section.questionBox dl dt span.a i{color:#d64156;}
+.kaoshi section.questionBox dl dt span.b i{color:#bbd782;}
+.kaoshiDetail section.enterKaoshi div.start{border-color:#627f26;color:#627f26;}
+.kaoshiDetail section.moreInfo .rank{color:#627f26;}
+/*通用提示框模块*/
+div.dialogBox .dialogHeader{color:#627f26;border-bottom-color:#627f26;}
+
+/*问答模块*/
+article.wenda .wendaBox a>div span:first-child label{color:#627f26;}
+article.wenda .optionBox span:first-child{color:#627f26;}
+article.wenda .optionBox span.options{color:#627f26;}
+article.wenda .txt div+span{background:#627f26;}
+
+.funcBox span,.funcBox1 span{color:#627f26;}
+
+/*作业模块*/
+article.zuoye nav ul{border-color:#627f26;}
+article.zuoye nav ul li{color:#627f26;}
+article.zuoye nav ul li:first-child+li{border-left-color:#627f26;border-right-color:#627f26;}
+article.zuoye nav ul li.cur{background:#627f26;}
+article.zuoye .list2 a ul li span.a{color:#d64156;}
+article.zuoye .list2 a ul li span.b{color:#bbd782;}
+article.zuoye .detailBox span.sub{border-color:#627f26;color:#627f26;}
+article.zuoye .comment1 ul li:first-child span label{color:#627f26;}
+article.zuoye .comment1 ul li:first-child+li span.a{color:#d64156;}
+article.zuoye .comment1 ul li:first-child+li span.b{color:#bbd782;}
+
+article.zuoye .zuoyeList a ul li span.a{color:#d64156;}
+article.zuoye .zuoyeList a ul li span.b{color:#bbd782;}
+article.zuoye .zuoyeList a ul li span.c{color:#F0AD4E;}
+article.zuoye span.uploadSub{border-color:#627f26;color:#627f26;}
+

@@ -1,0 +1,55 @@
+<%@page import="com.longtime.ajy.student.config.Constant"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/WEB-INF/include/taglibs_m.jsp"%>
+<!DOCTYPE html >
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>资讯目录</title>
+        <link type="text/css" rel="stylesheet" href="${basepath}/static/m/ext/muyang/css/reset.css" />
+        <link type="text/css" rel="stylesheet" href="${basepath}/static/m/ext/muyang/css/add_list.css" />
+	</head>
+<body>
+   <header>
+            <span class="btn-back" id="btn-back"></span>
+            <div class="text">目录</div>
+   </header>
+		 <section class="detail-box">
+		 
+ 	<input type="hidden" name = "mid" id="mid" value="${mid }">
+            
+
+        </section>
+	<script type="text/javascript" src="${basepath}/static/m/ext/enn/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="${basepath}/static/m/ext/enn/js/guidance.2.0.js"></script>
+        <script type="text/javascript">
+            var page =1;
+            var mid = $("#mid").val();
+			$(function () {
+				var $btnBack = $('#btn-back');
+                getlist(mid);
+				 
+                $btnBack.bind('click', function () {
+                    window.history.go(-1);
+                });
+
+			});
+			
+			    function getlist(mid){
+            	var  $loading1 = $('.detail-box');
+            	$loading1.html('<span><i class="fa fa-spinner fa-pulse"></i>正在加载.....</span>');
+            	$.ajax({
+					type:"GET",
+					url:"${basepath}/m/ext/muyang/information/titlelist.list",
+					data:{mid: mid},
+					success:function(html){
+						$loading1.html(html);
+					
+					}
+				});
+            	}
+
+        </script>
+</body>
+</html>

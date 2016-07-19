@@ -1,0 +1,114 @@
+body {
+  background: #f8f6f1; }
+
+header {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #fff;
+  background: #529bea;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%; }
+  header .btn-back {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 55;
+    left: 0;
+    top: 0;
+    background: url(../img/back.png) center center no-repeat;
+    background-size: auto 18px; }
+  header .text {
+    width: 100%;
+    padding: 0 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center; }
+
+.list-box {
+  padding: 58px 8px 8px; }
+  .list-box .btn-more-box {
+    padding: 20px 47px 30px; }
+    .list-box .btn-more-box span {
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border: 1px solid #999;
+      color: #999;
+      display: block;
+      font-size: 14px; }
+  .list-box > a {
+    display: block;
+    margin-bottom: 8px;
+    background: #fff;
+    padding: 10px 30px 10px 10px;
+    box-shadow: 0 0 3px #ccc;
+    position: relative; }
+  .list-box li:first-child {
+    font-size: 14px;
+    line-height: 20px; }
+    .list-box li:first-child label {
+      padding: 1px 4px;
+      background: #f5462f;
+      font-size: 10px;
+      line-height: 12px;
+      color: #fff;
+      border-radius: 4px;
+      margin-left: 5px;
+      position: relative;
+      top: -2px; }
+  .list-box li:last-child {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+    line-height: 18px; }
+  .list-box .arrow {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/more.png) center center no-repeat;
+    background-size: auto 18px; }
+
+.detail-box {
+  padding: 58px 8px 8px; }
+  .detail-box dl {
+    margin-bottom: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px #ccc; }
+  .detail-box dt {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 44px 12px 10px;
+    border-bottom: 1px solid #f4f4f4;
+    position: relative; }
+    .detail-box dt label {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 44px;
+      color: #999;
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      top: 0; }
+  .detail-box dd {
+    padding: 5px 30px; }
+    .detail-box dd span {
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+      color: #666;
+      padding: 8px 0; }
+
+/*# sourceMappingURL=add_list.css.map */

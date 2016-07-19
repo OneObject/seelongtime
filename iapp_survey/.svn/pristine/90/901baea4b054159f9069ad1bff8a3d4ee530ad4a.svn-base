@@ -1,0 +1,16 @@
+{
+	"ksftest":{
+		"id":10000,
+		"loginName":"ksftest",
+	    "passWord":"ksftest",
+	    "realName":"康师傅测试账号",
+	    "domain":"ksf"
+	},
+	"lttest":{
+	    "id":10001,
+	    "loginName":"lttest",
+	    "passWord":"lttest",
+	    "realName":"龙泰测试",
+	    "domain":"longtimeit"
+	}
+}

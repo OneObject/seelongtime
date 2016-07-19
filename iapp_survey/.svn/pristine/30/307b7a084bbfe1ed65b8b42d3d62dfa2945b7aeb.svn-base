@@ -1,0 +1,3 @@
+/opt/tomcat_s2urvey/bin/startup.sh s2urvey
+
+echo "start tomcat-s2urvey server"

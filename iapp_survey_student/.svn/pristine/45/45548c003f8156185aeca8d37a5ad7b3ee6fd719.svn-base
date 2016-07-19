@@ -1,0 +1,1 @@
+ALTER TABLE ixin_student_topic ADD cover VARCHAR(2000) DEFAULT NULL;

@@ -1,0 +1,47 @@
+html, body, div, span, a, p, section, article, dl, ul, dd, dt, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0; }
+
+dl, ul {
+    list-style: none; }
+
+a, button, input, textarea, span, img, li, div {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+section, div, a, ul, dl, span, p, dd, dt, li, input, textarea,table,tbody,tr,td {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    min-width: 320px;
+    color: rgba(0, 0, 0, 0.87);
+    -ms-touch-action: none;
+    background: #fff; }
+
+input, textarea, div {
+    outline: medium; }
+
+input[type="search"] {
+    -webkit-appearance: none; }
+
+a {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }
+
+a:link {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }
+
+a:visited {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }
+
+a:hover {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }
+
+a:active {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none; }

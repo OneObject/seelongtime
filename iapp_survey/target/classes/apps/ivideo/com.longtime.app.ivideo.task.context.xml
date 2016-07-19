@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd"
+	default-autowire="no" default-lazy-init="false">
+
+
+	<!-- 线程执行器配置，用于任务注册 -->
+	<!-- <bean id="executor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="100" />
+		<property name="queueCapacity" value="500" />
+	</bean> -->
+
+
+	<!-- 刷新视频转换状态 -->
+	<bean id="job_flush_video_status"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="videoService" />
+		<property name="targetMethod" value="doFlushVideoStatus" />
+		<property name="concurrent" value="false"/> <!-- 串行 -->
+	</bean>
+	<bean id="task_flush_video_status" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_flush_video_status" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="60000" /> <!-- 延迟10秒启动，然后每隔1分钟执行一次。 -->
+	</bean>
+
+
+	<!-- 刷新视频时长-->
+	<bean id="job_flush_video_duration"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="videoTaskService" />
+		<property name="targetMethod" value="updateVideoDuration" />
+		<property name="concurrent" value="false"/> <!-- 串行 -->
+	</bean>
+	<bean id="task_flush_video_duration" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_flush_video_duration" />
+		<property name="startDelay" value="20000" />
+		<property name="repeatInterval" value="3600000" /> <!-- 延迟20秒启动，然后每隔1小时执行一次。 -->
+	</bean>
+
+		<!-- 获取视频mp4下载路径-->
+	<bean id="job_get_mp4_download_url"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="getMP4DownloadUrlTask" />
+		<property name="targetMethod" value="getMP4DownloadUrl" />
+		<property name="concurrent" value="false"/> <!-- 串行 -->
+	</bean>
+	<bean id="task_get_mp4_download_url" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="job_get_mp4_download_url" />
+		<property name="startDelay" value="20000" />
+		<property name="repeatInterval" value="300000" /> <!-- 延迟20秒启动，然后每隔5分钟执行一次。 -->
+	</bean>
+	
+	
+	<!-- 设置调度 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="task_flush_video_status" />
+				<ref bean="task_flush_video_duration"/>
+				<ref bean="task_get_mp4_download_url"/>				
+			</list>
+		</property>
+		<property name="taskExecutor" ref="executor" />
+	</bean>
+
+</beans>

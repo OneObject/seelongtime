@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>iapp</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:com.longtime.context.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.myctu.platform.spring.ext.ShareContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>xssfilter</filter-name>
+		<filter-class>com.longtime.common.filter.XssFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>xssfilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>xssfilter</filter-name>
+		<url-pattern>*.list</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>xssfilter</filter-name>
+		<url-pattern>*.dlg</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>xssfilter</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>LocalSessionThreadLocalSetFilter</filter-name>
+		<filter-class>com.longtime.app.base.cookie.LocalSessionThreadLocalSetFilter</filter-class>
+		<init-param>
+			<param-name>excludes</param-name>
+			<param-value>/resource/*,/static/*,/mgr/login.xhtml,/mgr/static/*,/student/itest/examination/*,/ivideo/*,/mgr/itest/exam/previewinmobile.list</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>  
+	    <filter-name>LocalSessionThreadLocalSetFilter</filter-name>  
+	    <url-pattern>/mgr/*</url-pattern>    
+	</filter-mapping>
+	
+	<filter-mapping>  
+	    <filter-name>LocalSessionThreadLocalSetFilter</filter-name>  
+	    <url-pattern>/base/admin/*</url-pattern>    
+	</filter-mapping>
+	
+	<filter-mapping>  
+	    <filter-name>LocalSessionThreadLocalSetFilter</filter-name>  
+	    <url-pattern>/report/*</url-pattern>    
+	</filter-mapping>
+	<filter>  
+	    <filter-name>LocalLoginFilter</filter-name>  
+	    <filter-class>com.longtime.common.filter.LocalLoginFilter</filter-class>  
+	    <init-param>
+	    	<param-name>excludes</param-name>
+	    	<param-value>/mgr/login.xhtml,/mgr/static/*,/student/itest/examination/*,/ivideo/*,/mgr/itest/exam/previewinmobile.list</param-value>
+	    </init-param>
+	</filter>  
+	  
+	<filter-mapping>  
+	    <filter-name>LocalLoginFilter</filter-name>  
+	    <url-pattern>/mgr/*</url-pattern>    
+	</filter-mapping>
+	
+	<filter-mapping>  
+	    <filter-name>LocalLoginFilter</filter-name>  
+	    <url-pattern>/base/admin/*</url-pattern>    
+	</filter-mapping>
+	
+	<!-- 
+	<filter>  
+	    <filter-name>permissionFilter</filter-name>  
+	    <filter-class>com.longtime.common.filter.PermissionFilter</filter-class>  
+	</filter>  
+	  
+	<filter-mapping>  
+	    <filter-name>permissionFilter</filter-name>  
+	    <url-pattern>/base/admin/*</url-pattern>   
+	</filter-mapping> -->
+	
+	<!-- <filter>  
+	    <filter-name>userBindFilter</filter-name>  
+	    <filter-class>com.longtime.common.filter.UserBindFilter</filter-class>  
+	</filter>  
+	  
+	<filter-mapping>  
+	    <filter-name>userBindFilter</filter-name>  
+	    <url-pattern>*.xhtml</url-pattern>    
+	</filter-mapping> -->
+	
+	<!-- 用户访问足迹 -->
+	<filter>  
+	    <filter-name>userTrackFilter</filter-name>  
+	    <filter-class>com.longtime.common.filter.UserTrackFilter</filter-class>
+	    <init-param>
+	    	<param-name>isTrack</param-name>
+	    	<param-value>true</param-value>
+	    </init-param>  
+	</filter>  
+	  
+	<filter-mapping>  
+	    <filter-name>userTrackFilter</filter-name>  
+	    <url-pattern>*.xhtml</url-pattern>    
+	</filter-mapping>
+	
+	
+	
+<!--Comet4J配置 -->
+	<!-- <listener>
+		<description>Comet4J容器侦听</description>
+		<listener-class>org.comet4j.core.CometAppListener</listener-class>
+	</listener>
+	<servlet>
+		<description>Comet连接[默认:org.comet4j.core.CometServlet]</description>
+		<display-name>CometServlet</display-name>
+		<servlet-name>CometServlet</servlet-name>
+		<servlet-class>org.comet4j.core.CometServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CometServlet</servlet-name>
+		<url-pattern>/conn</url-pattern>
+	</servlet-mapping>
+	Comet4J可选参数配置
+	<context-param>
+		<description>语言[支持：zh,en,默认:zh，详细http://www.loc.gov/standards/iso639-2/php/English_list.php]</description>
+		<param-name>Comet.Language</param-name>
+		<param-value>zh</param-value>
+	</context-param>
+	<context-param>
+		<description>请求超时时间/微妙[默认:60000,1分钟,建议至少设置3秒以上]</description>
+		<param-name>Comet.Timeout</param-name>
+		<param-value>60000</param-value>
+	</context-param>
+	<context-param>
+		<description>连接空闲过期时间/微妙[默认:5000,5秒]</description>
+		<param-name>Comet.ConnExpires</param-name>
+		<param-value>5000</param-value>
+	</context-param>
+	<context-param>
+		<description>连接检查频率/微妙[默认:5000,5秒]</description>
+		<param-name>Comet.ConnFrequency</param-name>
+		<param-value>5000</param-value>
+	</context-param>
+	<context-param>
+		<description>缓存信息过期时间/微妙[默认:60000,1分种]</description>
+		<param-name>Comet.CacheExpires</param-name>
+		<param-value>60000</param-value>
+	</context-param>
+	<context-param>
+		<description>缓存信息过期检查频率/微妙[默认:60000,1分种]</description>
+		<param-name>Comet.CacheFrequency</param-name>
+		<param-value>60000</param-value>
+	</context-param>
+	<context-param>
+		<description>连接模式[auto(默认)/stream/lpool]</description>
+		<param-name>Comet.WorkStyle</param-name>
+		<param-value>auto</param-value>
+	</context-param>
+	<context-param>
+		<description>开启调试[false(默认)/true]</description>
+		<param-name>Comet.Debug</param-name>
+		<param-value>false</param-value>
+	</context-param> -->
+	
+	<!-- 图片上传 -->
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.longtime.app.image.web.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+	<!--  
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>com.longtime.app.image.web.ImageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/image/*</url-pattern>
+	</servlet-mapping>
+	-->
+	
+	<servlet>
+		<servlet-name>ImageServlet2</servlet-name>
+		<servlet-class>com.longtime.app.image.web.ImageServlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ImageServlet2</servlet-name>
+		<url-pattern>/image/*</url-pattern>
+	</servlet-mapping>
+	<!-- 图片上传 -->
+	
+<!-- end comet4j -->	
+
+	<servlet>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>100</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<url-pattern>*.list</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<url-pattern>*.dlg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping>
+		<servlet-name>spring-mvc-jsp</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	 -->
+	<!-- <servlet-mapping>
+	  <servlet-name>springDispatcher</servlet-name>
+	  <url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping> -->
+
+	<servlet>
+		<servlet-name>path-servlet</servlet-name>
+		<servlet-class>com.longtime.common.PathServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+
+	<!-- dwr配置 -->
+    <servlet>
+        <servlet-name>dwr-invoker</servlet-name>
+        <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <!-- <init-param>
+            <param-name>config-1</param-name>
+            <param-value>WEB-INF/dwr.xml</param-value>
+        </init-param> -->
+        <init-param>
+            <param-name>classes</param-name>
+            <param-value>
+                com.longtime.app.util.DWRService
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dwr-invoker</servlet-name>
+        <url-pattern>/dwr/*</url-pattern>
+    </servlet-mapping>
+
+
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+
+	<!-- weixin oauth   
+		note: 已经不在使用废弃  2015-03-04
+	-->
+	<filter>
+		<filter-name>WXOauthFilter</filter-name>
+		<filter-class>com.longtime.app.ixin.protal.WXOauthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+   	 	<filter-name>WXOauthFilter</filter-name>
+    	<url-pattern>/protal/activity/activitypage.xhtml</url-pattern><!-- 活动 -->
+  	</filter-mapping>
+	<filter-mapping>
+   	 	<filter-name>WXOauthFilter</filter-name>
+    	<url-pattern>/protal/activity/cardreward.xhtml</url-pattern><!-- 刮刮卡 -->
+  	</filter-mapping>
+  	
+  	<filter-mapping>
+   	 	<filter-name>WXOauthFilter</filter-name>
+    	<url-pattern>/protal/uservote/index.xhtml</url-pattern><!-- 调研投票 -->
+  	</filter-mapping>
+  	<filter-mapping>
+   	 	<filter-name>WXOauthFilter</filter-name>
+    	<url-pattern>/protal/uservote/result.xhtml</url-pattern><!-- 调研投票结果 -->
+  	</filter-mapping>
+  	
+
+
+
+	<!-- 以下配置cas所要过滤的url -->
+
+	<!-- <filter-mapping> <filter-name>CAS Filter</filter-name> <url-pattern>/*</url-pattern> 
+		</filter-mapping> -->
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/jsp/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>com.longtime.common.exception.IAppRuntimeException</exception-type>
+		<location>/WEB-INF/jsp/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/jsp/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/error/404.jsp</location>
+	</error-page>
+
+	<jsp-config>
+		<taglib id="taglib-elfunctions">
+			<taglib-uri>http://www.longtimeit.com/taglib-elfunctions</taglib-uri>
+			<!-- tld文件的路径 -->
+			<taglib-location>/WEB-INF/tld/functions.taglib.xml</taglib-location>
+		</taglib>
+		<taglib id="taglib-longtimetag">
+			<taglib-uri>http://www.longtimeit.com/iapp</taglib-uri>
+			<taglib-location>/WEB-INF/tld/longtimeTag.tld</taglib-location>
+		</taglib>
+		<taglib id="taglib-acl">
+		    <taglib-uri>http://www.longtimeit.com/taglib-acl</taglib-uri> 
+			<taglib-location>/WEB-INF/tld/acl.taglib.xml</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://www.longtimeit.com/taglib-elfunctions-ajy</taglib-uri>
+			<!-- tld文件的路径 -->
+			<taglib-location>/WEB-INF/tld/ajy.functions.taglib.xml</taglib-location>
+		</taglib>
+
+	</jsp-config>
+
+
+</web-app>

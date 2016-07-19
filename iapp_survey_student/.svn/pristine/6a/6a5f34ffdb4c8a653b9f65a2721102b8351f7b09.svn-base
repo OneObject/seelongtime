@@ -1,0 +1,205 @@
+/* 提示 更多 */
+.student-func-line{
+	font-size:12px;
+	color:#fefefe;
+	line-height:45px;
+}
+.student-func-line .student-tip{
+	width:90%;
+	margin:0 auto;
+}
+.student-func-line .student-tip .message{
+	width:24px;
+	height:45px;
+	margin-right:10px;
+	display:block;
+	background:url(../img/message.png) no-repeat center center;
+	background-size:24px auto;
+	float:left;
+}
+.student-func-line .student-tip label{
+	overflow:hidden;
+}
+.student-func-line a.dot{
+	height:45px;
+	display:block;
+	float:right;
+}
+.student-func-line a.dot span{
+	display:block;
+	width:42px;
+	height:21px;
+	line-height:21px;
+	border:1px solid #fefefe;
+	-webkit-border-radius:4px;
+	text-align:center;
+	color:#fefefe;
+	margin-top:0.7rem;
+	position:relative;
+}
+.student-func-line a.dot i{
+	display:block;
+	width:8px;
+	height:8px;
+	position:absolute;
+	background:#fa565a;
+	border-radius:8px;
+	top:-4px;
+	right:-4px;
+}
+
+/* 等级 */
+.new-student-box .student-box-lv{
+	height:20px;
+	line-height:10px;
+}
+.new-student-box .student-box-lv .lv-name{
+	float:left;
+	width:30%;
+	text-align:center;
+	font-size:14px;
+	color:#bcdad7;
+	float:left;
+}
+.new-student-box .student-box-lv .lv-intro{
+	width:60%;
+	height:10px;
+	margin-left:15px;
+	background:#fefefe;
+	float:left;
+	position:relative;
+	border-radius:10px;
+}
+.new-student-box .student-box-lv .lv-intro span.lv-percent{
+	font-size:10px;
+	color:#fefefe;
+	width:87%;
+	height:10px;
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+	background:#f29700;
+	border-radius:10px;
+	text-align:right;
+	padding-right:5px;
+	-webkit-transition:width 0.5s ease-out;
+	-moz-transition:width 0.5s ease-out;
+	transition:width 0.5s ease-out;
+}
+
+.useapp-box{
+	width:100%;
+	background:#fefefe;
+	padding-bottom:60px;
+}
+@media screen and (max-width:1000px){
+	.useapp-box{
+		width:90%;
+	}
+}
+.useapp-box ul li{
+	float:left;
+	text-align:center;
+}
+.useapp-box ul li a{
+	display:block;
+	font-size:14px;
+	color:#434343;
+	padding-top:1.5rem;
+}
+.useapp-box ul li span{
+	display:block;
+	margin-top:0.5rem;
+}
+.useapp-box ul li b{
+	display:inline-block;
+	position:relative;
+	width:55px;
+	height:55px;
+}
+.useapp-box ul li em{
+	display:block;
+	height:55px;
+}
+.useapp-box ul li em img{
+	width:55px;
+	height:55px;
+}
+
+.useapp-box ul li a i{
+	display:block;
+	width:8px;
+	height:8px;
+	position:absolute;
+	background:#fa565a;
+	border-radius:8px;
+	top:-4px;
+	right:-4px;
+}
+
+
+
+/* 应用中心 */
+.add-about-box{
+	width:100%;
+	height:78px;
+	line-height:78px;
+	border-bottom:1px solid #d8d8d8;
+	color:#434343;
+	font-size:18px;
+	background:#fefefe;
+}
+.add-about-box em{
+	display:block;
+	margin-left:10px;
+	float:left;
+	width:55px;
+	height:78px;
+}
+.add-about-box em.add-about-bg1{
+	background:url(../img/icon_1_8.png) no-repeat center center;
+	background-size:55px auto;
+}
+.add-about-box em.add-about-bg2{
+	background:url(../img/icon_1_9.png) no-repeat center center;
+	background-size:55px auto;
+}
+.add-about-box em.add-about-bg3{
+	background:url(../img/icon_1_10.png) no-repeat center center;
+	background-size:55px auto;
+}
+.add-about-box .about-frid{
+	float:left;
+	line-height:78px;
+	margin-left:10px;
+}
+.add-about-box .about-add{
+	float:right;
+	width:20%;
+	height:73px;
+	text-align:center;
+	margin-right:10px;
+	padding-top:23px;
+}
+.add-about-box .about-add .active{
+	float:right;
+	display:block;
+	width:60px;
+	height:28px;
+	color:#fefefe;
+	line-height:28px;
+	border-radius:3px;
+	background:#fe7373;
+}
+.add-about-box .about-add span{
+	float:right;
+	display:block;
+	width:60px;
+	height:28px;
+	color:#fefefe;
+	line-height:28px;
+	background:#259d93;
+	border-radius:3px;
+	cursor:pointer;
+}

@@ -1,0 +1,7 @@
+article.index{width:100%;position:relative;background:url(../img/i_bg.jpg) left bottom no-repeat;background-size:cover;}
+article.index ul{position:absolute;top:32px;right:32px;width:196px;}
+article.index ul li{width:62px;margin-bottom:22px;text-align:center;font-size:14px;font-weight:bold;float:left;margin-left:36px;}
+article.index ul li a{color:#fff;display:block;}
+article.index ul li span{height:16px;line-height:16px;}
+article.index ul img{width:62px;height:62px;margin-bottom:10px;}
+article.index span.logo img{height:28px;position:absolute;bottom:24px;left:26px;display:block;}

@@ -1,0 +1,58 @@
+html,body{font-family: "微软雅黑"}
+.mytable_btn{
+    cursor: pointer;
+}
+.mytable_btn i{color:#8B8B8B;}
+.btngroup{margin: 10px;float: right;text-align: right;}
+.xuanxiang{display: block;line-height: 30px;padding-top: 7px;}
+.radiogroup{display: block;width: 50px;float: left;overflow: hidden;}
+.right{float: right;}
+.add-on{display: block;float: left;background-color: #F7F7F7;}
+.col-md-5{padding: 0px;}
+/*弹出层样式*/
+#choosePaper,#chooseQuestion{width: 500px;height: 420px;background-color: #FFFFFF;}
+#choosePaper input,#chooseQuestion input{width: 300px;
+margin: 5px;}
+.close_btn{float: right;}
+.easyDialog_text{padding: 20px;overflow:hidden;}
+.yellow{display: block;}
+.pagination{float: right;}
+.easyDialog_footer{overflow: hidden;}
+.dialog-btn{float: right;margin-right: 20px;margin-top: 20px;}
+.cancle{margin-left: 30px;}
+.shangyibu{cursor: pointer;display: block;margin-left: 10px;color:#999999;}
+//#chooseQuestion{display: none;width:700px;height:450px;}
+//#testQuestion{display: block;padding:10px;padding-left: 0px;padding-right: 20px;}
+#testQuestion .row{height: 35px;overflow: hidden;}
+
+#testQuestion .col-md-8,#testQuestion .col-md-7{padding:0px;}
+//#chooseQuestion #table_list{overflow: auto; display: block;width:800px;height: 650px;margin: 10px -15px 10px 5px;}
+//#chooseQuestion #itemblank_list{overflow: auto; display: block;width:800px;height: 650px;margin: 10px -15px 10px 5px;}
+#itemblankList input{width: 170px;}
+#con_structures input{width: 50px;}
+#con_structures table td:first-child{text-align: right;}
+#con_structures table td:nth-child(2){text-align: left;}
+.tiku_name{background-color: #bedfc2;display: block;padding: 3px 5px; border-radius:4px;float: left;margin-right: 10px;margin-bottom: 10px;color:#555;cursor: pointer;}
+.panel-body table td:first-child{min-width: 110px;}
+.you-error{color:#B94A48;}
+.you-error input{border-color:#B94A48; border-collapse:#B94A48; }
+.error_info{margin-left: 10px;}
+.time_zhi{margin-top: 6px;display: block;}
+.yuejuan tr th:first-child{width: 20px;}
+.defen{width: 100px;color: #FF0000;}
+.error{color: #FF0000;}
+.num{width: 30px;}
+.cankao{width: 200px;}
+.col1{height: 30px;line-height: 30px;}
+.cont{width: 50px;}
+.cont .label{margin-left: 10px;margin-right: 5px;}
+.item_score{color: #72C02C;}
+.error-table{border-top: 5px solid #FF0000;}
+.right-table{border-top: 5px solid #199C37;}
+.danwei{display:block;height: 34px;line-height: 34px;overflow: hidden;float: left;color:#10A062;}
+.bb_name{font-size: 14px;font-weight: bold;}
+.bb_canshu{font-size: 12px;font-style: oblique;color:#B94A48}
+
+.table_add{font-size: 14px;float: right;display: block;margin-right: 16px;}
+.choose_btn{cursor: pointer;}
+.mt20{margin-top: 20px;}

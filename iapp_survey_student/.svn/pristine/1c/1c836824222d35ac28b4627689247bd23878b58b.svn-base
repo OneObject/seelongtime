@@ -1,0 +1,13 @@
+
+launcher='org.apache.catalina.startup.Bootstrap'
+PID=`ps -ef | grep $launcher | grep survey | grep -v ' grep' | awk '{print $2}'`
+
+echo $PID
+
+if [ ! -e $PID ];
+then
+        echo "kill tomcat-survey the PID is $PID"
+        kill $PID
+else
+        echo "tomcat-surveythe not run"
+fi

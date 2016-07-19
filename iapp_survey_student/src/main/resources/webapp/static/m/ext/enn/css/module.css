@@ -1,0 +1,315 @@
+.dialog-wrapper{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:100;
+}
+.dialog-box{
+    border-radius:4px;
+    border:1px solid #ccc;
+    position:fixed;
+    left:50%;
+    top:35%;
+    background:#fff;
+    z-index:105;
+    text-align:center;
+    margin-left:-140px;
+}
+.dialog-box .dialog-header{
+    min-height:44px;
+    line-height:44px;
+    font-size:16px;
+    color:#26a69a;
+    border-bottom:2px solid #26a69a;
+    padding:0 15px;
+    text-align: left;
+}
+.dialog-box .dialog-content{
+    font-size:16px;
+    color:#53575e;
+    border-bottom:1px solid #ccc;
+    padding:15px;
+    line-height:22px;
+    text-align: left;
+}
+.dialog-box .dialog-footer{
+    min-height:44px;
+    line-height:44px;
+    font-size:16px;
+    color:#53575e;
+}
+.dialog-box .dialog-footer span{
+    text-align:center;
+    display:inline-block;
+    cursor:pointer;
+    width:50%;
+    color:#26a69a;
+}
+.dialog-box .dialog-footer span:last-child{
+    box-sizing:border-box;
+    border-left:1px solid #ccc;
+}
+.dialog-box .dialog-footer.cols-1 span{
+    width:100%;
+}
+
+.dialog-selector-wrapper{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:100;
+}
+.dialog-selector-box{
+    width:270px;
+    position:absolute;
+    left: 50%;
+    top:35%;
+    background: #fff;
+    border-radius: 4px;
+    margin-left: -135px;
+}
+.dialog-selector-box ul li{
+    color:#333;
+    height:55px;
+    line-height:54px;
+    border-bottom: 1px solid #e7e7e7;
+    padding:0 20px;
+    font-size:20px;
+}
+.dialog-selector-box ul li:last-child{
+    border:none;
+}
+.dialog-selector-box ul label{
+    margin-right:2px;
+}
+.dialog-selector-box ul li.selected{
+    color:#26a69a;
+}
+.dialog-selector-box ul span{
+    display: inline-block;
+    width:24px;
+    height:24px;
+    line-height: 24px;
+    float: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:1px solid #bcbcbc;
+    border-radius:24px;
+    margin-top:15px;
+}
+.dialog-selector-box ul i{
+    display: inline-block;
+    width:12px;
+    height:12px;
+    background: #fff!important;
+    float:left;
+    margin:5px;
+    border-radius: 12px;
+}
+.dialog-selector-box ul li.selected span{
+    border-color:#26a69a;
+}
+.dialog-selector-box ul li.selected i{
+    background:#26a69a!important;
+}
+
+.dialog-selector-box-text{
+    width:240px;
+    position:absolute;
+    left: 50%;
+    top:30%;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin-left: -120px;
+}
+.dialog-selector-box-text ul{
+    max-height: 260px;
+    overflow: auto;
+    -webkit-overflow-scrolling : touch;
+}
+.dialog-selector-box-text ul li{
+    color:#333;
+    min-height:43px;
+    line-height:22px;
+    border-bottom: 1px solid #e7e7e7;
+    padding:10px 15px 10px 40px;
+    font-size:16px;
+    position: relative;
+}
+.dialog-selector-box-text ul li:last-child{
+    border: 0;
+}
+.dialog-selector-box-text ul .radio-box{
+    display: inline-block;
+    position: absolute;
+    left:10px;
+    width:20px;
+    height:20px;
+    border-radius: 20px;
+    border:1px solid rgba(0,0,0,0.36);
+    top:50%;
+    margin-top:-10px;
+}
+.dialog-selector-box-text ul .radio{
+    display: inline-block;
+    width:14px;
+    height:14px;
+    border-radius: 14px;
+    margin: 2px;
+    background: rgba(0,0,0,0.36);
+}
+
+.dialog-selector-box-text ul .selected .radio-box{
+    border:1px solid #26a69a;
+}
+.dialog-selector-box-text ul .selected .radio{
+    background: #26a69a;
+}
+.dialog-selector-box-text ul .check-box{
+    display: inline-block;
+    position: absolute;
+    left:10px;
+    width:20px;
+    height:20px;
+    border-radius: 2px;
+    border:1px solid rgba(0,0,0,0.36);
+    top:50%;
+    margin-top:-10px;
+    text-align: center;
+    line-height: 18px;
+}
+.dialog-selector-box-text ul .check{
+    display: none;
+}
+.dialog-selector-box-text ul .selected .check-box{
+    border:1px solid #26a69a;
+    background: #26a69a;
+}
+.dialog-selector-box-text ul .selected .check{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/check_w.png) center center no-repeat;
+    background-size: 14px 14px;
+    margin:2px;
+}
+.dialog-selector-box-text ul li.selected{
+    color:#26a69a;
+}
+.dialog-selector-box-text .dialog-selector-box-btns{
+    height:41px;
+    line-height:40px;
+    border-top: 1px solid #e7e7e7;
+    font-size:16px;
+    color:#53575e;
+}
+.dialog-selector-box-text .dialog-selector-box-btns span{
+    text-align:center;
+    display:inline-block;
+    cursor:pointer;
+    width:50%;
+    color:#26a69a;
+}
+.dialog-selector-box-text .dialog-selector-box-btns span:last-child{
+    box-sizing:border-box;
+    border-left:1px solid #e7e7e7;
+}
+
+
+.light-block{
+    line-height: 20px;
+    color:#fff;
+    background-color: #000;
+    font-size:14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:4px 15px;
+    position: fixed;
+    z-index: 105;
+    left:50%;
+    bottom:55px;
+    text-align: center;
+    width: 200px;
+    margin-left:-100px;
+    overflow: hidden;
+}
+
+.upload-progress-wrapper{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:100;
+}
+.upload-progress-box{
+    width:200px;
+    position: absolute;
+    left:50%;
+    top:35%;
+    margin-left:-100px;
+}
+.upload-progress-box dt{
+    width:100%;
+    font-size:20px;
+    height:26px;
+    line-height: 26px;
+    color:#eee;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.upload-progress-box dd{
+    width:100%;
+    height:8px;
+    border-radius: 4px;
+    background: #999;
+}
+.upload-progress-box dd span{
+    display: inline-block;
+    width:1%;
+    float: left;
+    height:8px;
+    border-radius: 4px;
+    background-color: #eee;
+}
+.upload-progress-box .progress-cancel-btn{
+    display: block;
+    width:80px;
+    height:34px;
+    line-height: 34px;
+    text-align: center;
+    border:1px solid #eee;
+    border-radius: 5px;
+    color:#eee;
+    font-size:16px;
+    margin:80px auto 0;
+}
+
+.module-handling{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:100;
+
+}
+.module-handling i{
+    font-size:44px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top:-22px;
+    margin-left:-22px;
+    color:rgba(255,255,255,0.8);
+}

@@ -1,0 +1,15 @@
+com.longtime.ivideo.upload.query=http://v.jteam.cn:80/jvideo/api/upload/query.do
+com.longtime.ivideo.playurl=http://v.jteam.cn:80/jvideo/api/player/playUrl.do
+com.longtime.ivideo.get=http://v.jteam.cn:80/jvideo/api/video/get.do
+com.longtime.ivideo.key=12333
+com.longtime.ivideo.appkey=1
+com.longtime.ivideo.screenshoturl=http://v.jteam.cn:80/jvideo/api/video/thumbnail.do
+com.longtime.ivideo.createprofile=http://v.jteam.cn:80/jvideo/api/video/createProfile.do
+
+# \u622a\u53d6\u89c6\u9891\u63a5\u53e3
+com.longtime.ivideo.subvideo=http://v.jteam.cn:80/jvideo/api/video/createClip.do
+# \u89c6\u9891\u64ad\u653e\u8be6\u7ec6\u65f6\u95f4\u7edf\u8ba1  true|false
+com.longtime.ivideo.trace.detail.open=true
+# \u64ad\u653e\u76d1\u63a7\u8bf7\u6c42\u95f4\u9694 .\u5355\u4f4d millisecond
+com.longtime.ivideo.trace.interval=120000
+com.longtime.ivideo.defaultvideoid=a09a10217bed552c3b3ea53925d978c8

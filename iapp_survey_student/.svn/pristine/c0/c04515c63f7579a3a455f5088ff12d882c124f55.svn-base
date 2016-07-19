@@ -1,0 +1,3 @@
+/opt/tomcat_survey/bin/startup.sh survey
+
+echo "start tomcat-survey server"

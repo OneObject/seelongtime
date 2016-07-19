@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="false">
+
+	<appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/opt/applications/logs/student_survey_test.log</file>
+		<append>true</append>
+		<encoder>
+			<!-- <pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c]:%L-%m%n</pattern> -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c{5}#%M]:%L-%m%n%caller{0}</pattern>
+		</encoder>
+		<prudent>false</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/applications/logs/student_survey_test.%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern>
+			<!-- keep 24*30 hour' worth of history -->
+			<maxHistory>720</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+	
+	<appender name="student-druid-logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/opt/applications/logs/student_survey_test-druid.log</file>
+		<append>true</append>
+		<encoder>
+			<!-- <pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c]:%L-%m%n</pattern> -->
+			<pattern>%d{yyyy-MM-dd HH:mm:ssS} %5p [%c{5}#%M]:%L-%m%n%caller{0}</pattern>
+		</encoder>
+		<prudent>false</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/applications/logs/student_survey_test-druid.%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern>
+			<!-- keep 24*30 hour' worth of history -->
+			<maxHistory>720</maxHistory>
+		</rollingPolicy>
+	</appender>
+	
+
+	<root level="info">
+		<appender-ref ref="logfile" />
+	</root>
+	
+	<logger name="com.longtime.ajy" level="debug" additivity="true"/>
+	
+	<!-- <logger name="com.alibaba.druid" level="info" additivity="false">
+		<appender-ref ref="student-druid-logfile" />
+	</logger> -->
+	
+
+</configuration>

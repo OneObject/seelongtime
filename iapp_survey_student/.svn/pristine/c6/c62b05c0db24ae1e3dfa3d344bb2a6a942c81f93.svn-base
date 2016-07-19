@@ -1,0 +1,150 @@
+body{font-family: "微软雅黑"}
+.iask_color_green{color: #d2322d;}
+/*提问页面*/
+.iask_mr5{margin-right: 5px;}
+.iask_ml5{margin-left: 5px;}
+.navbar-inverse {background-color: #71C7D5;border-bottom:7px solid #000000;}
+.iask-logo{font-size: 38px;font-family: "微软雅黑";color: #FFFFFF;}
+.iask-logo:hover{color: #FFFFFF;text-decoration: none;}
+.bs-navbar-collapse{text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);background-color: #71C7D5;border-color: #463265;box-shadow: 0 1px 0 rgba(255, 255, 255, .1);}
+.navbar-inverse .navbar-nav>li>a {color: #FFFFFF;}
+.iask_header{width: 100%;}
+.navbar-nav>li>a {padding-top: 20px;padding-bottom: 15px;}
+.iask_asking h1{font-family: "微软雅黑";font-size: 16px;font-weight: bold;margin: 10px 20px 20px 20px;display: block;}
+.iask_asking .iask_asking_box{border: 1px solid #CCCCCC;margin: 10px 20px;display: block;padding: 30px 14px;overflow: auto;}
+.iask_asking_box span{font-family: "微软雅黑"; font-size:14px; font-weight: bold;margin: 10px 0px;display: block;}
+.iask_asking_box .iask_importent{margin: 15px 0px 0px 5px;width: 20px;float: left;}
+.iask_asking_box .iask_title,.iask_asking_box .iask_tip{margin: 10px 0px;display: block;width: 100%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.428571429;color: #555;vertical-align: middle;
+background-color: white;background-image: none;border: 1px solid #CCC;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;}
+.iask_submit{float: right !important;}
+.iask_asking_box .ke-container span{margin: 0px;}
+.modify_question{float: right;margin-right: 10px;}
+.error{width: 100%;}
+.alert {
+padding: 5px;
+margin-bottom: 0px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+/*下面开始是详情页面的样式*/
+.iask_quondam_question{margin: 10px;width: 100%;}/*原问题*/
+.question_title{font-size: 14px;font-weight: bold;line-height: 2.4;}
+.question_title_s{font-size: 14px;line-height: 2.4;}
+.publish_detail{clear: both;font-size: 12px;color: #999999;}
+.publish_detail span{display: block;padding: 3px 0px;}
+.publisher{color: #648DC9;margin-right: 20px;float: left;cursor: pointer;}
+.question_tips{float: left;}
+.publish_detail .question_tip_one{display: block;background-color: #D9534F;padding: 3px 5px;border-radius:6px;float: left;color: #FFFFFF;margin-left: 10px;cursor: pointer;}
+.question_publish_time{float: right;margin-right: 20px;}
+.question_supplement{clear: both;padding: 10px;}
+.sort_control{width: 100%;text-align: right;border-bottom: 2px solid #ddd;overflow: hidden;}
+.by_answer_time,.by_replay_count{padding: 10px 20px 10px 20px;display: block;float: right;font-size: 14px;font-weight: bold;}
+.sort_control .active{border-bottom: 3px solid #d2322d;}
+.by_answer_time:hover,.by_replay_count:hover{border-bottom: 3px solid #d2322d;cursor: pointer;}
+.replay_list{clear: both;margin-top: 10px;}
+.replay_list ul{clear: both;margin: 0px;padding: 0px;overflow: hidden;}
+.replay_list ul li{list-style: none;}
+.replay_list ul li .replay_for_quondam{width: 100%;}
+.one_replay li{float: left;width: 93%;}
+.one_replay li:first-child{width: 4%;min-width: 35px;margin-right: 10px;}
+.iask-zan{width: 32px;height: 24px;background-image: url("../img/replay_btn.png");background-position: -34px 0;background-repeat: no-repeat;display: block;color: #71c7d5;font-size: 10px;margin-top: 5px;
+padding-top: 8px;text-align: center; cursor: pointer;}
+.iask-cai{background-image: url("../img/replay_btn.png"); background-position: -34px -26px;width: 31px;height: 15px;display: block;background-repeat: no-repeat;margin-top: 3px;cursor: pointer;}
+.one_replay li .zan_active{background-position: 0 0;color: #FFFFFF;}
+.one_replay li .cai_active{background-position: 0 -26px;}
+.replay_detail{color: #929292;font-size: 12px;}
+.replay_time{float: left;display: block;}
+.replay_btn{color: #648DC9;cursor: pointer;}
+.replay_for_replay{border: 1px solid #ddd;
+margin: 0px 10px;
+overflow: hidden;
+border-radius: 6px;}
+.replaying_for_replay{margin: 10px 10px;display: block;width: 88%;height: 34px;padding: 3px 12px;font-size: 14px;line-height: 1.428571429;color: #555;vertical-align: middle;
+background-color: white;background-image: none;border: 1px solid #CCC;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;float: left;}
+.submit_replaying_for_replay{border-bottom-left-radius:0px;border-bottom-right-radius: 16px;border-top-left-radius:0px;border-top-right-radius: 16px; margin-top: 10px;} 
+.rfr_list{margin: 0px;padding: 0px;}
+.replay_for_replay .rfr_list li{list-style: none;width: 100%;}
+.replay_for_replay .rfr_list .one_rfr{color: #000000;}
+.rfr_name{float: left;margin-left: 10px;color:#648DC9; }
+.rfr_time{float: right;margin-right: 10px;color: #999999;}
+.rfr_content{clear: both;margin: 10px;}
+.replay_for_replay .rfr_list hr{margin: 0px;}
+.split_up_down{display: block;border-bottom: 1px dashed  #DADADA;margin: 10px 0px;}
+ .replay_quondam_question{overflow: hidden;}
+.replay_quondam_question textarea{margin: 10px 10px;display: block;width: 100%;height: 100px;resize: none;
+padding: 3px 12px;font-size: 14px;line-height: 1.428571429;color: #555;vertical-align: middle;
+background-color: white;background-image: none;border: 1px solid #CCC;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;float: left;}
+ .replay_quondam_question .btn_submit_quondam{background-color: #71C7D5;
+padding: 5px 10px;
+display: block;
+clear: both;
+float: right;
+margin-right: 15px;
+color: #FFFFFF;
+cursor: pointer;
+margin-top: 10px;
+}
+.replayer_name{color:#648DC9; }
+/*下面是列表页*/
+.sort_control_list{width: 100%;text-align: right;border-bottom: 2px solid #999999;overflow: hidden;}
+.by_asking_time,.by_answer_count{padding: 10px 20px 10px 20px;display: block;float: right;font-size: 14px;font-weight: bold;}
+.sort_control_list .active{border-bottom: 3px solid #d2322d;}
+.by_asking_time:hover,.by_answer_count:hover{border-bottom: 3px solid #d2322d;cursor: pointer;}
+.question_list,.one_question{margin: 0px;padding: 0px;overflow: hidden;}
+.question_list li{list-style: none;}
+.replay_count,.question_content{float: left;}
+.question_content{width: 93%;}
+.iask_quondam_question a{color: #000000;}
+.iask_quondam_question a:hover{color:#428BCA;text-decoration: none;}
+.replay_count span{width: 30px;height: 30px;display: block;background-color: #71C7D5;color: #FFFFFF;font-size: 14px;margin: 10px 10px;text-align: center;line-height: 30px;font-weight: bold;}
+/*这里共用了详情页的样式*/
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+z-index: 2;
+color: white;
+cursor: default;
+background-color: #d2322d;
+border-color: #d2322d;
+}
+.pagination{margin-left: 40%;}
+.huifumuren{color: #d2322d;float: left;}
+/*我的提问*/
+.iask_second_nav{float: left;display: block;margin-bottom: 0px;clear: left;margin-top: 5px;}
+.iask_second_nav span{padding: 10px 20px 10px 20px;font-size: 14px;font-family: "微软雅黑";line-height: 2.4;border: 1px solid #CCCCCC;font-weight: bold;}
+.iask_second_nav span:hover{background-color: #D9534F;color: #FFFFFF;cursor: pointer;}
+.iask_second_nav .nav_active{background-color: #D9534F;color: #FFFFFF;}
+/**
+ *最新问题，最热问题，以及用户排名
+ */
+.hot_question{width: 100%;overflow: hidden;display: block;height: 270px;}
+.hot_question h3{margin: 0px;font-family: "微软雅黑";font-size: 18px;font-weight: bold;margin-bottom: 10px;display: block;}
+.hot_question ul{margin: 0px;padding: 0px;}
+.hot_question ul li{list-style: none;font-family: "微软雅黑";overflow: hidden;display: block;line-height: 2.4;}
+.hot_question ul li .question_title_s{width: 80%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;display: block;float: left;}
+.hot_question ul li .answer_count{font-size: 12px;color: #999999;line-height: 2.4;}
+/*new*/
+.new_question{width: 100%;overflow: hidden;display: block;height: 270px;}
+.new_question h3{margin: 0px;font-family: "微软雅黑";font-size: 18px;font-weight: bold;margin-bottom: 10px;display: block;}
+.new_question ul{margin: 0px;padding: 0px;}
+.new_question ul li{list-style: none;font-family: "微软雅黑";overflow: hidden;display: block;line-height: 2.4;}
+.new_question ul li .question_title_s{width: 80%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;display: block;float: left;}
+.new_question ul li .answer_count{font-size: 12px;color: #999999;line-height: 2.4;}
+/*users_Ranklist*/
+.users_Ranklist{width: 100%;overflow: hidden;display: block;height: 270px;}
+.users_Ranklist h3{margin: 0px;font-family: "微软雅黑";font-size: 18px;font-weight: bold;margin-bottom: 10px;display: block;}
+.users_Ranklist ul{margin: 0px;padding: 0px;}
+.users_Ranklist ul li{list-style: none;float: left;padding: 3px;display: block;}
+.users_Ranklist ul li .user_photo{background-image: url("../img/userphotoes.jpg");display: block;width: 45px;height: 40px;overflow: hidden;}
+.users_Ranklist ul li .first{background-position: 0 0;}
+.users_Ranklist ul li .second{background-position: -40px -45px;}
+
+
+
+
+
+
+
+
+
+
+
+

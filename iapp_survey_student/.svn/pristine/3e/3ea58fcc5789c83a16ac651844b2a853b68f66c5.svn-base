@@ -1,0 +1,10 @@
+/*新的颜色匹配css文件*/
+.top-bar{background-color: #3d4450;
+    border-color: #1a1e25;}
+.count{color: #ffffff;}
+.side-nav-color,.side-nav-bg{background-color: #3d4450;}
+.menu{background-color: #3d4450;}
+.menu ul li span{border-bottom-color: #d9534f;color: #ffffff}
+.menu ul li i{color:#d9534f }
+.menu ul li:hover{background-color:#d9534f; }
+.menu ul li:hover i{color: #ffffff;}

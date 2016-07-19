@@ -1,0 +1,106 @@
+﻿<html><head>
+<title>I无限</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no"> 
+<script type="text/javascript" src="http://www.aijiayou.com:80/student/static/m_h5/js/jquery-2.1.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">   
+<link rel="stylesheet" href="http://www.aijiayou.com:80/student/static/plugins/font-awesome-4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://www.aijiayou.com:80/student/static/m_h5/css/common.css">
+<link rel="stylesheet" href="http://www.aijiayou.com:80/student/static/m_h5/css/color.css">
+	
+<style type="text/css">
+	section.sender a:active,section.sender a,section.test ul li span.a,a.sub,header{background-color:#9ACF60;}
+	section.result ul li.face_g i{color:#9ACF60;}
+	section.option a.cur{color:#9ACF60;border-color:#9ACF60;}
+	section.testOnline a li.state label.now{background-color:#9ACF60;}
+	
+	article.scroll a.sub:active{background-color:#9ACF60;}
+	
+	section.login div{border:1px solid #9ACF60;}
+	section.login a{background:#9ACF60;}
+	section.login a:active{background-color:#9ACF60;}
+	.addClass{background-color:#9ACF60;}
+	.ts_bgcolor{background-color:#9ACF60;}
+	/*默认首页主题颜色*/	
+	article.default nav div a:active{background:#f4f4f4;color:#9ACF60;}
+
+/*通用提示框模块*/
+div.dialogBox .dialogHeader{color:#9ACF60;border-bottom-color:#9ACF60;}
+	
+		.ctl_header{display:block;}
+		.ranklist .ctl_header{display:block;}
+		img.ctl_cont{padding-top:50px;}
+		article.ctl_cont{padding-top:50px;}
+		div.ctl_cont{padding-top:50px;}
+		.ctl_rl{display:block;}
+	
+	}
+</style>
+</head>
+<body>
+<!--<header class="head"></header> --><!--主要内容区域-->
+
+<header class="ctl_header">
+    	<div class="back"><a href="javascript:history.go(-1);"><i class="fa fa-angle-left"></i></a></div>
+   <span style="height:38px;width:120px;display:inline-block;line-heigth:38px;overflow:hidden;">   I无限</span>
+	</header>
+    
+    <article class="searchList ctl_cont" style="margin-top:8px;"> 
+        <section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210571485&idx=1&sn=0c8daf0da1ab71cb7360097ae4f4b691&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>1班：“非”一班</li></ul></a></section>      <section class="listBox" style="display:block;" id="channels">        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575282&idx=1&sn=eb9174e541f30462b1f477dfdd8ebeae&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>2班：女貌狼才</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575364&idx=1&sn=141599987c8a03471615a6573cef240b&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>3班：嬗变</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575593&idx=1&sn=555ee7407afe99c06e4279f7461fca74&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>4班：致青春</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575675&idx=1&sn=4a49aa018628ec280a2df5250926382a&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>5班：最好的年华遇见你</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575720&idx=1&sn=ac853ed76b0a303d9068dbd1fe5af62a&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>6班：叱咤风云</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575745&idx=1&sn=7f97fa6e8555f344a92314679b010d8a&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>7班：新人新视觉</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575792&idx=1&sn=d5346223efe883c75a90eb621afb0514&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>8班：我们正青春</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575832&idx=1&sn=4fe40f1cc76a61ed3563f80951441aec&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>9班：鸿鹄志—御风九天</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575882&idx=1&sn=0c35c36abf797d4bcb51988be05d52ca&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>10班：健康绎家亲</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575928&idx=1&sn=10ce8317642677b99a636b13c9e5f907&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>11班：威武十一&nbsp;&nbsp;奥翔蓝天</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210575973&idx=1&sn=39097191be2a3d3c0a65e235e5474f03&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>12班：蜕变，我们在路上</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210576024&idx=1&sn=f566818adff51d9ac024e142407087c6&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>13班：新火之旅</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210576051&idx=1&sn=8c099103e1572e3bd9ee5bce0fb99b84&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>14班：十四王朝</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210576109&idx=1&sn=36e7f4c4e65d6bc05e06262913e0b98d&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>15班：E家文化</li></ul></a></section><section class="listBox" style="display:block;" id="channels"> 
+        
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MTA0NjExMw==&mid=210576144&idx=1&sn=673a4e66963554d7319204eeb5a5ec83&scene=0#rd"><div><img src="http://7d9ijt.com1.z0.glb.clouddn.com/FgjotBujYVmCv0IJa1fqiRNbhL3h-320x180" onerror="javascript:this.src='http://www.aijiayou.com:80/student/static/img/study/cover_c.png'"></div><ul style="width: 968px;"><li>16班：集结号</li></ul></a></section></article>
+
+
+    
+<style type="text/css">
+	body{background:#f8f8f8;}
+ 	.listBox ul{
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		padding-left:78px!important;
+		width:100%!important;
+		float:none!important;
+	}
+</style> 
+<!-- end -->
+<!--<footer class="footer"></footer>-->
+
+
+</body></html>

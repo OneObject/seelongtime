@@ -1,0 +1,1598 @@
+/*
+*   3.20新版本的课程分类等列表页面的新的实际界面的样式、
+*   author：yubo
+*   shanghai longtime
+*/
+/*课程分类——————————————————————————————————————————————————————*/
+html,body{
+    font-family: "microsoft yahei";
+}
+ul li{
+    list-style: none!important;
+}
+/* Swipe 2 required styles */
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative;
+}
+.swipe-wrap > div >img{
+    width:100%;
+}
+nav #position{
+    position: absolute;
+    z-index: 10;
+    margin-top: -20px;
+    margin-left: 30%;;
+}
+#position li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    /*border: 1px inset #ffffff;*/
+    border-radius: 50%;
+    margin-left: 5px;
+    list-style: none;
+}
+#position .on{background-color: #D9534F}
+/* END required styles */
+.panel-default > .panel-heading{
+    background-image: none;
+}
+.panel-heading{
+    padding: 0px;
+}
+.panel-title>a:hover,.panel-title>a:focus{
+    text-decoration: none;
+    /*background-color: #D9534F;*/
+    /*color: #ffffff;*/
+}
+.panel-title>a{
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: #3D4450;
+}
+.panel-title>a>i:first-child{
+    float: left;
+    font-size: 20px;
+    color: #3D4450;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+.panel-title>a>i:last-child{
+    float: right;
+    margin-right: 5px;
+}
+.class-title{
+    font-weight: 600;
+}
+.class-list,.class-list li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.class-list li{
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+}
+.class-list li:hover,.class-list li:focus{
+    background-color: #fafafa;
+}
+.class-list li>i{
+    float: right;
+    color: #888888;
+}
+/*====================================================================================================================*/
+/*课程列表*/
+.course-list,.course-list li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.course-list li{
+    border:1px solid #dadada;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.course-list-item{
+    width: 100%;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+.course-list-item-img{
+    width: 80px;
+    height:80px;
+    display: block;
+    overflow: hidden;
+}
+.course-list-item-img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.course-list-item-img .i{
+    font-size: 92px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -80px;
+    margin-left: 0px;
+    color: #999;
+    opacity: 0.8;-moz-opacity: 0.8;filter:alpha(opacity=80);
+}
+.course-list-item-detail{
+    width: 100%;
+    height: 80px;
+    display: block;
+    padding-left: 90px;
+    margin-top: -85px;
+}
+.course-list-item-detail h3{
+    margin: 0px;
+    padding-left: 0px;
+    font-size: 1em;
+    line-height: 1em;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.course-list-item-detail span{
+    font-size: 75%;
+    height: 42px;
+    line-height: 21px;
+    display: block;overflow: hidden;
+}
+.course-list-item-detail p{
+    color: #999;
+    font-size: 75%;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    /*margin-top: 12px;*/
+}
+.course-list-item-detail p i:first-child{
+    margin-left: 0px;
+}
+.course-list-item-detail p i{
+    margin-left: 20px;
+}
+/*课程系列*/
+.series{
+    display: block;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+.a-series{
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.series-top{
+    display: block;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+.series-top img{
+    width: 100%;
+    z-index: 1;
+    zoom: 1;
+}
+.series-top-title-bg{
+    position: absolute;
+    background-color: #999999;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width:85%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: -30px;
+    z-index: 2;
+    opacity: 0.7;-moz-opacity: 0.7;filter:alpha(opacity=70);
+}
+.series-top-title{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width:85%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: -30px;
+    z-index: 3;
+}
+.a-series .course-list li{
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+.a-series .course-list li:last-child{
+    border: none;
+}
+.course-name{
+    width: 100%;
+    font-size: 1em;
+    max-height: 42px;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.class-time{
+    font-size: 75%;
+    color: #999999;
+}
+.jianjie{
+    width: 100%;
+    padding: 5px 10px;
+    display: block;
+    font-size: 75%;
+    overflow: hidden;
+}
+.quanwen{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1em;
+    padding: 0px 10px;
+}
+.quanwen p{
+    color: #999;
+    font-size: 75%;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+/*====================================================================================================================*/
+/*课程详情*/
+ .course-detail footer{
+     width: 100%;
+     height: 50px;
+     background-color: #3D4450;
+ }
+.course-detail footer .form-control{
+    width: 60%;
+    margin-top: 8px;
+    margin-left: 20px;
+    float: left;
+}
+.course-detail footer .btn{
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+    display: block;
+}
+/*discuss-box*/
+.discuss-box .tou{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dadada;
+}
+.discuss-box .tou .course-detail-label{
+    float: left;
+    font-size: 20px;
+}
+.discuss-box .tou p{
+    float: right;
+    font-size: 14px;
+    color: #999999;
+    margin-top: 5px;
+}
+.discuss-box-list ul,.discuss-box-list ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.discuss-list-item{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 20px;
+}
+.discuss-list-item img{
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
+.discuss-list-item-content{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-left: 50px;
+    margin-top: -40px;
+    border-bottom: 1px solid #dadada;
+}
+.discuss-list-item-content span:first-child{
+    font-size: 1em;
+    display: block;
+    overflow: hidden;
+}
+.detail-pinlun-time{
+    font-size: 55%;
+    color: #666666;
+}
+
+.discuss-list-item-content i{
+    float: right;
+    color: #2d2d2d;
+}
+.detail-pinlun-time>i{
+    clear: both;
+    float: left;
+    margin-top: 5px;
+}
+.discuss-list-item-content p{
+    display: block;
+    overflow: hidden;
+}
+/*作业列表*/
+.task-list-box{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.task-list-box ul,.task-list-box ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.task-list-box ul{
+    padding: 10px 20px;
+}
+.task-list-box ul li{
+    height: 58px;
+    width: 100%;
+    line-height: 24px;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.task-list-box ul li:hover{
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+/*iconwarning:未完成   iconsuccess:通过     icondanger:未通过    iconinfo：已完成*/
+.iconwarning{
+    color:#F0AD4E;
+}
+.iconsuccess{
+    color: #5CB85C;
+}
+.icondanger{
+    color: #D9534F;
+}
+.iconinfo{
+    color: #428BCA;
+}
+/*label-warning:未开始   label-success:通过     label-danger:未通过    label-info：已完成 */
+.task-cion{
+    font-size: 36px;
+    display: block;
+    overflow: hidden;
+    height: 48px;
+    line-height: 48px;
+    width: 40px;
+}
+.task-content{
+    width: 100%;
+    height: 48px;
+    padding-left: 40px;
+    margin-top: -52px;
+}
+.task-content span{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-right: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.task-content i{
+    clear: both;
+    height: 48px;
+    width: 30px;
+    display: block;
+    overflow: hidden;
+    margin-top: -48px;
+    float: right;
+    line-height: 48px;
+}
+.task-name{
+    font-size: 1em;
+}
+.task-time{
+    font-size: 75%;
+}
+.task-content-style1{
+    width: 100%;
+    height: 48px;
+}
+.task-content-style1 span{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.task-content-style1  i{
+    clear: both;
+    height: 48px;
+    width: 30px;
+    display: block;
+    overflow: hidden;
+    margin-top: -48px;
+    float: right;
+    line-height: 48px;
+}
+.task-name-style1{
+    font-size: 1em;
+}
+.task-time-style1{
+    font-size: 75%;
+}
+.task-name-style1 .label{margin-left: 20px;}
+.isover .task-name-style1,.isover .task-time-style1{
+    color: #999999;
+}
+/*作业详情*/
+.task-detail-box{
+    display: block;
+    overflow: hidden;
+    padding: 10px 20px;
+}
+.task-detail-time{
+    font-size: 1.3em;
+    display: block;
+    overflow: hidden;
+    line-height: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+}
+.task-detail-time i,.task-need i{
+    color: #16A085;
+    margin-right: 10px;
+}
+.task-need{
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+.task-detail-box p{
+    text-indent: 1em;
+}
+.task-detail-box .btn{
+    margin-top: 20px;
+}
+.task-textarea{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.task-textarea textarea{
+    width: 100%;
+    resize: none;
+    height: 50px;
+    border: 1px solid #dadada;
+}
+.addimg{
+    width: 100%;
+    height: 80px;
+    background-color: #dadada;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    font-size: 36px;
+    line-height: 80px;
+    color: #aaaaaa;
+    position: absolute;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 10;
+    margin-top: -0px;
+    border-radius: 3px;
+}
+.task-img-box{
+    margin: 10px 0px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+}
+.task-img-box ul,.task-img-box ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.task-img-box ul li{
+    width: 32%;
+    float: left;
+    margin-left: 1%;
+}
+#inputfile{
+    float: left;
+    width: 32%;
+    z-index: 1;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+.task-img-box img{
+    width: 100%;
+}
+.task-img{
+    width: 100%;
+    height: 80px;
+    background-color: #eaeaea;
+    border: 2px solid #dadada;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    overflow:hidden;
+}
+/*分数*/
+.task-score{
+    width: 90px;
+    height: 50px;
+    background-image:url("../img/yz.png") ;
+    background-size: 90px 50px;
+    display: block;
+    overflow: hidden;
+    color: #ffffff;
+    transform: rotate(-40deg);
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+.pingyu-book{
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #dadada;
+    display: block;
+    overflow: hidden;
+    background-color: #faebcc;
+}
+/*3月26日 表情支持start*/
+.qqFace{margin-top:4px;background:#fff;padding:2px;border:1px #dfe6f6 solid;}
+.qqFace table td{padding:0px;}
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+.qqFace table td img:hover{border:1px #0066cc solid;}
+/*表情支持 end*/
+/*
+*3月27日
+*于波
+*列表页通用
+*start
+*/
+.GM-list-box{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.GM-list-box>ul{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.GM-list-box>ul>li{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.GM-list-item{
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+.GM-list-item .GM-item-poster{
+    width: 80px;
+    height: 80px;
+}
+.GM-list-item-content{
+    width: 100%;
+    display: block;
+    overflow:hidden;
+    margin-top: -80px;
+}
+.img-for-left{
+    padding-left: 90px;
+}
+.GM-item-title{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 1em;
+    line-height: 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 30px;
+    vertical-align:top;
+}
+.GM-item-jianjie{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 75%;
+    line-height: 25px;
+    height: 50px;
+    vertical-align:bottom;
+}
+.has-time>.GM-item-jianjie{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 75%;
+    line-height: 20px;
+    white-space: nowrap;
+    height: 25px;
+    vertical-align:bottom;
+    text-overflow: ellipsis;
+}
+.has-time>.GM-item-time{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    font-size: 75%;
+    line-height: 20px;
+    white-space: nowrap;
+    height: 25px;
+    vertical-align:bottom;
+    text-overflow: ellipsis;
+}
+.GM-item-time>.GM-item-time-o{
+    float: left;
+    height: 25px;
+    display: block;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-top: 8px;
+    text-align: left;
+}
+.GM-item-time>.GM-item-time-state{
+    float: right;
+    height: 25px;
+    display: block;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-top: 8px;
+    text-align: right;
+}
+/*
+*3月27日
+*列表页通用
+*end
+*/
+/*3月31日 start*/
+/*课程系列*/
+.active-series{
+    width: 97%;
+    display: block;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+.active-series .a-series{
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.active-series .series-top{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+.active-series .series-top img{
+    width: 100%;
+    z-index: 1;
+    zoom: 1;
+}
+.active-series .series-top-title-bg{
+    position: absolute;
+    background-color: #999999;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width:85%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: -30px;
+    z-index: 2;
+    opacity: 0.7;-moz-opacity: 0.7;filter:alpha(opacity=70);
+}
+.active-series .series-top-title{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width:85%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: -30px;
+    z-index: 3;
+}
+.active-series .a-series .course-list li{
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #dadada;
+}
+.active-series .a-series .course-list li:last-child{
+    border: none;
+}
+.active-series .course-name{
+    width: 100%;
+    font-size: 1em;
+    max-height: 42px;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.active-series .jianjie{
+    width: 100%;
+    padding: 5px 10px;
+    display: block;
+    font-size: 75%;
+    overflow: hidden;
+}
+.active-series .quanwen{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1em;
+    padding: 0px 10px;
+}
+.active-series .quanwen p{
+    color: #999;
+    font-size: 75%;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+.active-series .course-list-item-detail span {
+    font-size: 75%;
+    height: 66px;
+    line-height: 21px;
+    display: block;
+    overflow: hidden;
+}
+/*3月31日end*/
+
+/*
+*3月27日
+*列表页通用
+*end
+*/
+/*3月28日
+*pc-方新源
+*start
+
+.uploadify-queue-item{
+	display: none;
+}*/
+.preview-area{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+}
+.preview-area,.preview-area li{
+	margin: 0px;
+	padding:0px;
+	display: block;
+	overflow: hidden;
+	list-style: none;
+}
+.preview-area li{
+	padding:10px;
+	border: 1px solid #dadada;
+	border-radius:5px; 
+	margin-top: 10px;
+}
+.funjian-item{
+	width: 100%;
+	height: 80px;
+	display: block;
+	overflow: hidden;
+}
+.funjian-item .imgbox {
+	width: 80px;
+	height: 80px;
+	display: block;
+	overflow: hidden;
+	background-color: #fafafa;
+	border:1px solid #dadada;
+	border-radius:3px;
+	vertical-align:middle;
+}
+.funjian-item .imgbox img{
+	max-height: 80px;
+	max-width: 80px;
+}
+.detail-control{
+	padding-left: 90px;
+	margin-top: -80px;
+}
+.itemdetail{
+	padding-right: 80px;
+	height: 80px;
+}
+.fujian-control{
+text-align: right;
+margin-top: -80px;
+}
+/*4月1日 active detail start*/
+.active-detail{
+    height: 100%;
+    padding: 15px 15px 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.active-detail header h1{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    word-break: normal;
+    word-wrap: break-word;
+}
+.active-detail .activity-meta .no-extra {
+    margin-left: 0;
+}
+.active-detail .activity-meta {
+    display: inline-block;
+    margin-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #8c8c8c;
+    font-size: 11px;
+}
+.page-content .media {
+    margin: 18px 0;
+    text-align: center;
+}
+.page-content .media img {
+    width: 100%;
+}
+.page-content .text {
+    font-size: 16px;
+    color: #3e3e3e;
+    line-height: 1.5;
+    width: 100%;
+}
+.page-content .text p {
+    min-height: 1.5em;
+    display: block;
+}
+.btnGreen {
+    font-size: 16px;
+    text-align: center;
+    text-align: center;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: pointer;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0 20px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) , inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    display: block;
+    display: block;
+    display: block;
+    width: auto;
+    width: auto;
+    color: #FFF;
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #21A52B;
+    background-image: -moz-linear-gradient(top, #53c15c 0, #00920b 83%);
+    background-image: -webkit-gradient(linear, 0 0, 0 83%, from(#53C15C), to(#00920B));
+    background-image: -webkit-linear-gradient(top, #53C15C 0, #00920B 83%);
+    background-image: -o-linear-gradient(top, #53c15c 0, #00920b 83%);
+    background-image: linear-gradient(to bottom, #53C15C 0, #00920B 83%);
+    background-color: #21A52B;
+    background-image: -moz-linear-gradient(top, #53c15c 0, #00920b 83%);
+    background-image: -webkit-gradient(linear, 0 0, 0 83%, from(#53C15C), to(#00920B));
+    background-image: -webkit-linear-gradient(top, #53C15C 0, #00920B 83%);
+    background-image: -o-linear-gradient(top, #53c15c 0, #00920b 83%);
+    background-image: linear-gradient(to bottom, #53C15C 0, #00920B 83%);
+}
+.time-detail{
+    height: 100%;
+    padding: 15px 15px 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fafafa;
+}
+.time-detail ul,.time-detail ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.time-detail-item{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.time-detail-item .top-time{
+    font-size: 1em;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    overflow: hidden;
+}
+.container-info{
+    background-color: #ffffff;
+    margin-bottom: 5px;
+}
+.info-time{
+    width: 80px;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    border-right: 1px solid #53c15c;
+    line-height: 50px;
+    text-align: center;
+}
+.info-time span{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    height: 24px;
+    vertical-align: middle;
+    line-height: 24px;
+}
+.info-time span:first-child{
+    font-size: 90%;
+}
+.info-time span:last-child{
+    font-size: 75%;
+}
+.info-detail{
+    width: 100%;
+    height: 50px;
+    margin-top: -50px;
+    padding-left: 85px;
+}
+.info-detail-title{
+    font-size: 1em;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.info-detail-title label{
+}
+.info-detail .btn{
+    margin-top: 8px;
+}
+.info-detail-jieshao{
+    font-size: 75%;
+    color:#999;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.red_line{
+    border-bottom: 2px solid #E74C3C;
+}
+.green_line{
+    border-bottom: 2px solid #0b8409;
+}
+.orange_line{
+    border-bottom: 2px solid #ff9304;
+}
+.this-time{
+    background-color: #e3e3e3;
+}
+/*4月1日 active detail end*/
+/*4月2日 审批作业 教师端 start ---------------------------------------------------------------------------------------*/
+.check-task ul,.check-task ul li{
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.check-task header{
+    height: 100px;
+    display: block;
+    overflow: hidden;
+    padding: 20px 10px;
+    /*background-color: #14A950;*/
+    border-bottom: 1px solid #14A950;
+}
+.check-task header img{
+    width:50px;
+    width: 50px;
+}
+.check-task header .task-miaoshu{
+    width: 100%;
+    padding-left: 60px;
+    margin-top: -65px;
+}
+.check-task header .task-miaoshu h3{
+    font-size: 1.1em;
+    /*color: #ffffff;*/
+    height: 30px;
+    display: block;
+    overflow: hidden;
+}
+.check-task header .task-miaoshu ul li{
+    float: left;
+    width: auto;
+    margin-right: 10px;
+
+}
+.check-task header .task-miaoshu ul li span{
+    font-size: 75%;
+}
+.check-task-list ul,.check-task-list ul li{
+    margin: 0px;
+    padding: 0px;
+    display:block;
+    overflow: hidden;
+}
+.check-task-list ul li{
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0px;
+}
+.check-task-item{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #53c15c;
+    border-radius: 5px;
+}
+.check-task-item .item-top{
+    height: 50px;
+    display: block;
+    overflow: hidden;
+}
+.check-task-item .item-top img{
+    width: 50px;
+    height: 50px;
+}
+.check-task-item .item-top .name-time-score{
+    width: 100%;
+    height: 50px;
+    padding-left: 60px;
+    margin-top: -50px
+}
+.check-task-item .item-top .name-time-score span{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 25px;
+    vertical-align: bottom;
+}
+.name-time-score .nts-name{
+    font-size: 1em;
+}
+.name-time-score .nts-time{
+    font-size: 75%;
+    margin-top: 10px;
+}
+.check-task-item .item-top .name-time-score .nts-score{
+    position: absolute;
+    background-image: url("../img/yz.png");
+    background-size: 80px 30px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 30px;
+    margin-top: -60px;
+    right: 20px;
+    transform:rotate(-11deg);
+    -ms-transform:rotate(-11deg); 	/* IE 9 */
+    -moz-transform:rotate(-11deg); 	/* Firefox */
+    -webkit-transform:rotate(-11deg); /* Safari 和 Chrome */
+    -o-transform:rotate(-11deg); 	/* Opera */
+}
+.check-task-item .item-miaoshu{
+    border-radius: 3px;
+    background-color: rgba(242, 239, 190, 0.64);
+    padding: 5px;
+    font-size: 1em;
+}
+.item-imglist figure {
+    position: relative;
+    height: 100px;
+    padding: 0px 10px;
+    -webkit-box-sizing: border-box;
+    white-space: nowrap;
+    margin: 10px 0px;
+}
+.item-imglist figure div {
+    overflow: hidden;
+    overflow-x: auto;
+}
+.item-imglist figure img {
+    margin-top: 0;
+    height: 100px;
+    max-width: 260px;
+    margin-right: 5px;
+    max-height: 300px;
+}
+.check-task-item .item-footer{
+    height: 24px;
+    line-height: 24px;
+    border-top: 1px solid #eaeaea;
+}
+.check-task-item .item-footer span:first-child{
+    border-right: 1px solid #eaeaea;
+}
+.check-task-item .item-footer span{
+    text-align: center;
+    width: 49%;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.check-user-list{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+}
+.check-user-list ul,.check-user-list ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+
+.check-user-list ul li{
+    float: left;
+    margin-bottom: 10px;
+    width: auto;
+}
+h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.user-item {
+    width: 78px;
+    height: 100px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.easyDialog_wrapper .btn_highlight, .easyDialog_wrapper .btn_normal{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 30px;
+}
+/*4月2日 审批作业 教师端 end ---------------------------------------------------------------------------------------*/
+/*4月3日 话题界面 ………………………………………………………………………………………start……………………………………………*/
+.huati-list-box{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px 10px;
+}
+.huati-list-box header{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.huati-list-box header img{
+    width: 100%;
+}
+.huati-list-box header .huati-title{
+    position: absolute;
+    margin-top: -30px;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.6)!important;
+    text-align: center;
+    filter: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');
+}
+
+.huati-list-items,.huati-list-items ul,.huati-list-items ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.huati-list-items ul li{
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eaeaea;
+}
+.huati-list-items{
+    margin-top: 10px;
+    font-size: 1em;
+}
+.huati-item img{
+    width: 36px;
+    height: 36px;
+}
+.huati-item-detail{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-left: 46px;
+    margin-top: -36px;
+}
+.huati-user-name{
+    color: #1a71c3;
+}
+.huati-item-time{
+    color: #999999;
+    font-size:75%;
+    float: left;
+}
+.huati-item-caozuo{
+    width: 100%;
+	display: block;
+	overflow: hidden;
+	margin-top: -15px;
+	z-index: 20;
+}
+.huati-caozuo-hide{
+    display: block;overflow: hidden;
+    position: absolute;
+    z-index: 12;
+    margin-top: -12px;
+    font-size: 75%;
+    padding: 5px 10px;
+    /*width: 150px;*/
+    background-color: #525252;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    float: right;
+    right: -330px;
+}
+.btn-black {
+    color: #ffffff;
+    text-shadow:none;
+    background-image: -webkit-linear-gradient(top, #555 0%, #333 100%);
+    background-image: linear-gradient(to bottom, #555 0%, #333 100%);
+    background-repeat: repeat-x;
+    border-color: #666;
+    border-color: #666;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99000000', endColorstr='#99000000', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-black:hover,.btn-black:focus,.btn-black:active{
+    background-color: #333;
+    background-position: 0 -15px;
+    color: #ffffff;
+}
+.toolbtn{
+    float: right;
+    height: 20px;
+    width: 30px;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+}
+.toolbtn img{
+    height: 20px;
+    width: 30px;
+}
+#add,#remove{
+    font-size: 38px;
+    position: absolute;
+    z-index: 9999;
+    top: 45%;
+    left: 45%;
+    display: block;
+    overflow: hidden;
+    color: #E74C3C;
+}
+.huati-customer{
+    margin-top: 10px;
+}
+.huati-customer ul{
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.huati-customer ul li{
+    float: left;
+    margin-right: 5px;
+    display: block;
+    overflow: hidden;
+}
+.huati-customer ul li img{
+    width: 24px;
+    height: 24px;
+}
+.huati-customer i{
+    font-size: 18px;
+    width: 25px;
+}
+.huati-customer ul{
+    padding-left: 25px;
+    margin-top: -24px;
+}
+.huati-customer ul li{
+    padding-bottom: 5px;
+}
+.huati-customer .saybox{
+    background-color: #eaeaea;
+}
+.huati-customer .saybox li{
+    width: 100%;
+}
+.huati-customer .saybox li .say-name{
+    color: #007aff;
+}
+#pinglun-input{
+    width: 320px;
+    height: 220px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+#pinglun-input textarea{
+    width: 300px;
+    height: 150px;
+    resize: none;
+}
+#pinglun-input .control-box{
+    margin-top: 10px;
+    height: 30px;
+    width: 300px;
+}
+#pinglun-input .control-box span{
+    float: right;
+    margin-right: 10px;
+}
+#pinglun-input .control-box span:first-child{
+    float: left;
+}
+.huati-input{
+    width: 100%;
+    height: 50px;
+    background-color: #3D4450;
+    line-height:50px;
+    text-align:center;
+    padding:10px
+}
+/*4月3日 话题界面 ………………………………………………………………………………………end……………………………………………*/
+/*4月16日 问答列表          --------------------------------------------------------start*/
+ask-box,.havequestion{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.ask-box{
+    padding: 10px;
+}
+.ask-box ul,.ask-box ul li{
+    margin: 0px;
+    padding: 0px;
+}
+.ask-box ul li{
+    padding-bottom: 5px;
+    margin-top: 5px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+.havequestion{
+    margin: 10px 0px;
+}
+.ask-poster{
+    width: 100%;
+}
+.anask{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.ask-detail{
+    padding-right: 24px;
+    min-height: 80px;
+}
+.enter{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-align: right;
+    padding-right: 6px;
+    height: 80px;
+    line-height: 80px;
+    margin-top: -80px;
+}
+.ask-detail .ask-title{
+    font-size: 1em;
+    display: block;
+    max-height: 4em;
+    line-height: 2em;
+    overflow: hidden;
+}
+.ask-detail-span{
+    font-size: 75%;
+    display: block;
+    max-height: 2.7em;
+}
+/*4月16日 问答列表          --------------------------------------------------------end*/
+/*4月16日 新课程首页          --------------------------------------------------------start*/
+.classify-box{
+    clear: both;
+}
+.classify-title{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.courselistbox{
+    width: 100%;
+    height: 125px;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.courselistbox ul,.courselistbox ul li{
+    margin: 0px;
+    padding:0px;
+    display: block;
+    overflow: hidden;
+}
+.courselistbox ul{
+    margin-top: 5px;
+    padding: 0px 10px;
+    height: 120px;
+    width: 100%;
+    display:absolute;
+    overflow-x: scroll;
+}
+.courselistbox ul li{
+    float: left;
+    margin-right: 10px;
+}
+.owl .item{
+    margin: 5px;
+    color: #000;
+    width: 80px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+.courseitem img{
+    width: 80px;
+    height: 80px;
+}
+.courseitem .coursetitle{
+    display: block;
+    width: 80px;
+    min-height:40px; ;
+    font-size: 1em;
+}
+.coursefooter{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: #333;
+    height: 50px;
+    color: #fff;
+}
+.coursefooter ul,.coursefooter ul li{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    overflow: hidden;
+}
+.coursefooter ul li {
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    line-height: 50px;
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid #000000;
+}
+.search-box{
+    width: 100%;
+    padding: 10px;
+}
+.search-box input{
+    font-size: 14px;
+}
+.collect-title{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #eaeaea;
+    padding-left:15px ;
+}
+.nothing{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    color:#cccccc;
+    font-size: 20px;
+}
+/*4月16日 新课程首页          --------------------------------------------------------end*/

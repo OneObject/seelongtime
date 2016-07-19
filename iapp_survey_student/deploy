@@ -1,0 +1,45 @@
+profile=$1
+tag=$2
+##checkout from svn
+svn sw svn://218.244.150.59:3699/longtime-inner/tags/$tag .
+svn info > svn.info
+
+##compile and war
+mvn clean compile war:war -P $profile 
+
+##stop tomcat
+chmod +x stop_tomcat
+./stop_tomcat
+
+
+##convert student.war to mo.tar.gz
+cd target/student_survey
+jar -xvf student_survey.war 
+rm -rf student_survey.war
+cd ..
+tar -czvf student_survey.tar.gz student_survey
+
+##deplay the student_survey.tar.gz
+
+#remove execute resoucre dir
+rmback_path="/opt/applications/webapps/student_survey/"
+ls $rmback_path |egrep -v resource |xargs -i  rm -fr ${rmback_path}/{}
+
+#rm -rf /opt/applications/webapps/student_survey
+mkdir -p /opt/applications/webapps/student_survey
+tar -zxvf student_survey.tar.gz -C /opt/applications/webapps/
+
+
+#resource ln
+rm -f /opt/applications/webapps/student_survey/resource
+ln -s /mnt/data/iapp_resource  /opt/applications/webapps/student_survey/resource
+
+
+##makte tomcat webapps link
+rm -rf /opt/tomcat_survey/webapps/student
+ln -s  /opt/applications/webapps/student_survey /opt/tomcat_survey/webapps/student
+
+##start tomcat
+cd ..
+chmod +x start_tomcat
+./start_tomcat

@@ -1,0 +1,1 @@
+ALTER table base_tenant_config ADD `setting` varchar(2000) DEFAULT null;

@@ -1,0 +1,46 @@
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative;
+}
+.swipe>nav>ul{
+    height: 18px;
+    display: block;
+    overflow: hidden;
+    margin-top: -18px;
+    position: absolute;
+    text-align: center;
+    right: 35%;
+}
+.swipe>nav>ul>li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    list-style: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+.swipe>nav>ul>li.on{
+    background-color: #529bea;
+}
+.huakuai{
+    height: 123px;
+    display: block;
+    overflow: hidden;
+    padding-top: 16px;
+}
+.huakuai>h1{
+    font-size: 20px;
+    margin:0px 16px 16px;
+}

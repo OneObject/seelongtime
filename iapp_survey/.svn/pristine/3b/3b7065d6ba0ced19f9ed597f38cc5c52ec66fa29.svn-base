@@ -1,0 +1,114 @@
+.block_red{display: block;width: 12px;height: 12px;border: 1px solid #CACACA;float:left;margin-top: 5px;background-color:#E7007B; }
+.block_green{display: block;width: 12px;height: 12px;border: 1px solid #CACACA;float:left;margin-top: 5px;background-color:#009794; }
+.block_blue{display: block;width: 12px;height: 12px;border: 1px solid #CACACA;float:left;margin-top: 5px;background-color:#20A9DE; }
+.block_yellow{display: block;width: 12px;height: 12px;border: 1px solid #CACACA;float:left;margin-top: 5px;background-color:#FEC85C; }
+.color_tip{padding:0px 5px;float: left; }
+#list_box{width: 100%;background-color: #fAfAfA;border: 1px solid #CACACA;overflow: hidden;border-radius:6px;padding: 10px; }
+.list_list{margin: 0px;padding: 0px;}
+.list_list li{margin-left: 30px;list-style: none;cursor: pointer;float: left;margin-top: 20px;}
+.list_item_folder{width: 135px;height: 200px;}
+/*
+ *按时间选择背景颜色 
+ */
+.today{background-color: #E7007B;}
+.threedays{background-color: #20A9DE;}
+.month{background-color: #009794;}
+.ago{background-color: #FEC85C;}
+.list_item_folder i{color: #FFFFFF;font-size: 55px;margin: 0px 10px;}
+.item_name{height: 30px;color: #FFFFFF;margin-top: 10px;line-height: 30px;display: block;padding: 0 5px;}
+.upload_title,.upload_time,.modify_title,.modify_time{color: #FFFFFF;font-size: 12px;line-height: 24px;}
+.upload_time,.modify_time{padding-left: 20px;}
+.mulu_crumbs .btn{float: left;}
+.mulu_nav{margin: 0px;padding: 0px;float: left;}
+.mulu_nav li{list-style: none;float: left;line-height: 3;}
+.list_style{float: right;margin-right: 20px;font-size: 20px;}
+.list_style span{padding: 3px;border: 1px solid #AAAAAA;display: block;float: right;cursor: pointer;}
+.list_style .active{background-color: #20A9DE;}
+.portlet-tabs > .nav-tabs {
+position: relative;
+top: -50px;
+margin-right: 10px;
+overflow: hidden;
+}
+/*拖拽上传*/
+.drag_upload{min-width:300px;min-height:100px;border:2px dashed #ddd;border-radius: 10px;}
+.drag_upload:nth-child(2){min-width:300px;min-height:0px;border:1px dashed #ddd;border-radius: 10px;border-top:0px; }
+/*
+课程管理
+*/
+.table_add{font-size: 14px;float: right;display: block;margin-right: 16px;}
+.time_box,.time_zhi{float: left}
+.left_lable{float: left;display: block;width: 100px;text-align: right;}
+.time_box input{height: 30px;}.time_zhi{margin-top: 6px;}
+.search_condition .mt10{margin-top: 10px;display: block;}
+.study_detail_title{width: 100px;border-right:1px solid #CECECE; }
+/*添加课程*/
+.add-on .btn{
+	margin-top: -34px;
+	height: 34px;
+	float: right;
+}
+.mytextarea{
+	resize: 
+}
+.chose_coursewear{
+    cursor: pointer;
+}
+.box_box{overflow: hidden;}
+/*课件列表边框待定*/
+.coursewear_box{border: 1px solid green;overflow: hidden;}
+.coursewear_box ul{margin: 0px;padding: 0px;}
+.coursewear_box ul li{float: left;display: block;margin: 10px 20px;}
+.a_cousewear{display: block;width: 80px;height: 100px;overflow: hidden;cursor: pointer;}
+.a_cousewear i{font-size: 36px;display: block;margin: 10px;color:#FFFFFF;}
+.a_cousewear span{padding: 0px 10px;color:#FFFFFF;}
+.b_red{background-color:#E7007B; }
+.b_green{background-color:#009794; }
+.b_blue{background-color:#20A9DE; }
+.b_yellow{background-color:#FEC85C; }
+.btn-box{width: 100%;padding: 20px;text-align: right;overflow: hidden;}
+.checked{color: #fff;font-size: 26px;
+margin-top: -93px;
+margin-left: 50px;}
+.remove_item{z-index: 10;color: #FFFFFF;font-size: 24px;cursor: pointer;display: block;margin-top: -200px;
+margin-left: 100px;}
+.remove_item i{font-size: 24px;}
+.jiahao{text-align: center;font-size: 72px;color:#ddd}
+.jiahao i{}
+/*人员授权样式*/
+.add_role{float: right;margin-right: 30px;margin-top: 3px;}
+.add_box{overflow: hidden;margin-bottom: 10px;}
+.role_detail_text{background-color: #dff0d8;border: 1px solid #d6e9c6;width: 98%;margin-left: 20px;}
+.text{float: left;display: block;margin-top: 12px;margin-right: 20px;}
+.anniu{cursor: pointer;margin:0 10px;display: block;float: left;}
+.role_detail h4{float: left;display: block;}
+#add_member_dialog{width: 500px;height: 420px;background-color: #FFFFFF;}
+#add_member_dialog input{width: 300px;
+margin: 5px;}
+.close_btn{float: right;}
+.easyDialog_text{padding: 20px;overflow:hidden;}
+.yellow{float: right;display: block;margin-top: -20px;}
+.pagination{float: right;}
+.easyDialog_footer{overflow: hidden;}
+.dialog-btn{float: right;margin-right: 20px;margin-top: 20px;}
+.cancle{margin-left: 30px;}
+
+#list_content td.highlight div.info {  
+  border-left: 2px solid #87ceeb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

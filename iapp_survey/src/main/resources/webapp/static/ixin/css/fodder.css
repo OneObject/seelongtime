@@ -1,0 +1,51 @@
+.changeListShow .ixin_item {
+	width: 100%;
+	min-width: 800px;
+}
+
+.changeListShow .ixin_item .appmsg {
+	margin-botton: 15px;
+}
+
+.changeListShow .ixin_item .appmsg_title {
+	width: 10%;
+	float: left;
+}
+
+.changeListShow .ixin_item .appmsg_info {
+	width: 10%;
+	display: block;
+	float: left;
+	position: relative;
+	top: 12px;
+}
+
+.changeListShow .ixin_item .appmsg_thumb_wrp {
+	display: none;
+}
+
+.changeListShow .ixin_item .appmsg_desc {
+	width: 40%;
+	float: left;
+	position: relative;
+	top: 6px;
+	padding-left:8px;
+}
+
+.changeListShow .ixin_item .appmsg_opr {
+	width: 20%;
+	float: right;
+}
+
+.changeListShow .ixin_item .appmsg_opr ul li:nth-child(3) a {
+	position: relative;
+	top: -4px;
+}
+
+.changeListShow .ixin_item .appmsg_readNum {
+	width: 10%;
+	float: left;
+	position: relative;
+	top: 8px;
+	color: #999;
+}

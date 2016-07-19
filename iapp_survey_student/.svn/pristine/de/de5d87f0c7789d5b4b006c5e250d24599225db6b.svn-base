@@ -1,0 +1,138 @@
+.QN-top{
+    width: 100%;
+    padding: 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #CCCCCC;
+}
+.QN-top>img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.QN-top-left{
+    height: 80px;
+    padding-left: 96px;
+    margin-top: -80px;
+    text-align: left;
+}
+.QN-top-left>h1{
+    font-size: 20px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    color: #53575E;
+}
+.QN-top-left>span{
+    font-size: 14px;
+    color: #999999;
+}
+.QN-top>p{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #999999;
+}
+.questions-box{
+    padding:0px 16px;
+}
+.questions-box>.question-type{
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #529bea;
+}
+.question-item{
+    padding-top: 8px;
+}
+.question-item>.question-title{
+    line-height: 28px;
+    font-size: 18px;
+    color: #53575E;
+}
+.question-check-item{
+    padding: 5px;
+    display: block;
+    overflow: hidden;
+    color: #53575E;
+    border: 1px solid #CCCCCC;
+    background-color: #ffffff;
+    margin-top: -1px;
+}
+.question-check-item{
+    display: block;
+    overflow: hidden;
+    min-height: 48px;
+}
+
+.question-check-item>img{
+    width: 100%;
+    margin-bottom: 12px;
+}
+.question-check-item{
+    padding: 8px 8px;
+    line-height: 28px;
+    font-size: 18px;
+}
+.question-check-item>span{
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 28px!important;
+}
+.scoreCard{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.scoreCard .tapCard{
+    font-size: 18px;
+    color: #529bea;
+    border: 1px solid #CCCCCC;
+    float: left;
+    text-align: center;
+    background-color: #ffffff;
+}
+.scoreCard .selectednew{
+    color: #ffffff;
+    background-color: #529bea;
+}
+.QN-top-left>h1>.done-flag{
+    font-size: 18px;
+    color: #529bea;
+    float: right;
+}
+.question-check-item>h1{
+    font-size: 16px;
+    color: #53575E;
+}
+.question-check-item>.done-flag{
+    font-size: 18px;
+    color: #529bea;
+    float: right;
+    margin-top: -28px;
+}
+.progress{
+    height: 16px;
+    display: block;
+    overflow: hidden;
+    background-clip: padding-box;
+    color: #CCCCCC;
+    position: relative;
+}
+.progress-bar{
+    display: block;
+    overflow: hidden;
+    height: 16px;
+    background-color: #7ED321;
+}
+.progress-count{
+position: absolute;
+    top: -7px;
+    color: #CCCCCC;
+    font-size: 16px;
+}
+.done{
+    background-color: #529bea;
+}
+.score{
+    color: #529bea;
+}

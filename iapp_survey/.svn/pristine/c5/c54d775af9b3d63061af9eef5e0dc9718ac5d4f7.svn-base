@@ -1,0 +1,44 @@
+profile=$1
+
+##checkout from svn
+svn sw svn://218.244.150.59:3699/longtime-inner/branches/survey/iapp_survey .
+svn info > svn.info
+
+##compile and war
+mvn clean compile war:war -P $profile 
+
+##stop tomcat
+chmod +x stop_tomcat
+./stop_tomcat
+
+##convert iapp.war to mo.tar.gz
+cd target/iapp_survey
+jar -xvf iapp_survey.war 
+rm -rf iapp_survey.war
+cd ..
+tar -czvf iapp_survey.tar.gz iapp_survey
+
+##deplay the iapp.tar.gz
+
+#remove execute resoucre dir
+rmback_path="/opt/applications/webapps/iapp_survey/"
+ls $rmback_path |egrep -v resource |xargs -i  rm -fr ${rmback_path}/{}
+
+#rm -rf /opt/applications/webapps/iapp
+mkdir -p /opt/applications/webapps/iapp_survey
+tar -zxvf iapp_survey.tar.gz -C /opt/applications/webapps/
+
+rm -rf /opt/applications/webapps/iapp_survey/.svn
+
+##makte tomcat webapps link
+rm -rf /opt/tomcat_survey/webapps/iapp
+ln -s  /opt/applications/webapps/iapp_survey /opt/tomcat_survey/webapps/iapp
+
+#resource ln
+rm -f /opt/applications/webapps/iapp_survey/resource
+ln -s /mnt/data/iapp_survey_resource  /opt/applications/webapps/iapp_survey/resource
+
+##start tomcat
+cd ..
+chmod +x start_tomcat
+./start_tomcat
