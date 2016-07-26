@@ -1,0 +1,5 @@
+-- 用于增加邮件模板的字段
+alter table base_tenant_config add column mailmodule text; 
+
+-- 增加标签字段
+alter table ixin_vote add column labels varchar(500);

@@ -30,13 +30,35 @@
 			background-size:auto 29px;
 		}
 	</style>
+<<<<<<< .mine
 	<script type="text/javascript">
 		function initFlush() {		//用于解决火狐浏览器的缓存问题
 			document.getElementById("flushFlag").value = "sss";
 		}
 	</script>
+||||||| .r22907
+=======
+	
+	<script type="text/javascript">
+		function isRedirect() {	//用来判断是否是第一次加载，用于解决火狐浏览器中的页面缓存。
+			if(document.getElementById("flushFlag").value == "sss") {
+				document.getElementById("flushFlag").value = "aaa";
+			} else {
+				window.location.href = window.location.href;
+			}
+		}
+	</script>
+	
+>>>>>>> .r22982
 </head>
+<<<<<<< .mine
 <body onload="initFlush()">
+||||||| .r22907
+<body>
+=======
+<body onload="isRedirect()">
+	<input type="hidden" id="flushFlag" value="sss">
+>>>>>>> .r22982
 	<div class="paper">
 		<div class="exam_top">
 			<h2>${entity.title }</h2>

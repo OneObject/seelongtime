@@ -711,19 +711,25 @@
 											method="post">
 											<div class="form-body">
 												<div class="form-group">
-													<label for="biaoti">变量表示的含义</label>
+													<label for="biaoti">变量表示的含义</label><br/>
 													<!-- JSTL表达式转义 -->
-													<span>\${name}：表示发送到的姓名; \${surveyName}：调研报告的名字; \${surveyUrl}：调研报告的地址;
-													 \${remark}; \${author}：作者; \${sendDate}：发送的时间</span>
+													<span>\${name}：用户姓名<br/>\${surveyName}：调研活动的名称<br/>\${surveyUrl}：调研活动的地址  例如：http://www.baidu.com/a/b.xhtml?id=XXX<br/>
+													 \${remark}：调研活动简介<br/>\${author}：发起人/单位<br/>\${sendDate}：发送时间  例如：2016-07-20</span>
 												</div>
 												
 												<div class="form-group">
 													<label for="biaoti">模板的HTML代码</label>
+<<<<<<< .mine
 													<textarea class="form-control textareaheight" id="mailmodule"
 														style="resize: none" placeholder="html代码" rows="8" ><c:if test="${tenantConfig.mailmodule ne null}">${tenantConfig.mailmodule}</c:if><c:if test="${tenantConfig.mailmodule eq null}">\${name},您好<br/><br/>诚挚邀请您参加\${surveyName}，谢谢您的配合！<br/><a href="\${surveyUrl}"> 请点击这里 </a>或在浏览器输入： \${surveyUrl}<br/>用户名/密码：工号/888888<br/><br/>\${remark}<br/><br/>\${author}<br/>\${sendDate}</c:if></textarea>
+||||||| .r22896
+													<textarea class="form-control" id="descript"
+														style="resize: none" placeholder="html代码">${tenantConfig.moduleCode }</textarea>
+=======
+													<textarea class="form-control textareaheight" id="mailmodule"
+														style="resize: none" placeholder="html代码" rows="8" ><c:if test="${not empty fn:trim(tenantConfig.mailmodule)}">${tenantConfig.mailmodule}</c:if><c:if test="${empty fn:trim(tenantConfig.mailmodule)}">\${name},您好<br/><br/>诚挚邀请您参加\${surveyName}，谢谢您的配合！<br/><a href="\${surveyUrl}"> 请点击这里 </a>或在浏览器输入： \${surveyUrl}<br/>用户名/密码：工号/888888<br/><br/>\${remark}<br/><br/>\${author}<br/>\${sendDate}</c:if></textarea>
+>>>>>>> .r22982
 												</div>
-												
-												
 											</div>
 										</form>
 									</div>
@@ -768,6 +774,7 @@
 	</c:if>
 
 	var replycontent = "${tenantConfig.replycontent}";
+<<<<<<< .mine
 	
 	/*
 	 * 用来更新邮件模板的内容
@@ -791,6 +798,32 @@
 		})
 	}
 	
+||||||| .r22896
+=======
+	
+	/*
+	 * 用来更新邮件模板的内容
+	 */
+	function saveEmailModule() {
+		var mailmodule = $("#mailmodule").val();
+		
+		$.ajax({
+			type: "POST",
+			url: basepath + "/base/admin/tenantconfig/updatemailmodule.json",
+			data: {
+				"content": mailmodule
+			},
+			success: function(data) {
+				if (data == null) {
+					showMsgDialog("修改失败");
+				} else {
+					showMsgDialog("修改成功");
+				}
+			}
+		})
+	}
+	
+>>>>>>> .r22982
 	function updateTenantSiteInfo() {
 		var isopen = $("#isShowIsOpen").val();
 		var isfoddershare = $("#isfoddershare").val();

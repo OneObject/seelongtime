@@ -261,7 +261,7 @@ public class TenantConfigController {
 	@ResponseBody
 	public ModelMap updateMailmodule(HttpServletRequest request, ModelMap model) {
 		String domain = LoginSessionHelper.getCurrentDomain(request);
-		String mailmodule = request.getParameter("mailmodule");
+		String mailmodule = request.getParameter("content");
 		TenantConfig tenantConfig = tenantConfigService.get(domain);
 		
 		mailmodule = mailmodule.replaceAll("＜", "<");
